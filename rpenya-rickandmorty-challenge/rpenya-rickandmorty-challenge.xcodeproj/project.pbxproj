@@ -10,7 +10,6 @@
 		0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */; };
 		0C93444F29BF9FD0002DDF2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444E29BF9FD0002DDF2F /* ContentView.swift */; };
 		0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93445029BF9FD2002DDF2F /* Assets.xcassets */; };
-		0C93445429BF9FD2002DDF2F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93445329BF9FD2002DDF2F /* Preview Assets.xcassets */; };
 		0C93445E29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93445D29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift */; };
 		0C93446829BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93446729BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITests.swift */; };
 		0C93446A29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93446929BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITestsLaunchTests.swift */; };
@@ -38,7 +37,6 @@
 		0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeApp.swift; sourceTree = "<group>"; };
 		0C93444E29BF9FD0002DDF2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0C93445029BF9FD2002DDF2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0C93445329BF9FD2002DDF2F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C93445929BF9FD3002DDF2F /* rpenya-rickandmorty-challengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rpenya-rickandmorty-challengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93445D29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeTests.swift; sourceTree = "<group>"; };
 		0C93446329BF9FD3002DDF2F /* rpenya-rickandmorty-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rpenya-rickandmorty-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,9 +72,9 @@
 		0C93444029BF9FD0002DDF2F = {
 			isa = PBXGroup;
 			children = (
-				0C93444B29BF9FD0002DDF2F /* rpenya-rickandmorty-challenge */,
-				0C93445C29BF9FD3002DDF2F /* rpenya-rickandmorty-challengeTests */,
-				0C93446629BF9FD3002DDF2F /* rpenya-rickandmorty-challengeUITests */,
+				0C93447629BFA059002DDF2F /* Data */,
+				0C93447729BFA05F002DDF2F /* Domain */,
+				0C93447829BFA067002DDF2F /* Mobile */,
 				0C93444A29BF9FD0002DDF2F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,40 +89,63 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0C93444B29BF9FD0002DDF2F /* rpenya-rickandmorty-challenge */ = {
+		0C93447629BFA059002DDF2F /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0C93447729BFA05F002DDF2F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0C93447829BFA067002DDF2F /* Mobile */ = {
+			isa = PBXGroup;
+			children = (
+				0C93447B29BFA0C7002DDF2F /* CharactersList */,
+				0C93447C29BFA0D6002DDF2F /* CharacterDetail */,
+				0C93447929BFA0AD002DDF2F /* MobileTests */,
+				0C93447A29BFA0BA002DDF2F /* MobileUITests */,
 				0C93444E29BF9FD0002DDF2F /* ContentView.swift */,
+				0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */,
 				0C93445029BF9FD2002DDF2F /* Assets.xcassets */,
-				0C93445229BF9FD2002DDF2F /* Preview Content */,
 			);
-			path = "rpenya-rickandmorty-challenge";
+			path = Mobile;
 			sourceTree = "<group>";
 		};
-		0C93445229BF9FD2002DDF2F /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				0C93445329BF9FD2002DDF2F /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		0C93445C29BF9FD3002DDF2F /* rpenya-rickandmorty-challengeTests */ = {
+		0C93447929BFA0AD002DDF2F /* MobileTests */ = {
 			isa = PBXGroup;
 			children = (
 				0C93445D29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift */,
 			);
-			path = "rpenya-rickandmorty-challengeTests";
+			path = MobileTests;
 			sourceTree = "<group>";
 		};
-		0C93446629BF9FD3002DDF2F /* rpenya-rickandmorty-challengeUITests */ = {
+		0C93447A29BFA0BA002DDF2F /* MobileUITests */ = {
 			isa = PBXGroup;
 			children = (
 				0C93446729BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITests.swift */,
 				0C93446929BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITestsLaunchTests.swift */,
 			);
-			path = "rpenya-rickandmorty-challengeUITests";
+			path = MobileUITests;
+			sourceTree = "<group>";
+		};
+		0C93447B29BFA0C7002DDF2F /* CharactersList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CharactersList;
+			sourceTree = "<group>";
+		};
+		0C93447C29BFA0D6002DDF2F /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CharacterDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +252,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C93445429BF9FD2002DDF2F /* Preview Assets.xcassets in Resources */,
 				0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,7 +436,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"rpenya-rickandmorty-challenge/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Mobile/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -444,7 +464,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"rpenya-rickandmorty-challenge/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Mobile/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
