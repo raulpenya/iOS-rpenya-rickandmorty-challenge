@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1B84D429BFA1B200671265 /* Data.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B84D329BFA1B200671265 /* Data.docc */; };
+		0C1B84DA29BFA1B200671265 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B84D029BFA1B200671265 /* Data.framework */; };
+		0C1B84E129BFA1B200671265 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B84E029BFA1B200671265 /* DataTests.swift */; };
+		0C1B84E229BFA1B200671265 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1B84D229BFA1B200671265 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C1B84E529BFA1B200671265 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B84D029BFA1B200671265 /* Data.framework */; };
+		0C1B84E629BFA1B200671265 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B84D029BFA1B200671265 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C1B84F729BFA1BC00671265 /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B84F629BFA1BC00671265 /* Domain.docc */; };
+		0C1B84FD29BFA1BD00671265 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B84F329BFA1BC00671265 /* Domain.framework */; };
+		0C1B850429BFA1BD00671265 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B850329BFA1BD00671265 /* DomainTests.swift */; };
+		0C1B850529BFA1BD00671265 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1B84F529BFA1BC00671265 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C1B850829BFA1BD00671265 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B84F329BFA1BC00671265 /* Domain.framework */; };
+		0C1B850929BFA1BD00671265 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B84F329BFA1BC00671265 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */; };
 		0C93444F29BF9FD0002DDF2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444E29BF9FD0002DDF2F /* ContentView.swift */; };
 		0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93445029BF9FD2002DDF2F /* Assets.xcassets */; };
@@ -16,6 +28,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0C1B84DB29BFA1B200671265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C93444129BF9FD0002DDF2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C1B84CF29BFA1B100671265;
+			remoteInfo = Data;
+		};
+		0C1B84DD29BFA1B200671265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C93444129BF9FD0002DDF2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C93444829BF9FD0002DDF2F;
+			remoteInfo = "rpenya-rickandmorty-challenge";
+		};
+		0C1B84E329BFA1B200671265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C93444129BF9FD0002DDF2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C1B84CF29BFA1B100671265;
+			remoteInfo = Data;
+		};
+		0C1B84FE29BFA1BD00671265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C93444129BF9FD0002DDF2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C1B84F229BFA1BC00671265;
+			remoteInfo = Domain;
+		};
+		0C1B850029BFA1BD00671265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C93444129BF9FD0002DDF2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C93444829BF9FD0002DDF2F;
+			remoteInfo = "rpenya-rickandmorty-challenge";
+		};
+		0C1B850629BFA1BD00671265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C93444129BF9FD0002DDF2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C1B84F229BFA1BC00671265;
+			remoteInfo = Domain;
+		};
 		0C93445A29BF9FD3002DDF2F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0C93444129BF9FD0002DDF2F /* Project object */;
@@ -32,7 +86,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0C1B84EA29BFA1B200671265 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0C1B850929BFA1BD00671265 /* Domain.framework in Embed Frameworks */,
+				0C1B84E629BFA1B200671265 /* Data.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0C1B84D029BFA1B200671265 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C1B84D229BFA1B200671265 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		0C1B84D329BFA1B200671265 /* Data.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Data.docc; sourceTree = "<group>"; };
+		0C1B84D929BFA1B200671265 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C1B84E029BFA1B200671265 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
+		0C1B84F329BFA1BC00671265 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C1B84F529BFA1BC00671265 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
+		0C1B84F629BFA1BC00671265 /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
+		0C1B84FC29BFA1BD00671265 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C1B850329BFA1BD00671265 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		0C93444929BF9FD0002DDF2F /* rpenya-rickandmorty-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-rickandmorty-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeApp.swift; sourceTree = "<group>"; };
 		0C93444E29BF9FD0002DDF2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,10 +124,42 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0C1B84CD29BFA1B100671265 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C1B84D629BFA1B200671265 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C1B84DA29BFA1B200671265 /* Data.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C1B84F029BFA1BC00671265 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C1B84F929BFA1BC00671265 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C1B84FD29BFA1BD00671265 /* Domain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C93444629BF9FD0002DDF2F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C1B850829BFA1BD00671265 /* Domain.framework in Frameworks */,
+				0C1B84E529BFA1B200671265 /* Data.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,12 +180,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C1B84D129BFA1B200671265 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B84D229BFA1B200671265 /* Data.h */,
+				0C1B84D329BFA1B200671265 /* Data.docc */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0C1B84DF29BFA1B200671265 /* DataTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B84E029BFA1B200671265 /* DataTests.swift */,
+			);
+			path = DataTests;
+			sourceTree = "<group>";
+		};
+		0C1B84F429BFA1BC00671265 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B84F529BFA1BC00671265 /* Domain.h */,
+				0C1B84F629BFA1BC00671265 /* Domain.docc */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0C1B850229BFA1BD00671265 /* DomainTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B850329BFA1BD00671265 /* DomainTests.swift */,
+			);
+			path = DomainTests;
+			sourceTree = "<group>";
+		};
 		0C93444029BF9FD0002DDF2F = {
 			isa = PBXGroup;
 			children = (
 				0C93447629BFA059002DDF2F /* Data */,
 				0C93447729BFA05F002DDF2F /* Domain */,
 				0C93447829BFA067002DDF2F /* Mobile */,
+				0C1B84D129BFA1B200671265 /* Data */,
+				0C1B84DF29BFA1B200671265 /* DataTests */,
+				0C1B84F429BFA1BC00671265 /* Domain */,
+				0C1B850229BFA1BD00671265 /* DomainTests */,
 				0C93444A29BF9FD0002DDF2F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +234,10 @@
 				0C93444929BF9FD0002DDF2F /* rpenya-rickandmorty-challenge.app */,
 				0C93445929BF9FD3002DDF2F /* rpenya-rickandmorty-challengeTests.xctest */,
 				0C93446329BF9FD3002DDF2F /* rpenya-rickandmorty-challengeUITests.xctest */,
+				0C1B84D029BFA1B200671265 /* Data.framework */,
+				0C1B84D929BFA1B200671265 /* DataTests.xctest */,
+				0C1B84F329BFA1BC00671265 /* Domain.framework */,
+				0C1B84FC29BFA1BD00671265 /* DomainTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,7 +303,100 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		0C1B84CB29BFA1B100671265 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C1B84E229BFA1B200671265 /* Data.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C1B84EE29BFA1BC00671265 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C1B850529BFA1BD00671265 /* Domain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		0C1B84CF29BFA1B100671265 /* Data */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C1B84E729BFA1B200671265 /* Build configuration list for PBXNativeTarget "Data" */;
+			buildPhases = (
+				0C1B84CB29BFA1B100671265 /* Headers */,
+				0C1B84CC29BFA1B100671265 /* Sources */,
+				0C1B84CD29BFA1B100671265 /* Frameworks */,
+				0C1B84CE29BFA1B100671265 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Data;
+			productName = Data;
+			productReference = 0C1B84D029BFA1B200671265 /* Data.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0C1B84D829BFA1B200671265 /* DataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C1B84EB29BFA1B200671265 /* Build configuration list for PBXNativeTarget "DataTests" */;
+			buildPhases = (
+				0C1B84D529BFA1B200671265 /* Sources */,
+				0C1B84D629BFA1B200671265 /* Frameworks */,
+				0C1B84D729BFA1B200671265 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C1B84DC29BFA1B200671265 /* PBXTargetDependency */,
+				0C1B84DE29BFA1B200671265 /* PBXTargetDependency */,
+			);
+			name = DataTests;
+			productName = DataTests;
+			productReference = 0C1B84D929BFA1B200671265 /* DataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0C1B84F229BFA1BC00671265 /* Domain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C1B850A29BFA1BD00671265 /* Build configuration list for PBXNativeTarget "Domain" */;
+			buildPhases = (
+				0C1B84EE29BFA1BC00671265 /* Headers */,
+				0C1B84EF29BFA1BC00671265 /* Sources */,
+				0C1B84F029BFA1BC00671265 /* Frameworks */,
+				0C1B84F129BFA1BC00671265 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Domain;
+			productName = Domain;
+			productReference = 0C1B84F329BFA1BC00671265 /* Domain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0C1B84FB29BFA1BC00671265 /* DomainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C1B850D29BFA1BD00671265 /* Build configuration list for PBXNativeTarget "DomainTests" */;
+			buildPhases = (
+				0C1B84F829BFA1BC00671265 /* Sources */,
+				0C1B84F929BFA1BC00671265 /* Frameworks */,
+				0C1B84FA29BFA1BC00671265 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C1B84FF29BFA1BD00671265 /* PBXTargetDependency */,
+				0C1B850129BFA1BD00671265 /* PBXTargetDependency */,
+			);
+			name = DomainTests;
+			productName = DomainTests;
+			productReference = 0C1B84FC29BFA1BD00671265 /* DomainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0C93444829BF9FD0002DDF2F /* rpenya-rickandmorty-challenge */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C93446D29BF9FD3002DDF2F /* Build configuration list for PBXNativeTarget "rpenya-rickandmorty-challenge" */;
@@ -158,10 +404,13 @@
 				0C93444529BF9FD0002DDF2F /* Sources */,
 				0C93444629BF9FD0002DDF2F /* Frameworks */,
 				0C93444729BF9FD0002DDF2F /* Resources */,
+				0C1B84EA29BFA1B200671265 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0C1B84E429BFA1B200671265 /* PBXTargetDependency */,
+				0C1B850729BFA1BD00671265 /* PBXTargetDependency */,
 			);
 			name = "rpenya-rickandmorty-challenge";
 			productName = "rpenya-rickandmorty-challenge";
@@ -214,6 +463,20 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					0C1B84CF29BFA1B100671265 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					0C1B84D829BFA1B200671265 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 0C93444829BF9FD0002DDF2F;
+					};
+					0C1B84F229BFA1BC00671265 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					0C1B84FB29BFA1BC00671265 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 0C93444829BF9FD0002DDF2F;
+					};
 					0C93444829BF9FD0002DDF2F = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -243,11 +506,43 @@
 				0C93444829BF9FD0002DDF2F /* rpenya-rickandmorty-challenge */,
 				0C93445829BF9FD3002DDF2F /* rpenya-rickandmorty-challengeTests */,
 				0C93446229BF9FD3002DDF2F /* rpenya-rickandmorty-challengeUITests */,
+				0C1B84F229BFA1BC00671265 /* Domain */,
+				0C1B84FB29BFA1BC00671265 /* DomainTests */,
+				0C1B84CF29BFA1B100671265 /* Data */,
+				0C1B84D829BFA1B200671265 /* DataTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0C1B84CE29BFA1B100671265 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C1B84D729BFA1B200671265 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C1B84F129BFA1BC00671265 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C1B84FA29BFA1BC00671265 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C93444729BF9FD0002DDF2F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,6 +568,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0C1B84CC29BFA1B100671265 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C1B84D429BFA1B200671265 /* Data.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C1B84D529BFA1B200671265 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C1B84E129BFA1B200671265 /* DataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C1B84EF29BFA1BC00671265 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C1B84F729BFA1BC00671265 /* Domain.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C1B84F829BFA1BC00671265 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C1B850429BFA1BD00671265 /* DomainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C93444529BF9FD0002DDF2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -302,6 +629,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0C1B84DC29BFA1B200671265 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C1B84CF29BFA1B100671265 /* Data */;
+			targetProxy = 0C1B84DB29BFA1B200671265 /* PBXContainerItemProxy */;
+		};
+		0C1B84DE29BFA1B200671265 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C93444829BF9FD0002DDF2F /* rpenya-rickandmorty-challenge */;
+			targetProxy = 0C1B84DD29BFA1B200671265 /* PBXContainerItemProxy */;
+		};
+		0C1B84E429BFA1B200671265 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C1B84CF29BFA1B100671265 /* Data */;
+			targetProxy = 0C1B84E329BFA1B200671265 /* PBXContainerItemProxy */;
+		};
+		0C1B84FF29BFA1BD00671265 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C1B84F229BFA1BC00671265 /* Domain */;
+			targetProxy = 0C1B84FE29BFA1BD00671265 /* PBXContainerItemProxy */;
+		};
+		0C1B850129BFA1BD00671265 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C93444829BF9FD0002DDF2F /* rpenya-rickandmorty-challenge */;
+			targetProxy = 0C1B850029BFA1BD00671265 /* PBXContainerItemProxy */;
+		};
+		0C1B850729BFA1BD00671265 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C1B84F229BFA1BC00671265 /* Domain */;
+			targetProxy = 0C1B850629BFA1BD00671265 /* PBXContainerItemProxy */;
+		};
 		0C93445B29BF9FD3002DDF2F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0C93444829BF9FD0002DDF2F /* rpenya-rickandmorty-challenge */;
@@ -315,6 +672,190 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0C1B84E829BFA1B200671265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.Data;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0C1B84E929BFA1B200671265 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.Data;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0C1B84EC29BFA1B200671265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.DataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpenya-rickandmorty-challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpenya-rickandmorty-challenge";
+			};
+			name = Debug;
+		};
+		0C1B84ED29BFA1B200671265 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.DataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpenya-rickandmorty-challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpenya-rickandmorty-challenge";
+			};
+			name = Release;
+		};
+		0C1B850B29BFA1BD00671265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.Domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0C1B850C29BFA1BD00671265 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.Domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0C1B850E29BFA1BD00671265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpenya-rickandmorty-challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpenya-rickandmorty-challenge";
+			};
+			name = Debug;
+		};
+		0C1B850F29BFA1BD00671265 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpenya-rickandmorty-challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpenya-rickandmorty-challenge";
+			};
+			name = Release;
+		};
 		0C93446B29BF9FD3002DDF2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -439,6 +980,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Mobile/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "rpenya-rickandmorty";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -467,6 +1009,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Mobile/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "rpenya-rickandmorty";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -560,6 +1103,42 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0C1B84E729BFA1B200671265 /* Build configuration list for PBXNativeTarget "Data" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C1B84E829BFA1B200671265 /* Debug */,
+				0C1B84E929BFA1B200671265 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C1B84EB29BFA1B200671265 /* Build configuration list for PBXNativeTarget "DataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C1B84EC29BFA1B200671265 /* Debug */,
+				0C1B84ED29BFA1B200671265 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C1B850A29BFA1BD00671265 /* Build configuration list for PBXNativeTarget "Domain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C1B850B29BFA1BD00671265 /* Debug */,
+				0C1B850C29BFA1BD00671265 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C1B850D29BFA1BD00671265 /* Build configuration list for PBXNativeTarget "DomainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C1B850E29BFA1BD00671265 /* Debug */,
+				0C1B850F29BFA1BD00671265 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0C93444429BF9FD0002DDF2F /* Build configuration list for PBXProject "rpenya-rickandmorty-challenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
