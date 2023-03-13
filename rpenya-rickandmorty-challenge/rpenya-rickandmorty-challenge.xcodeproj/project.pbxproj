@@ -19,6 +19,14 @@
 		0C1B850529BFA1BD00671265 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1B84F529BFA1BC00671265 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C1B850829BFA1BD00671265 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B84F329BFA1BC00671265 /* Domain.framework */; };
 		0C1B850929BFA1BD00671265 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B84F329BFA1BC00671265 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C1B851629BFA2CB00671265 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B851329BFA2CA00671265 /* HTTPMethod.swift */; };
+		0C1B851729BFA2CB00671265 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B851429BFA2CA00671265 /* Api.swift */; };
+		0C1B851829BFA2CB00671265 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B851529BFA2CA00671265 /* Resource.swift */; };
+		0C1B851C29BFA2D400671265 /* DataSourceErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B851929BFA2D300671265 /* DataSourceErrors.swift */; };
+		0C1B851D29BFA2D400671265 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B851A29BFA2D300671265 /* Session.swift */; };
+		0C1B851E29BFA2D400671265 /* NetworkingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B851B29BFA2D300671265 /* NetworkingDataSource.swift */; };
+		0C1B852129BFA2DD00671265 /* DataConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B851F29BFA2DD00671265 /* DataConstants.swift */; };
+		0C1B852229BFA2DD00671265 /* DataErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B852029BFA2DD00671265 /* DataErrors.swift */; };
 		0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */; };
 		0C93444F29BF9FD0002DDF2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444E29BF9FD0002DDF2F /* ContentView.swift */; };
 		0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93445029BF9FD2002DDF2F /* Assets.xcassets */; };
@@ -112,6 +120,14 @@
 		0C1B84F629BFA1BC00671265 /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
 		0C1B84FC29BFA1BD00671265 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C1B850329BFA1BD00671265 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
+		0C1B851329BFA2CA00671265 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		0C1B851429BFA2CA00671265 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		0C1B851529BFA2CA00671265 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		0C1B851929BFA2D300671265 /* DataSourceErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceErrors.swift; sourceTree = "<group>"; };
+		0C1B851A29BFA2D300671265 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		0C1B851B29BFA2D300671265 /* NetworkingDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingDataSource.swift; sourceTree = "<group>"; };
+		0C1B851F29BFA2DD00671265 /* DataConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConstants.swift; sourceTree = "<group>"; };
+		0C1B852029BFA2DD00671265 /* DataErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataErrors.swift; sourceTree = "<group>"; };
 		0C93444929BF9FD0002DDF2F /* rpenya-rickandmorty-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-rickandmorty-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeApp.swift; sourceTree = "<group>"; };
 		0C93444E29BF9FD0002DDF2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -214,6 +230,37 @@
 			path = DomainTests;
 			sourceTree = "<group>";
 		};
+		0C1B851029BFA25E00671265 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B851129BFA26900671265 /* Model */,
+				0C1B851229BFA26E00671265 /* NetworkingDataSource */,
+				0C1B851F29BFA2DD00671265 /* DataConstants.swift */,
+				0C1B852029BFA2DD00671265 /* DataErrors.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0C1B851129BFA26900671265 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B851429BFA2CA00671265 /* Api.swift */,
+				0C1B851329BFA2CA00671265 /* HTTPMethod.swift */,
+				0C1B851529BFA2CA00671265 /* Resource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C1B851229BFA26E00671265 /* NetworkingDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B851929BFA2D300671265 /* DataSourceErrors.swift */,
+				0C1B851B29BFA2D300671265 /* NetworkingDataSource.swift */,
+				0C1B851A29BFA2D300671265 /* Session.swift */,
+			);
+			path = NetworkingDataSource;
+			sourceTree = "<group>";
+		};
 		0C93444029BF9FD0002DDF2F = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +292,7 @@
 		0C93447629BFA059002DDF2F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0C1B851029BFA25E00671265 /* Common */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -572,7 +620,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C1B851729BFA2CB00671265 /* Api.swift in Sources */,
+				0C1B851C29BFA2D400671265 /* DataSourceErrors.swift in Sources */,
+				0C1B851D29BFA2D400671265 /* Session.swift in Sources */,
+				0C1B851829BFA2CB00671265 /* Resource.swift in Sources */,
+				0C1B851629BFA2CB00671265 /* HTTPMethod.swift in Sources */,
+				0C1B852129BFA2DD00671265 /* DataConstants.swift in Sources */,
+				0C1B851E29BFA2D400671265 /* NetworkingDataSource.swift in Sources */,
 				0C1B84D429BFA1B200671265 /* Data.docc in Sources */,
+				0C1B852229BFA2DD00671265 /* DataErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -973,6 +1029,7 @@
 		0C93446E29BF9FD3002DDF2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1002,6 +1059,7 @@
 		0C93446F29BF9FD3002DDF2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
