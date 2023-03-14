@@ -19,8 +19,16 @@ struct CharacterRemoteEntity: Decodable, Equatable {
     let gender: String?
     let imageUrl: String?
     
-    static func == (lhs: Self, rhs: Self) -> Bool {
-        return lhs.id == rhs.id
+    init(id: String?, name: String?, status: String?, species: String?, type: String?, origin: OriginRemoteEntity?, location: LocationRemoteEntity?, gender: String?, imageUrl: String?) {
+        self.id = id
+        self.name = name
+        self.status = status
+        self.species = species
+        self.type = type
+        self.origin = origin
+        self.location = location
+        self.gender = gender
+        self.imageUrl = imageUrl
     }
     
     init(from decoder: Decoder) throws {
@@ -46,6 +54,10 @@ struct CharacterRemoteEntity: Decodable, Equatable {
         case origin = "origin"
         case location = "location"
         case imageUrl = "image"
+    }
+    
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.id == rhs.id
     }
 }
 

@@ -40,6 +40,12 @@
 		0C1FEECD29C0CA8700E90B30 /* OriginRemoteEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEC029C0CA2C00E90B30 /* OriginRemoteEntityTests.swift */; };
 		0C1FEECE29C0CA8700E90B30 /* LocationRemoteEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEC229C0CA3E00E90B30 /* LocationRemoteEntityTests.swift */; };
 		0C1FEECF29C0CA8700E90B30 /* CharacterRemoteEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEBC29C0C9F900E90B30 /* CharacterRemoteEntityTests.swift */; };
+		0C1FEEDD29C0CEE700E90B30 /* MockCharacterRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEED329C0CE4300E90B30 /* MockCharacterRemoteEntity.swift */; };
+		0C1FEEDE29C0CEE700E90B30 /* MockLocationRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEED929C0CE6F00E90B30 /* MockLocationRemoteEntity.swift */; };
+		0C1FEEDF29C0CEE700E90B30 /* MockPageInfoRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEED529C0CE4E00E90B30 /* MockPageInfoRemoteEntity.swift */; };
+		0C1FEEE029C0CEE700E90B30 /* MockCharactersPageRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEED129C0CE2E00E90B30 /* MockCharactersPageRemoteEntity.swift */; };
+		0C1FEEE129C0CEE700E90B30 /* MockOriginRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEED729C0CE6500E90B30 /* MockOriginRemoteEntity.swift */; };
+		0C1FEEE229C0CEE700E90B30 /* MockCharactersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEDB29C0CE8A00E90B30 /* MockCharactersDataSource.swift */; };
 		0C875D6229C080F7001A4EAD /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D6129C080F7001A4EAD /* UseCase.swift */; };
 		0C875D6429C08180001A4EAD /* CharactersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D6329C08180001A4EAD /* CharactersPage.swift */; };
 		0C875D6629C0818F001A4EAD /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D6529C0818F001A4EAD /* Character.swift */; };
@@ -202,6 +208,12 @@
 		0C1FEEC229C0CA3E00E90B30 /* LocationRemoteEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRemoteEntityTests.swift; sourceTree = "<group>"; };
 		0C1FEEC429C0CA7100E90B30 /* CharactersDataRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDataRepositoryTests.swift; sourceTree = "<group>"; };
 		0C1FEEC629C0CA8100E90B30 /* CharactersRemoteDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRemoteDataSourceTests.swift; sourceTree = "<group>"; };
+		0C1FEED129C0CE2E00E90B30 /* MockCharactersPageRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharactersPageRemoteEntity.swift; sourceTree = "<group>"; };
+		0C1FEED329C0CE4300E90B30 /* MockCharacterRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterRemoteEntity.swift; sourceTree = "<group>"; };
+		0C1FEED529C0CE4E00E90B30 /* MockPageInfoRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPageInfoRemoteEntity.swift; sourceTree = "<group>"; };
+		0C1FEED729C0CE6500E90B30 /* MockOriginRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOriginRemoteEntity.swift; sourceTree = "<group>"; };
+		0C1FEED929C0CE6F00E90B30 /* MockLocationRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationRemoteEntity.swift; sourceTree = "<group>"; };
+		0C1FEEDB29C0CE8A00E90B30 /* MockCharactersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharactersDataSource.swift; sourceTree = "<group>"; };
 		0C875D6129C080F7001A4EAD /* UseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		0C875D6329C08180001A4EAD /* CharactersPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersPage.swift; sourceTree = "<group>"; };
 		0C875D6529C0818F001A4EAD /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -356,6 +368,7 @@
 		0C1B852429BFA3B500671265 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				0C1FEED029C0CE1200E90B30 /* Characters */,
 				0C1B852A29BFA41500671265 /* MockApi.swift */,
 				0C1B852829BFA41500671265 /* MockNetworkingDataSource.swift */,
 				0C1B852929BFA41500671265 /* MockSession.swift */,
@@ -565,6 +578,19 @@
 				0C1FEEC229C0CA3E00E90B30 /* LocationRemoteEntityTests.swift */,
 				0C1FEEC429C0CA7100E90B30 /* CharactersDataRepositoryTests.swift */,
 				0C1FEEC629C0CA8100E90B30 /* CharactersRemoteDataSourceTests.swift */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		0C1FEED029C0CE1200E90B30 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				0C1FEED129C0CE2E00E90B30 /* MockCharactersPageRemoteEntity.swift */,
+				0C1FEED329C0CE4300E90B30 /* MockCharacterRemoteEntity.swift */,
+				0C1FEED529C0CE4E00E90B30 /* MockPageInfoRemoteEntity.swift */,
+				0C1FEED729C0CE6500E90B30 /* MockOriginRemoteEntity.swift */,
+				0C1FEED929C0CE6F00E90B30 /* MockLocationRemoteEntity.swift */,
+				0C1FEEDB29C0CE8A00E90B30 /* MockCharactersDataSource.swift */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -980,21 +1006,27 @@
 			files = (
 				0C1FEECB29C0CA8700E90B30 /* CharactersDataRepositoryTests.swift in Sources */,
 				0C1B853429BFA42500671265 /* String+Extensions.swift in Sources */,
+				0C1FEEE129C0CEE700E90B30 /* MockOriginRemoteEntity.swift in Sources */,
 				0C1FEECF29C0CA8700E90B30 /* CharacterRemoteEntityTests.swift in Sources */,
 				0C1B853329BFA42500671265 /* URLResponse+Extensions.swift in Sources */,
+				0C1FEEDE29C0CEE700E90B30 /* MockLocationRemoteEntity.swift in Sources */,
 				0C1FEEC829C0CA8700E90B30 /* CharactersRemoteDataSourceTests.swift in Sources */,
 				0C875D9E29C0A437001A4EAD /* MockPageInfo.swift in Sources */,
 				0C1B853829BFA43B00671265 /* NetworkingDataSourceRequestTests.swift in Sources */,
 				0C1B852F29BFA41800671265 /* MockApi.swift in Sources */,
 				0C1B853729BFA43B00671265 /* NetworkingDataSourceHandleResponseTests.swift in Sources */,
 				0C1FEECA29C0CA8700E90B30 /* PageInfoRemoteEntityTests.swift in Sources */,
+				0C1FEEDD29C0CEE700E90B30 /* MockCharacterRemoteEntity.swift in Sources */,
 				0C1FEECE29C0CA8700E90B30 /* LocationRemoteEntityTests.swift in Sources */,
 				0C1FEECC29C0CA8700E90B30 /* CharactersPageRemoteEntityTests.swift in Sources */,
 				0C1B853029BFA41800671265 /* MockNetworkingDataSource.swift in Sources */,
+				0C1FEEDF29C0CEE700E90B30 /* MockPageInfoRemoteEntity.swift in Sources */,
 				0C875D9F29C0A439001A4EAD /* MockCharacter.swift in Sources */,
 				0C1FEEC929C0CA8700E90B30 /* CharactersApiTests.swift in Sources */,
+				0C1FEEE229C0CEE700E90B30 /* MockCharactersDataSource.swift in Sources */,
 				0C1FEECD29C0CA8700E90B30 /* OriginRemoteEntityTests.swift in Sources */,
 				0C1B853B29BFA45900671265 /* ApiTests.swift in Sources */,
+				0C1FEEE029C0CEE700E90B30 /* MockCharactersPageRemoteEntity.swift in Sources */,
 				0C875DA029C0A43B001A4EAD /* MockCharactersPage.swift in Sources */,
 				0C1B852E29BFA41800671265 /* MockSession.swift in Sources */,
 			);
