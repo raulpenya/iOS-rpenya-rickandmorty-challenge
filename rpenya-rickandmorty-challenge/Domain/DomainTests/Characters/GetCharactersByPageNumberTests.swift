@@ -6,30 +6,69 @@
 //
 
 import XCTest
+@testable import Domain
+import Combine
 
 final class GetCharactersByPageNumberTests: XCTestCase {
 
+    let charactersRepository = MockCharactersRepository()
+    let requestValues = GetCharactersByPageNumberRequestValues(page: 1)
+    var cancellableSet: Set<AnyCancellable> = []
+    var response: RepositoryResponse?
+    var charactersPage: CharactersPage?
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        response = nil
+        charactersPage = nil
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func test_GetCharactersByPageNumber_success() {
+        //Given
+        charactersRepository.response = .success
+        let usecase = GetCharactersByPageNumber(charactersRepository: charactersRepository)
+        let expectation = expectation(description: "test_GetCharactersByPageNumber_success")
+        //When
+        usecase.execute(requestValues).sink { [weak self] completion in
+            print(completion)
+            switch completion {
+            case .failure:
+                self?.response = .error
+            case .finished:
+                self?.response = .success
+            }
+            expectation.fulfill()
+        } receiveValue: { [weak self] charactersPage in
+            self?.charactersPage = charactersPage
+        }.store(in: &cancellableSet)
+        waitForExpectations(timeout: 5, handler: nil)
+        //Then
+        XCTAssertEqual(response, .success)
+        XCTAssertNotNil(charactersPage)
+        XCTAssertTrue(charactersRepository.getCharactersByPageNumberCalled)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func test_GetCharactersByPageNumber_error() {
+        //Given
+        charactersRepository.response = .error
+        let usecase = GetCharactersByPageNumber(charactersRepository: charactersRepository)
+        let expectation = expectation(description: "test_GetCharactersByPageNumber_error")
+        //When
+        usecase.execute(requestValues).sink { [weak self] completion in
+            print(completion)
+            switch completion {
+            case .failure:
+                self?.response = .error
+            case .finished:
+                self?.response = .success
+            }
+            expectation.fulfill()
+        } receiveValue: { [weak self] charactersPage in
+            self?.charactersPage = charactersPage
+        }.store(in: &cancellableSet)
+        waitForExpectations(timeout: 5, handler: nil)
+        //Then
+        XCTAssertEqual(response, .error)
+        XCTAssertNil(charactersPage)
+        XCTAssertTrue(charactersRepository.getCharactersByPageNumberCalled)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
