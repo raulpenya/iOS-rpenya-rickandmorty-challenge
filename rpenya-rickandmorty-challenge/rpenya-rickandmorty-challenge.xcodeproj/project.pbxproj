@@ -53,6 +53,13 @@
 		0C875D9929C0A2D0001A4EAD /* CharactersRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D9829C0A2D0001A4EAD /* CharactersRemoteDataSource.swift */; };
 		0C875D9B29C0A2DF001A4EAD /* CharactersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D9A29C0A2DF001A4EAD /* CharactersDataSource.swift */; };
 		0C875D9D29C0A306001A4EAD /* CharactersDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D9C29C0A306001A4EAD /* CharactersDataRepository.swift */; };
+		0C875D9E29C0A437001A4EAD /* MockPageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D7C29C08C1D001A4EAD /* MockPageInfo.swift */; };
+		0C875D9F29C0A439001A4EAD /* MockCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D7829C08BFE001A4EAD /* MockCharacter.swift */; };
+		0C875DA029C0A43B001A4EAD /* MockCharactersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D7A29C08C0E001A4EAD /* MockCharactersPage.swift */; };
+		0C875DA129C0A44C001A4EAD /* MockCharactersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D8129C09119001A4EAD /* MockCharactersRepository.swift */; };
+		0C875DA229C0A452001A4EAD /* MockCharactersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D7A29C08C0E001A4EAD /* MockCharactersPage.swift */; };
+		0C875DA329C0A455001A4EAD /* MockCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D7829C08BFE001A4EAD /* MockCharacter.swift */; };
+		0C875DA429C0A458001A4EAD /* MockPageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D7C29C08C1D001A4EAD /* MockPageInfo.swift */; };
 		0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */; };
 		0C93444F29BF9FD0002DDF2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444E29BF9FD0002DDF2F /* ContentView.swift */; };
 		0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93445029BF9FD2002DDF2F /* Assets.xcassets */; };
@@ -924,11 +931,14 @@
 			files = (
 				0C1B853429BFA42500671265 /* String+Extensions.swift in Sources */,
 				0C1B853329BFA42500671265 /* URLResponse+Extensions.swift in Sources */,
+				0C875D9E29C0A437001A4EAD /* MockPageInfo.swift in Sources */,
 				0C1B853829BFA43B00671265 /* NetworkingDataSourceRequestTests.swift in Sources */,
 				0C1B852F29BFA41800671265 /* MockApi.swift in Sources */,
 				0C1B853729BFA43B00671265 /* NetworkingDataSourceHandleResponseTests.swift in Sources */,
 				0C1B853029BFA41800671265 /* MockNetworkingDataSource.swift in Sources */,
+				0C875D9F29C0A439001A4EAD /* MockCharacter.swift in Sources */,
 				0C1B853B29BFA45900671265 /* ApiTests.swift in Sources */,
+				0C875DA029C0A43B001A4EAD /* MockCharactersPage.swift in Sources */,
 				0C1B852E29BFA41800671265 /* MockSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -964,7 +974,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C875DA129C0A44C001A4EAD /* MockCharactersRepository.swift in Sources */,
 				0C93444F29BF9FD0002DDF2F /* ContentView.swift in Sources */,
+				0C875DA429C0A458001A4EAD /* MockPageInfo.swift in Sources */,
+				0C875DA329C0A455001A4EAD /* MockCharacter.swift in Sources */,
+				0C875DA229C0A452001A4EAD /* MockCharactersPage.swift in Sources */,
 				0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
