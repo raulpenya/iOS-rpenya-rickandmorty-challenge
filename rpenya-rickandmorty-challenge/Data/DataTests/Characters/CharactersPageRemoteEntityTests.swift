@@ -29,11 +29,11 @@ final class CharactersPageRemoteEntityTests: XCTestCase {
         let domainCharactersPage = charactersPage.transformToDomain()
         //Then
         XCTAssertEqual(charactersPage.characters.count, domainCharactersPage.characters.count)
-        XCTAssertEqual(charactersPage.characters[0].id, domainCharactersPage.characters[0].id)
+        XCTAssertEqual(String(charactersPage.characters[0].id!), domainCharactersPage.characters[0].id)
         XCTAssertEqual(charactersPage.characters[0].name, domainCharactersPage.characters[0].name)
         XCTAssertEqual(charactersPage.characters[0].location?.name, domainCharactersPage.characters[0].locationName)
         XCTAssertEqual(charactersPage.characters[0].origin?.name, domainCharactersPage.characters[0].originName)
-        XCTAssertEqual(charactersPage.characters[1].id, domainCharactersPage.characters[1].id)
+        XCTAssertEqual(String(charactersPage.characters[1].id!), domainCharactersPage.characters[1].id)
         XCTAssertEqual(charactersPage.characters[1].name, domainCharactersPage.characters[1].name)
         XCTAssertEqual(charactersPage.characters[1].location?.name, domainCharactersPage.characters[1].locationName)
         XCTAssertEqual(charactersPage.characters[0].origin?.name, domainCharactersPage.characters[0].originName)

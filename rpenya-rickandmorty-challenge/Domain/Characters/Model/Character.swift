@@ -42,7 +42,7 @@ public enum Status: String {
 }
 
 public struct Character {
-    public let id: Int
+    public let id: String
     public let name: String
     public let status: Status
     public let species: String?
@@ -52,7 +52,7 @@ public struct Character {
     public let locationName: String?
     public let imageUrl: String
     
-    public init(id: Int, name: String, status: Status, species: String?, type: String?, gender: Gender, originName: String?, locationName: String?, imageUrl: String) {
+    public init(id: String, name: String, status: Status, species: String?, type: String?, gender: Gender, originName: String?, locationName: String?, imageUrl: String) {
         self.id = id
         self.name = name
         self.status = status

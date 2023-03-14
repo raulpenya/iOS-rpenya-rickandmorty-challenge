@@ -57,6 +57,6 @@ extension CharacterRemoteEntity {
         if let gender = gender {
             genderenum = Gender(rawValue: gender)
         }
-        return Character(id: id, name: name, status: statusenum, species: species, type: type, gender: genderenum, originName: origin?.name, locationName: location?.name, imageUrl: imageUrl)
+        return Character(id: String(id), name: name, status: statusenum, species: species, type: type, gender: genderenum, originName: origin?.name, locationName: location?.name, imageUrl: imageUrl)
     }
 }

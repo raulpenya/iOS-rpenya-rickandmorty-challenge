@@ -27,7 +27,7 @@ final class CharacterRemoteEntityTests: XCTestCase {
         let domainCharacter = character.transformToDomain()
         //Then
         XCTAssertNotNil(domainCharacter)
-        XCTAssertEqual(character.id, domainCharacter?.id)
+        XCTAssertEqual(String(character.id!), domainCharacter?.id)
         XCTAssertEqual(character.name, domainCharacter?.name)
         XCTAssertEqual(character.imageUrl, domainCharacter?.imageUrl)
         XCTAssertEqual(domainCharacter!.gender, Gender.male)
