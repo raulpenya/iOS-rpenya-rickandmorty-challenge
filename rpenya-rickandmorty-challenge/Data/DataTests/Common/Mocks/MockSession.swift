@@ -22,11 +22,11 @@ class MockSession: Session {
     func executeTaskPublisher(for request: URLRequest) -> AnyPublisher<RequestResponse, URLError> {
         switch response {
         case .success:
-            return Result.Publisher((String.getProductsSuccessResponse().data(using: .utf8)!, URLResponse.getURLResponseSuccess())).eraseToAnyPublisher()
+            return Result.Publisher((String.getCharacterSuccessResponse().data(using: .utf8)!, URLResponse.getURLResponseSuccess())).eraseToAnyPublisher()
         case .error:
             return Fail(error: URLError(.timedOut)).eraseToAnyPublisher()
         case .errorHandleResponse:
-            return Result.Publisher((String.getProductsSuccessResponse().data(using: .utf8)!, URLResponse.getNoHTTPURLResponseError())).eraseToAnyPublisher()
+            return Result.Publisher((String.getCharacterSuccessResponse().data(using: .utf8)!, URLResponse.getNoHTTPURLResponseError())).eraseToAnyPublisher()
         case .errorDecode:
             return Result.Publisher((String.getEmptyResponse().data(using: .utf8)!, URLResponse.getURLResponseSuccess())).eraseToAnyPublisher()
         }

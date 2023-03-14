@@ -25,7 +25,7 @@ enum MockApi: Api {
     var url: String {
         switch self {
         case .getGETRequestWithCacheAndHeaders, .getPOSTRequest:
-            return DataConstants.baseUrl + DataConstants.getProductsEndpoint
+            return DataConstants.baseUrl + DataConstants.charactersContext
         case .getErrorRequest:
             return ""
         }

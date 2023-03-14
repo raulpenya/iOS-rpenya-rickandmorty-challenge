@@ -21,7 +21,7 @@ final class NetworkingDataSourceHandleResponseTests: XCTestCase {
     
     func test_handleResponse_success() {
         //Given
-        let data = String.getProductsSuccessResponse().data(using: .utf8)
+        let data = String.getCharacterSuccessResponse().data(using: .utf8)
         let urlResponse = URLResponse.getURLResponseSuccess()
         //When
         do {
@@ -32,7 +32,7 @@ final class NetworkingDataSourceHandleResponseTests: XCTestCase {
         //Then
         XCTAssertNotNil(dataResponse)
         XCTAssertNil(errorResponse)
-        XCTAssertEqual(String(decoding: dataResponse!, as: UTF8.self), String.getProductsSuccessResponse())
+        XCTAssertEqual(String(decoding: dataResponse!, as: UTF8.self), String.getCharacterSuccessResponse())
     }
     
     func test_handleResponse_errorWithData() {
