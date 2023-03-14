@@ -6,30 +6,62 @@
 //
 
 import XCTest
+@testable import Data
+import Domain
 
 final class CharacterRemoteEntityTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func tests_CharacterRemoteEntity_decode() {
+        //Given
+        let json = String.getCharacterSuccessResponse()
+        //When
+        let jsonData = json.data(using: .utf8)!
+        let character: CharacterRemoteEntity? = try? JSONDecoder().decode(CharacterRemoteEntity.self, from: jsonData)
+        //Then
+        XCTAssertNotNil(character)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func tests_CharacterRemoteEntity_transform_success() {
+        //Given
+        let character = MockCharacterRemoteEntity.givenCharacterRemoteEntity1()
+        //When
+        let domainCharacter = character.transformToDomain()
+        //Then
+        XCTAssertNotNil(domainCharacter)
+        XCTAssertEqual(character.id, domainCharacter?.id)
+        XCTAssertEqual(character.name, domainCharacter?.name)
+        XCTAssertEqual(character.imageUrl, domainCharacter?.imageUrl)
+        XCTAssertEqual(domainCharacter!.gender, Gender.male)
+        XCTAssertEqual(domainCharacter!.status, Status.alive)
+        XCTAssertEqual(character.origin?.name, domainCharacter?.origin)
+        XCTAssertEqual(character.location?.name, domainCharacter?.location)
+        XCTAssertEqual(character.type, domainCharacter?.type)
+        XCTAssertEqual(character.species, domainCharacter?.species)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func tests_CharacterRemoteEntity_transform_withoutID() {
+        //Given
+        let character = MockCharacterRemoteEntity.givenCharacterRemoteEntity1(id: nil)
+        //When
+        let domainCharacter = character.transformToDomain()
+        //Then
+        XCTAssertNil(domainCharacter)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func tests_CharacterRemoteEntity_transform_withoutName() {
+        //Given
+        let character = MockCharacterRemoteEntity.givenCharacterRemoteEntity1(name: nil)
+        //When
+        let domainCharacter = character.transformToDomain()
+        //Then
+        XCTAssertNil(domainCharacter)
     }
-
+    
+    func tests_CharacterRemoteEntity_transform_withoutImageUrl() {
+        //Given
+        let character = MockCharacterRemoteEntity.givenCharacterRemoteEntity1(imageUrl: nil)
+        //When
+        let domainCharacter = character.transformToDomain()
+        //Then
+        XCTAssertNil(domainCharacter)
+    }
 }
