@@ -22,15 +22,26 @@ final class CharactersPageRemoteEntityTests: XCTestCase {
         XCTAssertTrue(charactersPage!.pageInfo.totalPages > 0)
     }
     
-//    func tests_CharactersPageRemoteEntity_transform() {
-//        //Given
-//        let products =
-//        //When
-//        let domainProducts = products.transformToDomain()
-//        //Then
-//        XCTAssertEqual(products.products.count, domainProducts.products.count)
-//        XCTAssertEqual(products.products[0].code, domainProducts.products[0].code)
-//        XCTAssertEqual(products.products[0].name, domainProducts.products[0].name)
-//        XCTAssertEqual(products.products[0].price, domainProducts.products[0].price)
-//    }
+    func tests_CharactersPageRemoteEntity_transform_success() {
+        //Given
+        let charactersPage = MockCharactersPageRemoteEntity.givenCharactersPageRemoteEntity()
+        //When
+        let domainCharactersPage = charactersPage.transformToDomain()
+        //Then
+        XCTAssertEqual(charactersPage.characters.count, domainCharactersPage.character.count)
+        XCTAssertEqual(charactersPage.characters[0].id, domainCharactersPage.character[0].id)
+        XCTAssertEqual(charactersPage.characters[0].name, domainCharactersPage.character[0].name)
+        XCTAssertEqual(charactersPage.characters[1].id, domainCharactersPage.character[1].id)
+        XCTAssertEqual(charactersPage.characters[1].name, domainCharactersPage.character[1].name)
+        XCTAssertEqual(charactersPage.pageInfo.totalPages, domainCharactersPage.pageInfo.totalPages)
+    }
+    
+    func tests_CharactersPageRemoteEntity_transform_withCharactersNil() {
+        //Given
+        let charactersPage = MockCharactersPageRemoteEntity.givenCharactersPageRemoteEntity(nilIds: true)
+        //When
+        let domainCharactersPage = charactersPage.transformToDomain()
+        //Then
+        XCTAssertTrue(charactersPage.characters.count > domainCharactersPage.character.count)
+    }
 }

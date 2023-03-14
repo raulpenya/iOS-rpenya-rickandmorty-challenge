@@ -9,7 +9,7 @@ import Foundation
 @testable import Data
 
 struct MockCharactersPageRemoteEntity {
-    static func givenCharactersPageRemoteEntity() -> CharactersPageRemoteEntity {
-        return CharactersPageRemoteEntity(characters: [MockCharacterRemoteEntity.givenCharacterRemoteEntity1(), MockCharacterRemoteEntity.givenCharacterRemoteEntity2()], pageInfo: MockPageInfoRemoteEntity.givenPageInfoRemoteEntity())
+    static func givenCharactersPageRemoteEntity(nilIds: Bool = false) -> CharactersPageRemoteEntity {
+        return CharactersPageRemoteEntity(characters: [MockCharacterRemoteEntity.givenCharacterRemoteEntity1(id: nilIds ? nil : MockCharacterRemoteEntity.id1), MockCharacterRemoteEntity.givenCharacterRemoteEntity2()], pageInfo: MockPageInfoRemoteEntity.givenPageInfoRemoteEntity())
     }
 }
