@@ -54,7 +54,8 @@
 		0C1FEEF829C0F80700E90B30 /* ErrorDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEF729C0F80700E90B30 /* ErrorDescription.swift */; };
 		0C1FEEFA29C0F82900E90B30 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEF929C0F82900E90B30 /* Router.swift */; };
 		0C1FEEFC29C0F84300E90B30 /* AccessibilityIdentifierConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEFB29C0F84200E90B30 /* AccessibilityIdentifierConstants.swift */; };
-		0C1FEEFF29C0FC7E00E90B30 /* PlainGridPaginated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEFE29C0FC7E00E90B30 /* PlainGridPaginated.swift */; };
+		0C1FEEFF29C0FC7E00E90B30 /* PlainListPaginated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEFE29C0FC7E00E90B30 /* PlainListPaginated.swift */; };
+		0C1FEF0329C102A400E90B30 /* PlainGridPaginated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEF0229C102A400E90B30 /* PlainGridPaginated.swift */; };
 		0C875D6229C080F7001A4EAD /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D6129C080F7001A4EAD /* UseCase.swift */; };
 		0C875D6429C08180001A4EAD /* CharactersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D6329C08180001A4EAD /* CharactersPage.swift */; };
 		0C875D6629C0818F001A4EAD /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D6529C0818F001A4EAD /* Character.swift */; };
@@ -229,7 +230,8 @@
 		0C1FEEF729C0F80700E90B30 /* ErrorDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDescription.swift; sourceTree = "<group>"; };
 		0C1FEEF929C0F82900E90B30 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0C1FEEFB29C0F84200E90B30 /* AccessibilityIdentifierConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifierConstants.swift; sourceTree = "<group>"; };
-		0C1FEEFE29C0FC7E00E90B30 /* PlainGridPaginated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainGridPaginated.swift; sourceTree = "<group>"; };
+		0C1FEEFE29C0FC7E00E90B30 /* PlainListPaginated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainListPaginated.swift; sourceTree = "<group>"; };
+		0C1FEF0229C102A400E90B30 /* PlainGridPaginated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainGridPaginated.swift; sourceTree = "<group>"; };
 		0C875D6129C080F7001A4EAD /* UseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		0C875D6329C08180001A4EAD /* CharactersPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersPage.swift; sourceTree = "<group>"; };
 		0C875D6529C0818F001A4EAD /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -639,7 +641,8 @@
 		0C1FEEFD29C0FC4E00E90B30 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
-				0C1FEEFE29C0FC7E00E90B30 /* PlainGridPaginated.swift */,
+				0C1FEEFE29C0FC7E00E90B30 /* PlainListPaginated.swift */,
+				0C1FEF0229C102A400E90B30 /* PlainGridPaginated.swift */,
 			);
 			name = CommonUI;
 			sourceTree = "<group>";
@@ -1115,10 +1118,11 @@
 				0C1FEEF629C0F7FB00E90B30 /* ListItems.swift in Sources */,
 				0C1FEEFC29C0F84300E90B30 /* AccessibilityIdentifierConstants.swift in Sources */,
 				0C875DA329C0A455001A4EAD /* MockCharacter.swift in Sources */,
-				0C1FEEFF29C0FC7E00E90B30 /* PlainGridPaginated.swift in Sources */,
+				0C1FEEFF29C0FC7E00E90B30 /* PlainListPaginated.swift in Sources */,
 				0C1FEEF829C0F80700E90B30 /* ErrorDescription.swift in Sources */,
 				0C875DA229C0A452001A4EAD /* MockCharactersPage.swift in Sources */,
 				0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */,
+				0C1FEF0329C102A400E90B30 /* PlainGridPaginated.swift in Sources */,
 				0C1FEEF529C0F7FB00E90B30 /* ButtonItem.swift in Sources */,
 				0C1FEEEF29C0F2CB00E90B30 /* CharacterThinViewEntity.swift in Sources */,
 			);
