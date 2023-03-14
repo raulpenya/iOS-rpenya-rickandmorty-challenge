@@ -11,6 +11,11 @@ protocol ListItems {
     var items: [AnyItem] { get set }
 }
 
+protocol ListItemsPaginated: ListItems {
+    var isListFull: Bool { get set }
+    var fetchData: (() -> Void) { get set }
+}
+
 struct AnyItem: Identifiable {
     var id = UUID()
     let item: ListItem
