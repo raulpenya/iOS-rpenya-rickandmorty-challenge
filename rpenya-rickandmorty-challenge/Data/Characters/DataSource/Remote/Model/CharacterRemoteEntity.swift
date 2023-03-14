@@ -66,11 +66,11 @@ extension CharacterRemoteEntity {
         guard let id = id, let name = name, let imageUrl = imageUrl else { return nil }
         var statusenum: Status = .unknown
         if let status = status {
-            statusenum = Status(rawValue: status) ?? .unknown
+            statusenum = Status(rawValue: status)
         }
         var genderenum: Gender = .unknown
         if let gender = gender {
-            genderenum = Gender(rawValue: gender) ?? .unknown
+            genderenum = Gender(rawValue: gender)
         }
         return Character(id: id, name: name, status: statusenum, species: species ?? "", type: type ?? "", gender: genderenum, origin: origin?.name ?? "", location: location?.name ?? "", imageUrl: imageUrl)
     }

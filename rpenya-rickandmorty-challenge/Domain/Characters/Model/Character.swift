@@ -12,12 +12,29 @@ public enum Gender: String {
     case male = "Male"
     case genderless = "Genderless"
     case unknown = "unknown"
+    
+    public init(rawValue: String) {
+        switch rawValue {
+        case "Female": self = .female
+        case "Male": self = .male
+        case "Genderless": self = .genderless
+        default: self = .unknown
+        }
+    }
 }
 
 public enum Status: String {
     case alive = "Alive"
     case dead = "Dead"
     case unknown = "unknown"
+    
+    public init(rawValue: String) {
+        switch rawValue {
+        case "Alive": self = .alive
+        case "Dead": self = .dead
+        default: self = .unknown
+        }
+    }
 }
 
 public struct Character {
