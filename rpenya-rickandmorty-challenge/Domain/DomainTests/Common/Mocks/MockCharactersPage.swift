@@ -6,3 +6,10 @@
 //
 
 import Foundation
+@testable import Domain
+
+struct MockCharactersPage {
+    static func givenCharactersPage() -> CharactersPage {
+        return CharactersPage(character: [MockCharacter.givenCharacter1(), MockCharacter.givenCharacter2()], pageInfo: MockPageInfo.givenPageInfo())
+    }
+}

@@ -7,17 +7,17 @@
 
 import Foundation
 
-public enum Gender {
-    case female
-    case male
-    case genderless
-    case unknown
+public enum Gender: String {
+    case female = "Female"
+    case male = "Male"
+    case genderless = "Genderless"
+    case unknown = "unknown"
 }
 
-public enum Status {
-    case alive
-    case dead
-    case unknown
+public enum Status: String {
+    case alive = "Alive"
+    case dead = "Dead"
+    case unknown = "unknown"
 }
 
 public struct Character {
