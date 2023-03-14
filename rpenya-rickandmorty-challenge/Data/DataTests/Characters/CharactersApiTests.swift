@@ -6,30 +6,60 @@
 //
 
 import XCTest
+@testable import Data
+import Domain
 
 final class CharactersApiTests: XCTestCase {
-
+    
+    var urlRequest: URLRequest?
+    var apiError: Error?
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        urlRequest = nil
+        apiError = nil
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func test_getCharactersByPageNumber_request() {
+        func test_getCharactersByPageNumber_request() {
+            //Given
+            let page = 1
+            let requestValues = GetCharactersByPageNumberRequestValues(page: page)
+            //When
+            do {
+                urlRequest = try CharactersApi.getCharactersByPageNumber(requestValues).asURLRequest()
+            } catch {
+                apiError = error
+            }
+            //Then
+            XCTAssertNil(apiError)
+            XCTAssertNotNil(urlRequest)
+            XCTAssertEqual(urlRequest?.url?.absoluteString, DataConstants.baseUrl + DataConstants.charactersContext + "?page=\(String(page))")
+            XCTAssertEqual(urlRequest?.httpBody, nil)
+            XCTAssertEqual(urlRequest?.allHTTPHeaderFields?.count, 2)
+            XCTAssertEqual(urlRequest?.cachePolicy, .useProtocolCachePolicy)
+            XCTAssertEqual(urlRequest?.httpMethod, HTTPMethod.get.rawValue)
         }
     }
-
+    
+    func test_getCharacterById_request() {
+        func test_getCharacterById_request() {
+            //Given
+            let id = "812"
+            let requestValues = GetCharacterByIdRequestValues(id: "812")
+            //When
+            do {
+                urlRequest = try CharactersApi.getCharacterById(requestValues).asURLRequest()
+            } catch {
+                apiError = error
+            }
+            //Then
+            XCTAssertNil(apiError)
+            XCTAssertNotNil(urlRequest)
+            XCTAssertEqual(urlRequest?.url?.absoluteString, DataConstants.baseUrl + DataConstants.charactersContext + id)
+            XCTAssertEqual(urlRequest?.httpBody, nil)
+            XCTAssertEqual(urlRequest?.allHTTPHeaderFields?.count, 2)
+            XCTAssertEqual(urlRequest?.cachePolicy, .useProtocolCachePolicy)
+            XCTAssertEqual(urlRequest?.httpMethod, HTTPMethod.get.rawValue)
+        }
+    }
 }
