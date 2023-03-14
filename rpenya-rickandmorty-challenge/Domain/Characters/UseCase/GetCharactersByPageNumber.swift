@@ -23,9 +23,8 @@ public class GetCharactersByPageNumber: UseCase {
 }
 
 public class GetCharactersByPageNumberRequestValues: RequestValues {
-    let page: Int
-    
-    init(page: Int) {
+    public let page: Int
+    public init(page: Int) {
         self.page = page
     }
 }

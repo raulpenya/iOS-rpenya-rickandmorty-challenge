@@ -30,10 +30,10 @@ struct MockCharacter {
     static let imageUrl2: String = "https://rickandmortyapi.com/api/character/avatar/822.jpeg"
     
     static func givenCharacter1() -> Character {
-        return Character(id: id1, name: name1, status: status1, species: species1, type: type1, gender: gender1, origin: origin1, location: location1, imageUrl: imageUrl1)
+        return Character(id: id1, name: name1, status: status1, species: species1, type: type1, gender: gender1, originName: origin1, locationName: location1, imageUrl: imageUrl1)
     }
     
     static func givenCharacter2() -> Character {
-        return Character(id: id2, name: name2, status: status2, species: species2, type: type2, gender: gender2, origin: origin2, location: location2, imageUrl: imageUrl2)
+        return Character(id: id2, name: name2, status: status2, species: species2, type: type2, gender: gender2, originName: origin2, locationName: location2, imageUrl: imageUrl2)
     }
 }

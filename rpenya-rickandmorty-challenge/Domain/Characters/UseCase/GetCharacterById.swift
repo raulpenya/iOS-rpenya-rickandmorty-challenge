@@ -23,9 +23,8 @@ class GetCharacterById: UseCase {
 }
 
 public class GetCharacterByIdRequestValues: RequestValues {
-    let id: String
-    
-    init(id: String) {
+    public let id: String
+    public init(id: String) {
         self.id = id
     }
 }

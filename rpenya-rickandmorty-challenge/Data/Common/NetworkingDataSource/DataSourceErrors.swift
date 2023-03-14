@@ -12,6 +12,7 @@ public enum DataSourceErrors: Int, Error {
     case instanceException = 800
     case castHTTPURLResponseException = 801
     case requestException = 802
+    case parametersException = 803
     public var localizedDescription: String {
         switch self {
         case .networkingRequestError:
@@ -22,6 +23,8 @@ public enum DataSourceErrors: Int, Error {
             return "DataSourceErrors :: Casting HTTPURLResponse exception"
         case .requestException:
             return "DataSourceErrors :: URLRequest exception"
+        case .parametersException:
+            return "DataSourceErrors :: Parameters exception"
         }
     }
     public var code: Int { return rawValue }

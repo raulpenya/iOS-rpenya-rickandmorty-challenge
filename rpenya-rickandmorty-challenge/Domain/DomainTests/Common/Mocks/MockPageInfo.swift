@@ -13,6 +13,6 @@ struct MockPageInfo {
     static let totalPages: Int = 42
     
     static func givenPageInfo(page: Int = MockPageInfo.page) -> PageInfo {
-        return PageInfo(page: page, totalPages: totalPages)
+        return PageInfo(nextPage: page, totalPages: totalPages)
     }
 }
