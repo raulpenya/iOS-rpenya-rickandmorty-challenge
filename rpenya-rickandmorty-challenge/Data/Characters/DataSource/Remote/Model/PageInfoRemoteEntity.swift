@@ -8,13 +8,9 @@
 import Foundation
 import Domain
 
-struct PageInfoRemoteEntity: Decodable, Equatable {
+struct PageInfoRemoteEntity: Decodable {
 //    let page: Int
     let totalPages: Int
-    
-//    static func == (lhs: Self, rhs: Self) -> Bool {
-//        return lhs.page == rhs.page
-//    }
     
     enum CodingKeys: String, CodingKey {
         case totalPages = "pages"

@@ -44,19 +44,19 @@ public struct Character {
     public let species: String?
     public let type: String?
     public let gender: Gender
-    public let origin: String?
-    public let location: String?
+    public let originName: String?
+    public let locationName: String?
     public let imageUrl: String
     
-    public init(id: String, name: String, status: Status, species: String, type: String, gender: Gender, origin: String, location: String, imageUrl: String) {
+    public init(id: String, name: String, status: Status, species: String?, type: String?, gender: Gender, originName: String?, locationName: String?, imageUrl: String) {
         self.id = id
         self.name = name
         self.status = status
         self.species = species
         self.type = type
         self.gender = gender
-        self.origin = origin
-        self.location = location
+        self.originName = originName
+        self.locationName = locationName
         self.imageUrl = imageUrl
     }
 }

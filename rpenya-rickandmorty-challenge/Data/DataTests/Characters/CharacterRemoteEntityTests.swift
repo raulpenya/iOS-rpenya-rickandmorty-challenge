@@ -32,8 +32,8 @@ final class CharacterRemoteEntityTests: XCTestCase {
         XCTAssertEqual(character.imageUrl, domainCharacter?.imageUrl)
         XCTAssertEqual(domainCharacter!.gender, Gender.male)
         XCTAssertEqual(domainCharacter!.status, Status.alive)
-        XCTAssertEqual(character.origin?.name, domainCharacter?.origin)
-        XCTAssertEqual(character.location?.name, domainCharacter?.location)
+        XCTAssertEqual(character.origin?.name, domainCharacter?.originName)
+        XCTAssertEqual(character.location?.name, domainCharacter?.locationName)
         XCTAssertEqual(character.type, domainCharacter?.type)
         XCTAssertEqual(character.species, domainCharacter?.species)
     }

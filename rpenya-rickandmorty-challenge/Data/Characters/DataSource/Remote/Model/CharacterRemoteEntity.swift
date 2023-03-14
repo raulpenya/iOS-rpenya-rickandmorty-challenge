@@ -8,7 +8,7 @@
 import Foundation
 import Domain
 
-struct CharacterRemoteEntity: Decodable, Equatable {
+struct CharacterRemoteEntity: Decodable {
     let id: String?
     let name: String?
     let status: String?
@@ -55,10 +55,6 @@ struct CharacterRemoteEntity: Decodable, Equatable {
         case location = "location"
         case imageUrl = "image"
     }
-    
-    static func == (lhs: Self, rhs: Self) -> Bool {
-        return lhs.id == rhs.id
-    }
 }
 
 extension CharacterRemoteEntity {
@@ -72,6 +68,6 @@ extension CharacterRemoteEntity {
         if let gender = gender {
             genderenum = Gender(rawValue: gender)
         }
-        return Character(id: id, name: name, status: statusenum, species: species ?? "", type: type ?? "", gender: genderenum, origin: origin?.name ?? "", location: location?.name ?? "", imageUrl: imageUrl)
+        return Character(id: id, name: name, status: statusenum, species: species, type: type, gender: genderenum, originName: origin?.name, locationName: location?.name, imageUrl: imageUrl)
     }
 }
