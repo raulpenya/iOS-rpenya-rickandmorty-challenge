@@ -19,7 +19,7 @@ final class CharactersRemoteDataSourceTests: XCTestCase {
     
     func test_getCharactersByPageNumber_success() {
         //Given
-        let expectation = expectation(description: "test_session_executeTaskPublisher")
+        let expectation = expectation(description: "test_getCharactersByPageNumber_success")
         //When
         dataSource.getCharactersByPageNumber(GetCharactersByPageNumberRequestValues(page: 1)).sink { [weak self] completion in
             switch completion {
@@ -36,10 +36,30 @@ final class CharactersRemoteDataSourceTests: XCTestCase {
         XCTAssertEqual(response, .success)
         XCTAssertNil(errorResponse)
     }
+    
+    func test_getCharactersByPageNumber_error() {
+        //Given
+        let expectation = expectation(description: "test_getCharactersByPageNumber_error")
+        //When
+        dataSource.getCharactersByPageNumber(GetCharactersByPageNumberRequestValues(page: 800)).sink { [weak self] completion in
+            switch completion {
+            case .failure(let error):
+                self?.response = .error
+                self?.errorResponse = error
+            case .finished:
+                self?.response = .success
+            }
+            expectation.fulfill()
+        } receiveValue: { _ in }.store(in: &cancellableSet)
+        waitForExpectations(timeout: 5, handler: nil)
+        //Then
+        XCTAssertEqual(response, .error)
+        XCTAssertNotNil(errorResponse)
+    }
 
     func test_getCharacterById_success() {
         //Given
-        let expectation = expectation(description: "test_session_executeTaskPublisher")
+        let expectation = expectation(description: "test_getCharacterById_success")
         //When
         dataSource.getCharacterById(GetCharacterByIdRequestValues(id: "812")).sink { [weak self] completion in
             switch completion {
@@ -55,5 +75,25 @@ final class CharactersRemoteDataSourceTests: XCTestCase {
         //Then
         XCTAssertEqual(response, .success)
         XCTAssertNil(errorResponse)
+    }
+    
+    func test_getCharacterById_error() {
+        //Given
+        let expectation = expectation(description: "test_getCharacterById_error")
+        //When
+        dataSource.getCharacterById(GetCharacterByIdRequestValues(id: "10000")).sink { [weak self] completion in
+            switch completion {
+            case .failure(let error):
+                self?.response = .error
+                self?.errorResponse = error
+            case .finished:
+                self?.response = .success
+            }
+            expectation.fulfill()
+        } receiveValue: { _ in }.store(in: &cancellableSet)
+        waitForExpectations(timeout: 5, handler: nil)
+        //Then
+        XCTAssertEqual(response, .error)
+        XCTAssertNotNil(errorResponse)
     }
 }

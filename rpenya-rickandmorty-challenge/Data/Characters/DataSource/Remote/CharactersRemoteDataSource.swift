@@ -20,7 +20,7 @@ public class CharactersRemoteDataSource: CharactersDataSource, NetworkingDataSou
     public func getCharacterById(_ requestValues: GetCharacterByIdRequestValues) -> AnyPublisher<Character, Error> {
         return request(resource: CharactersResources.getCharacterByIdResource(requestValues)).flatMap { character in
             guard let character = character else {
-                return Fail<Character, Error>(error: DataSourceErrors.castHTTPURLResponseException).eraseToAnyPublisher()
+                return Fail<Character, Error>(error: DataSourceErrors.parametersException).eraseToAnyPublisher()
             }
             return Result<Character, Error>.Publisher(character).eraseToAnyPublisher()
         }.eraseToAnyPublisher()

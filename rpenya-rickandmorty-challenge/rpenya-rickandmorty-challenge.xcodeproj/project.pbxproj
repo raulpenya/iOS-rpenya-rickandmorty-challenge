@@ -74,7 +74,6 @@
 		0C875DA229C0A452001A4EAD /* MockCharactersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D7A29C08C0E001A4EAD /* MockCharactersPage.swift */; };
 		0C875DA329C0A455001A4EAD /* MockCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D7829C08BFE001A4EAD /* MockCharacter.swift */; };
 		0C875DA429C0A458001A4EAD /* MockPageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D7C29C08C1D001A4EAD /* MockPageInfo.swift */; };
-		0C875DA729C0AAA1001A4EAD /* KeyedDecodingContainer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875DA629C0AAA1001A4EAD /* KeyedDecodingContainer+Extensions.swift */; };
 		0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */; };
 		0C93444F29BF9FD0002DDF2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444E29BF9FD0002DDF2F /* ContentView.swift */; };
 		0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93445029BF9FD2002DDF2F /* Assets.xcassets */; };
@@ -231,7 +230,6 @@
 		0C875D9829C0A2D0001A4EAD /* CharactersRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRemoteDataSource.swift; sourceTree = "<group>"; };
 		0C875D9A29C0A2DF001A4EAD /* CharactersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDataSource.swift; sourceTree = "<group>"; };
 		0C875D9C29C0A306001A4EAD /* CharactersDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDataRepository.swift; sourceTree = "<group>"; };
-		0C875DA629C0AAA1001A4EAD /* KeyedDecodingContainer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+Extensions.swift"; sourceTree = "<group>"; };
 		0C93444929BF9FD0002DDF2F /* rpenya-rickandmorty-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-rickandmorty-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeApp.swift; sourceTree = "<group>"; };
 		0C93444E29BF9FD0002DDF2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -305,8 +303,8 @@
 			children = (
 				0C1B852329BFA3AF00671265 /* Common */,
 				0C1B852729BFA40B00671265 /* NetworkingDataSource */,
-				0C1B853929BFA45700671265 /* ApiTests.swift */,
 				0C1FEEB129C0C95A00E90B30 /* Characters */,
+				0C1B853929BFA45700671265 /* ApiTests.swift */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
@@ -323,7 +321,6 @@
 		0C1B851029BFA25E00671265 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				0C875DA529C0AA8F001A4EAD /* Extensions */,
 				0C1B851129BFA26900671265 /* Model */,
 				0C1B851229BFA26E00671265 /* NetworkingDataSource */,
 				0C1B851F29BFA2DD00671265 /* DataConstants.swift */,
@@ -594,14 +591,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0C875DA529C0AA8F001A4EAD /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				0C875DA629C0AAA1001A4EAD /* KeyedDecodingContainer+Extensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		0C93444029BF9FD0002DDF2F = {
@@ -979,7 +968,6 @@
 				0C875D9D29C0A306001A4EAD /* CharactersDataRepository.swift in Sources */,
 				0C875D8729C09AE2001A4EAD /* CharacterRemoteEntity.swift in Sources */,
 				0C1B851D29BFA2D400671265 /* Session.swift in Sources */,
-				0C875DA729C0AAA1001A4EAD /* KeyedDecodingContainer+Extensions.swift in Sources */,
 				0C875D8529C09AD5001A4EAD /* CharactersPageRemoteEntity.swift in Sources */,
 				0C1B851829BFA2CB00671265 /* Resource.swift in Sources */,
 				0C875D8929C09AF6001A4EAD /* PageInfoRemoteEntity.swift in Sources */,

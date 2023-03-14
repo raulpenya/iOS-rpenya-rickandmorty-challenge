@@ -9,7 +9,7 @@ import Foundation
 @testable import Data
 
 struct MockCharacterRemoteEntity {
-    static let id1 = "1"
+    static let id1 = 1
     static let name1 = "Rick Sanchez"
     static let status1 = "Alive"
     static let species1 = "Human"
@@ -19,7 +19,7 @@ struct MockCharacterRemoteEntity {
     static let gender1 = "Male"
     static let imageUrl1 = "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
     
-    static let id2 = "2"
+    static let id2 = 2
     static let name2 = "Morty Smith"
     static let status2 = "Alive"
     static let species2 = "Human"
@@ -29,7 +29,7 @@ struct MockCharacterRemoteEntity {
     static let gender2 = "Male"
     static let imageUrl2 = "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
     
-    static func givenCharacterRemoteEntity1(id: String? = id1, name: String? = name1, imageUrl: String? = imageUrl1) -> CharacterRemoteEntity {
+    static func givenCharacterRemoteEntity1(id: Int? = id1, name: String? = name1, imageUrl: String? = imageUrl1) -> CharacterRemoteEntity {
         return CharacterRemoteEntity(id: id, name: name, status: status1, species: species1, type: type1, origin: origin1, location: location1, gender: gender1, imageUrl: imageUrl)
     }
     

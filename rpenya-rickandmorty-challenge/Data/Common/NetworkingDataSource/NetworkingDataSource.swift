@@ -22,7 +22,10 @@ extension NetworkingDataSource {
                 throw  DataSourceErrors.instanceException
             }
             return try strongSelf.handleResponse(data: data, response: response)
-        }.decode(type: T.self, decoder: JSONDecoder()).compactMap { resource.transform($0) }.eraseToAnyPublisher()
+        }.decode(type: T.self, decoder: JSONDecoder()).compactMap {
+            resource.transform($0)
+            
+        }.eraseToAnyPublisher()
     }
     
     func handleResponse(data: Data, response: URLResponse) throws -> Data {

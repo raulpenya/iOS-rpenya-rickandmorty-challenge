@@ -9,7 +9,7 @@ import Foundation
 @testable import Domain
 
 struct MockCharacter {
-    static let id1: String = "821"
+    static let id1: Int = 821
     static let name1: String = "Gotron"
     static let status1: Status = .unknown
     static let species1: String = "Robot"
@@ -19,7 +19,7 @@ struct MockCharacter {
     static let location1: String = "Earth (Replacement Dimension)"
     static let imageUrl1: String = "https://rickandmortyapi.com/api/character/avatar/821.jpeg"
     
-    static let id2: String = "822"
+    static let id2: Int = 822
     static let name2: String = "Young Jerry"
     static let status2: Status = .unknown
     static let species2: String = "Human"

@@ -9,7 +9,7 @@ import Foundation
 import Domain
 
 struct CharacterRemoteEntity: Decodable, Identifiable {
-    let id: String?
+    let id: Int?
     let name: String?
     let status: String?
     let species: String?
@@ -19,7 +19,7 @@ struct CharacterRemoteEntity: Decodable, Identifiable {
     let gender: String?
     let imageUrl: String?
     
-    init(id: String?, name: String?, status: String?, species: String?, type: String?, origin: OriginRemoteEntity?, location: LocationRemoteEntity?, gender: String?, imageUrl: String?) {
+    init(id: Int?, name: String?, status: String?, species: String?, type: String?, origin: OriginRemoteEntity?, location: LocationRemoteEntity?, gender: String?, imageUrl: String?) {
         self.id = id
         self.name = name
         self.status = status
@@ -29,19 +29,6 @@ struct CharacterRemoteEntity: Decodable, Identifiable {
         self.location = location
         self.gender = gender
         self.imageUrl = imageUrl
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = container.decodeIntAsStringIfPresent(forKey: .id)
-        name = try? container.decodeIfPresent(String.self, forKey: .name)
-        status = try? container.decodeIfPresent(String.self, forKey: .status)
-        species = try? container.decodeIfPresent(String.self, forKey: .species)
-        type = try? container.decodeIfPresent(String.self, forKey: .type)
-        gender = try? container.decodeIfPresent(String.self, forKey: .gender)
-        origin = try? container.decodeIfPresent(OriginRemoteEntity.self, forKey: .origin)
-        location = try? container.decodeIfPresent(LocationRemoteEntity.self, forKey: .location)
-        imageUrl = try? container.decodeIfPresent(String.self, forKey: .imageUrl)
     }
     
     enum CodingKeys: String, CodingKey {
@@ -59,7 +46,9 @@ struct CharacterRemoteEntity: Decodable, Identifiable {
 
 extension CharacterRemoteEntity {
     func transformToDomain() -> Character? {
-        guard let id = id, let name = name, let imageUrl = imageUrl else { return nil }
+        guard let id = id,
+                let name = name,
+                let imageUrl = imageUrl else { return nil }
         var statusenum: Status = .unknown
         if let status = status {
             statusenum = Status(rawValue: status)
