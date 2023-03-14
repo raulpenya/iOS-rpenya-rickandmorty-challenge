@@ -29,6 +29,11 @@ enum State: Equatable {
 
 class CharactersListViewModel: ObservableObject {
     @Published private(set) var state = State.idle
+    let getCharactersByPageNumberUseCase: GetCharactersByPageNumber
+    var cancellableSet: Set<AnyCancellable> = []
+//    var chrarcters: [Charac]
     
-    
+    init(getCharactersByPageNumberUseCase: GetCharactersByPageNumber) {
+        self.getCharactersByPageNumberUseCase = getCharactersByPageNumberUseCase
+    }
 }

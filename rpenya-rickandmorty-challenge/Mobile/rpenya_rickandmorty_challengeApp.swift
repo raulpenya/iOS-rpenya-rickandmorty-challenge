@@ -11,7 +11,7 @@ import SwiftUI
 struct rpenya_rickandmorty_challengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CharactersListAssemblerInjection().resolve()
         }
     }
 }
