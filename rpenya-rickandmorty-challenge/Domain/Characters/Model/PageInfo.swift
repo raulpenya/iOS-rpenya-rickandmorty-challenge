@@ -8,11 +8,11 @@
 import Foundation
 
 public struct PageInfo {
-    public let page: Int
+    public let nextPage: Int?
     public let totalPages: Int
     
-    public init(page: Int, totalPages: Int) {
-        self.page = page
+    public init(nextPage: Int?, totalPages: Int) {
+        self.nextPage = nextPage
         self.totalPages = totalPages
     }
 }
