@@ -1,14 +1,13 @@
 //
-//  DomainTests.swift
-//  DomainTests
+//  GetCharactersByPageNumberTests.swift
+//  rpenya-rickandmorty-challengeTests
 //
-//  Created by raulbot on 13/3/23.
+//  Created by raulbot on 14/3/23.
 //
 
 import XCTest
-@testable import Domain
 
-final class DomainTests: XCTestCase {
+final class GetCharactersByPageNumberTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
