@@ -21,13 +21,25 @@ public enum Status: String {
 }
 
 public struct Character {
-    let id: String
-    let name: String
-    let status: Status
-    let species: String
-    let type: String
-    let gender: Gender
-    let origin: String
-    let location: String
-    let imageUrl: String
+    public let id: String
+    public let name: String
+    public let status: Status
+    public let species: String
+    public let type: String
+    public let gender: Gender
+    public let origin: String
+    public let location: String
+    public let imageUrl: String
+    
+    public init(id: String, name: String, status: Status, species: String, type: String, gender: Gender, origin: String, location: String, imageUrl: String) {
+        self.id = id
+        self.name = name
+        self.status = status
+        self.species = species
+        self.type = type
+        self.gender = gender
+        self.origin = origin
+        self.location = location
+        self.imageUrl = imageUrl
+    }
 }

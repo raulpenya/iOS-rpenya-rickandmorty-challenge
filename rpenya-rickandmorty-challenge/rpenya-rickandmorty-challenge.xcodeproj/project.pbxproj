@@ -43,6 +43,13 @@
 		0C875D7F29C08D5E001A4EAD /* MockCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D7829C08BFE001A4EAD /* MockCharacter.swift */; };
 		0C875D8029C08D60001A4EAD /* MockPageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D7C29C08C1D001A4EAD /* MockPageInfo.swift */; };
 		0C875D8329C09174001A4EAD /* MockCharactersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D8129C09119001A4EAD /* MockCharactersRepository.swift */; };
+		0C875D8529C09AD5001A4EAD /* CharactersPageRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D8429C09AD5001A4EAD /* CharactersPageRemoteEntity.swift */; };
+		0C875D8729C09AE2001A4EAD /* CharacterRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D8629C09AE2001A4EAD /* CharacterRemoteEntity.swift */; };
+		0C875D8929C09AF6001A4EAD /* PageInfoRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D8829C09AF6001A4EAD /* PageInfoRemoteEntity.swift */; };
+		0C875D8B29C09B13001A4EAD /* CharactersApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D8A29C09B13001A4EAD /* CharactersApi.swift */; };
+		0C875D8D29C09B26001A4EAD /* CharactersResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D8C29C09B26001A4EAD /* CharactersResources.swift */; };
+		0C875D9329C09EBF001A4EAD /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B84F329BFA1BC00671265 /* Domain.framework */; };
+		0C875D9429C09EBF001A4EAD /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B84F329BFA1BC00671265 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */; };
 		0C93444F29BF9FD0002DDF2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444E29BF9FD0002DDF2F /* ContentView.swift */; };
 		0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93445029BF9FD2002DDF2F /* Assets.xcassets */; };
@@ -94,6 +101,13 @@
 			remoteGlobalIDString = 0C1B84F229BFA1BC00671265;
 			remoteInfo = Domain;
 		};
+		0C875D9529C09EBF001A4EAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C93444129BF9FD0002DDF2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C1B84F229BFA1BC00671265;
+			remoteInfo = Domain;
+		};
 		0C93445A29BF9FD3002DDF2F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0C93444129BF9FD0002DDF2F /* Project object */;
@@ -119,6 +133,17 @@
 			files = (
 				0C1B850929BFA1BD00671265 /* Domain.framework in Embed Frameworks */,
 				0C1B84E629BFA1B200671265 /* Data.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C875D9729C09EBF001A4EAD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0C875D9429C09EBF001A4EAD /* Domain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +185,11 @@
 		0C875D7A29C08C0E001A4EAD /* MockCharactersPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharactersPage.swift; sourceTree = "<group>"; };
 		0C875D7C29C08C1D001A4EAD /* MockPageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPageInfo.swift; sourceTree = "<group>"; };
 		0C875D8129C09119001A4EAD /* MockCharactersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharactersRepository.swift; sourceTree = "<group>"; };
+		0C875D8429C09AD5001A4EAD /* CharactersPageRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersPageRemoteEntity.swift; sourceTree = "<group>"; };
+		0C875D8629C09AE2001A4EAD /* CharacterRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRemoteEntity.swift; sourceTree = "<group>"; };
+		0C875D8829C09AF6001A4EAD /* PageInfoRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageInfoRemoteEntity.swift; sourceTree = "<group>"; };
+		0C875D8A29C09B13001A4EAD /* CharactersApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersApi.swift; sourceTree = "<group>"; };
+		0C875D8C29C09B26001A4EAD /* CharactersResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersResources.swift; sourceTree = "<group>"; };
 		0C93444929BF9FD0002DDF2F /* rpenya-rickandmorty-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-rickandmorty-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeApp.swift; sourceTree = "<group>"; };
 		0C93444E29BF9FD0002DDF2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -176,6 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C875D9329C09EBF001A4EAD /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +373,11 @@
 		0C1B853F29BFA4AF00671265 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C875D8429C09AD5001A4EAD /* CharactersPageRemoteEntity.swift */,
+				0C875D8629C09AE2001A4EAD /* CharacterRemoteEntity.swift */,
+				0C875D8829C09AF6001A4EAD /* PageInfoRemoteEntity.swift */,
+				0C875D8A29C09B13001A4EAD /* CharactersApi.swift */,
+				0C875D8C29C09B26001A4EAD /* CharactersResources.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -478,6 +514,13 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		0C875D9229C09EBF001A4EAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0C93444029BF9FD0002DDF2F = {
 			isa = PBXGroup;
 			children = (
@@ -485,6 +528,7 @@
 				0C93447729BFA05F002DDF2F /* Domain */,
 				0C93447829BFA067002DDF2F /* Mobile */,
 				0C93444A29BF9FD0002DDF2F /* Products */,
+				0C875D9229C09EBF001A4EAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -601,10 +645,12 @@
 				0C1B84CC29BFA1B100671265 /* Sources */,
 				0C1B84CD29BFA1B100671265 /* Frameworks */,
 				0C1B84CE29BFA1B100671265 /* Resources */,
+				0C875D9729C09EBF001A4EAD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0C875D9629C09EBF001A4EAD /* PBXTargetDependency */,
 			);
 			name = Data;
 			productName = Data;
@@ -844,12 +890,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C875D8B29C09B13001A4EAD /* CharactersApi.swift in Sources */,
 				0C1B851729BFA2CB00671265 /* Api.swift in Sources */,
 				0C1B851C29BFA2D400671265 /* DataSourceErrors.swift in Sources */,
+				0C875D8729C09AE2001A4EAD /* CharacterRemoteEntity.swift in Sources */,
 				0C1B851D29BFA2D400671265 /* Session.swift in Sources */,
+				0C875D8529C09AD5001A4EAD /* CharactersPageRemoteEntity.swift in Sources */,
 				0C1B851829BFA2CB00671265 /* Resource.swift in Sources */,
+				0C875D8929C09AF6001A4EAD /* PageInfoRemoteEntity.swift in Sources */,
 				0C1B851629BFA2CB00671265 /* HTTPMethod.swift in Sources */,
 				0C1B852129BFA2DD00671265 /* DataConstants.swift in Sources */,
+				0C875D8D29C09B26001A4EAD /* CharactersResources.swift in Sources */,
 				0C1B851E29BFA2D400671265 /* NetworkingDataSource.swift in Sources */,
 				0C1B852229BFA2DD00671265 /* DataErrors.swift in Sources */,
 			);
@@ -955,6 +1006,11 @@
 			isa = PBXTargetDependency;
 			target = 0C1B84F229BFA1BC00671265 /* Domain */;
 			targetProxy = 0C1B850629BFA1BD00671265 /* PBXContainerItemProxy */;
+		};
+		0C875D9629C09EBF001A4EAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C1B84F229BFA1BC00671265 /* Domain */;
+			targetProxy = 0C875D9529C09EBF001A4EAD /* PBXContainerItemProxy */;
 		};
 		0C93445B29BF9FD3002DDF2F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

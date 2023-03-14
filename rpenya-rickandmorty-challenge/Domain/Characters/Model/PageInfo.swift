@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct PageInfo {
-    let page: Int
-    let totalPages: Int
+public struct PageInfo {
+    public let page: Int
+    public let totalPages: Int
+    
+    public init(page: Int, totalPages: Int) {
+        self.page = page
+        self.totalPages = totalPages
+    }
 }

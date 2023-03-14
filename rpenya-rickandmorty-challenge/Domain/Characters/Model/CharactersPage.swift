@@ -8,6 +8,11 @@
 import Foundation
 
 public struct CharactersPage {
-    let character: [Character]
-    let pageInfo: PageInfo
+    public let character: [Character]
+    public let pageInfo: PageInfo
+    
+    public init(character: [Character], pageInfo: PageInfo) {
+        self.character = character
+        self.pageInfo = pageInfo
+    }
 }
