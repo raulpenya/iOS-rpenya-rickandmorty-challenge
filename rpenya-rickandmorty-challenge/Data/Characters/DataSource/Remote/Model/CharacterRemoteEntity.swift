@@ -8,7 +8,7 @@
 import Foundation
 import Domain
 
-struct CharacterRemoteEntity: Decodable {
+struct CharacterRemoteEntity: Decodable, Identifiable {
     let id: String?
     let name: String?
     let status: String?

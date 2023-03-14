@@ -31,8 +31,12 @@ final class CharactersPageRemoteEntityTests: XCTestCase {
         XCTAssertEqual(charactersPage.characters.count, domainCharactersPage.character.count)
         XCTAssertEqual(charactersPage.characters[0].id, domainCharactersPage.character[0].id)
         XCTAssertEqual(charactersPage.characters[0].name, domainCharactersPage.character[0].name)
+        XCTAssertEqual(charactersPage.characters[0].location?.name, domainCharactersPage.character[0].locationName)
+        XCTAssertEqual(charactersPage.characters[0].origin?.name, domainCharactersPage.character[0].originName)
         XCTAssertEqual(charactersPage.characters[1].id, domainCharactersPage.character[1].id)
         XCTAssertEqual(charactersPage.characters[1].name, domainCharactersPage.character[1].name)
+        XCTAssertEqual(charactersPage.characters[1].location?.name, domainCharactersPage.character[1].locationName)
+        XCTAssertEqual(charactersPage.characters[0].origin?.name, domainCharactersPage.character[0].originName)
         XCTAssertEqual(charactersPage.pageInfo.totalPages, domainCharactersPage.pageInfo.totalPages)
     }
     
