@@ -6,30 +6,134 @@
 //
 
 import XCTest
+@testable import Data
+import Domain
 
 final class CharactersDataRepositoryTests: XCTestCase {
-
+    
+    let dataSource = MockCharactersDataSource()
+    var response: DataSourceResponse?
+    var errorResponse: Error?
+    var charactersPage: CharactersPage?
+    var character: Character?
+    let getCharactersByPageNumberRequestValues = GetCharactersByPageNumberRequestValues(page: 1)
+    let getCharacterByIdRequestValues = GetCharacterByIdRequestValues(id: "812")
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        response = nil
+        errorResponse = nil
+        charactersPage = nil
+        character = nil
+        dataSource.getCharactersByPageNumberCalled = false
+        dataSource.getCharacterByIdCalled = false
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_getCharactersByPageNumber_success() {
+        //Given
+        dataSource.response = .success
+        let dataRepository = CharactersDataRepository(dataSource: dataSource)
+        let expectation = expectation(description: "test_getCharactersByPageNumber_success")
+        //When
+        dataRepository.getCharactersByPageNumber(getCharactersByPageNumberRequestValues).sink { [weak self] completion in
+            switch completion {
+            case .failure(let error):
+                self?.response = .error
+                self?.errorResponse = error
+            case .finished:
+                self?.response = .success
+            }
+            expectation.fulfill()
+        } receiveValue: { [weak self] charactersPage in
+            self?.charactersPage = charactersPage
+        }.cancel()
+        waitForExpectations(timeout: 5, handler: nil)
+        //Then
+        XCTAssertEqual(response, .success)
+        XCTAssertNil(errorResponse)
+        XCTAssertTrue(dataSource.getCharactersByPageNumberCalled)
+        XCTAssertFalse(dataSource.getCharacterByIdCalled)
+        XCTAssertNotNil(charactersPage)
+        XCTAssertFalse(charactersPage!.characters.isEmpty)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func test_getCharactersByPageNumber_error() {
+        //Given
+        dataSource.response = .error
+        let dataRepository = CharactersDataRepository(dataSource: dataSource)
+        let expectation = expectation(description: "test_getCharactersByPageNumber_error")
+        //When
+        dataRepository.getCharactersByPageNumber(getCharactersByPageNumberRequestValues).sink { [weak self] completion in
+            switch completion {
+            case .failure(let error):
+                self?.response = .error
+                self?.errorResponse = error
+            case .finished:
+                self?.response = .success
+            }
+            expectation.fulfill()
+        } receiveValue: { [weak self] charactersPage in
+            self?.charactersPage = charactersPage
+        }.cancel()
+        waitForExpectations(timeout: 5, handler: nil)
+        //Then
+        XCTAssertEqual(response, .error)
+        XCTAssertNotNil(errorResponse)
+        XCTAssertTrue(dataSource.getCharactersByPageNumberCalled)
+        XCTAssertFalse(dataSource.getCharacterByIdCalled)
+        XCTAssertNil(charactersPage)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_getCharacterById_success() {
+        //Given
+        dataSource.response = .success
+        let dataRepository = CharactersDataRepository(dataSource: dataSource)
+        let expectation = expectation(description: "test_getCharacterById_success")
+        //When
+        dataRepository.getCharacterById(getCharacterByIdRequestValues).sink { [weak self] completion in
+            switch completion {
+            case .failure(let error):
+                self?.response = .error
+                self?.errorResponse = error
+            case .finished:
+                self?.response = .success
+            }
+            expectation.fulfill()
+        } receiveValue: { [weak self] character in
+            self?.character = character
+        }.cancel()
+        waitForExpectations(timeout: 5, handler: nil)
+        //Then
+        XCTAssertEqual(response, .success)
+        XCTAssertNil(errorResponse)
+        XCTAssertFalse(dataSource.getCharactersByPageNumberCalled)
+        XCTAssertTrue(dataSource.getCharacterByIdCalled)
+        XCTAssertNotNil(character)
     }
-
+    
+    func test_getCharacterById_error() {
+        //Given
+        dataSource.response = .error
+        let dataRepository = CharactersDataRepository(dataSource: dataSource)
+        let expectation = expectation(description: "test_getCharacterById_error")
+        //When
+        dataRepository.getCharacterById(getCharacterByIdRequestValues).sink { [weak self] completion in
+            switch completion {
+            case .failure(let error):
+                self?.response = .error
+                self?.errorResponse = error
+            case .finished:
+                self?.response = .success
+            }
+            expectation.fulfill()
+        } receiveValue: { [weak self] character in
+            self?.character = character
+        }.cancel()
+        waitForExpectations(timeout: 5, handler: nil)
+        //Then
+        XCTAssertEqual(response, .error)
+        XCTAssertNotNil(errorResponse)
+        XCTAssertFalse(dataSource.getCharactersByPageNumberCalled)
+        XCTAssertTrue(dataSource.getCharacterByIdCalled)
+        XCTAssertNil(character)
+    }
 }
