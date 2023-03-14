@@ -24,11 +24,11 @@ public struct Character {
     public let id: String
     public let name: String
     public let status: Status
-    public let species: String
-    public let type: String
+    public let species: String?
+    public let type: String?
     public let gender: Gender
-    public let origin: String
-    public let location: String
+    public let origin: String?
+    public let location: String?
     public let imageUrl: String
     
     public init(id: String, name: String, status: Status, species: String, type: String, gender: Gender, origin: String, location: String, imageUrl: String) {

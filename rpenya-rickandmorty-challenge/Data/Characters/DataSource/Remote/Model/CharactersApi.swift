@@ -22,7 +22,7 @@ enum CharactersApi: Api {
     var url: String {
         switch self {
         case .getCharactersByPageNumber(let requestValues):
-            return DataConstants.baseUrl + DataConstants.charactersContext + String(format: "?page=", String(requestValues.page))
+            return DataConstants.baseUrl + DataConstants.charactersContext + String(format: "?page=\(String(requestValues.page))")
         case .getCharacterById(let requestValues):
             return DataConstants.baseUrl + DataConstants.charactersContext + requestValues.id
         }

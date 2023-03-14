@@ -16,11 +16,11 @@ public struct CharactersDataRepository: CharactersRepository {
         self.dataSource = dataSource
     }
     
-    public func getCharactersByPageNumber(_ requestValues: Domain.GetCharactersByPageNumberRequestValues) -> AnyPublisher<Domain.CharactersPage, Error> {
+    public func getCharactersByPageNumber(_ requestValues: GetCharactersByPageNumberRequestValues) -> AnyPublisher<CharactersPage, Error> {
         return dataSource.getCharactersByPageNumber(requestValues)
     }
     
-    public func getCharacterById(_ requestValues: Domain.GetCharacterByIdRequestValues) -> AnyPublisher<Domain.Character, Error> {
+    public func getCharacterById(_ requestValues: GetCharacterByIdRequestValues) -> AnyPublisher<Character, Error> {
         return dataSource.getCharacterById(requestValues)
     }
 }

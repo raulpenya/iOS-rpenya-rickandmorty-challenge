@@ -17,10 +17,10 @@ struct CharactersResources {
         }
     }
     
-    static func getCharacterByIdResource(_ requestValues: GetCharacterByIdRequestValues) -> Resource<CharacterRemoteEntity, Character>?
+    static func getCharacterByIdResource(_ requestValues: GetCharacterByIdRequestValues) -> Resource<CharacterRemoteEntity, Character?>?
     {
         guard let urlRequest = try? CharactersApi.getCharacterById(requestValues).asURLRequest() else { return nil }
-        return Resource<CharacterRemoteEntity, Character>(request: urlRequest) { character in
+        return Resource<CharacterRemoteEntity, Character?>(request: urlRequest) { character in
             return character.transformToDomain()
         }
     }

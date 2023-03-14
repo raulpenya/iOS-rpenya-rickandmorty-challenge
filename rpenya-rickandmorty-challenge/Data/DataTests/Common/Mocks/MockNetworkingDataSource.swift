@@ -8,4 +8,9 @@
 import Foundation
 @testable import Data
 
+enum DataSourceResponse {
+    case success
+    case error
+}
+
 class MockNetworkingDataSource: NetworkingDataSource {}

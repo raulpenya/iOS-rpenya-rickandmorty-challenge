@@ -11,6 +11,11 @@ import Domain
 struct CharactersPageRemoteEntity: Decodable {
     let characters: [CharacterRemoteEntity]
     let pageInfo: PageInfoRemoteEntity
+    
+    enum CodingKeys: String, CodingKey {
+        case characters = "results"
+        case pageInfo = "info"
+    }
 }
 
 extension CharactersPageRemoteEntity {
