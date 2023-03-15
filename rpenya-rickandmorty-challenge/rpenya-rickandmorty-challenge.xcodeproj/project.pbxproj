@@ -86,6 +86,10 @@
 		0C875DA229C0A452001A4EAD /* MockCharactersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D7A29C08C0E001A4EAD /* MockCharactersPage.swift */; };
 		0C875DA329C0A455001A4EAD /* MockCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D7829C08BFE001A4EAD /* MockCharacter.swift */; };
 		0C875DA429C0A458001A4EAD /* MockPageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D7C29C08C1D001A4EAD /* MockPageInfo.swift */; };
+		0C8B68E929C1D6E0000B05C1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68E829C1D6E0000B05C1 /* ErrorView.swift */; };
+		0C8B68ED29C1D789000B05C1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68EB29C1D789000B05C1 /* Colors.swift */; };
+		0C8B68EE29C1D789000B05C1 /* TextViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68EC29C1D789000B05C1 /* TextViewModifier.swift */; };
+		0C8B68F129C1D7DA000B05C1 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68F029C1D7DA000B05C1 /* Line.swift */; };
 		0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */; };
 		0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93445029BF9FD2002DDF2F /* Assets.xcassets */; };
 		0C93445E29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93445D29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift */; };
@@ -253,6 +257,10 @@
 		0C875D9829C0A2D0001A4EAD /* CharactersRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRemoteDataSource.swift; sourceTree = "<group>"; };
 		0C875D9A29C0A2DF001A4EAD /* CharactersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDataSource.swift; sourceTree = "<group>"; };
 		0C875D9C29C0A306001A4EAD /* CharactersDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDataRepository.swift; sourceTree = "<group>"; };
+		0C8B68E829C1D6E0000B05C1 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		0C8B68EB29C1D789000B05C1 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0C8B68EC29C1D789000B05C1 /* TextViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewModifier.swift; sourceTree = "<group>"; };
+		0C8B68F029C1D7DA000B05C1 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		0C93444929BF9FD0002DDF2F /* rpenya-rickandmorty-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-rickandmorty-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeApp.swift; sourceTree = "<group>"; };
 		0C93445029BF9FD2002DDF2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -638,20 +646,40 @@
 			path = ViewItems;
 			sourceTree = "<group>";
 		};
-		0C1FEEFD29C0FC4E00E90B30 /* CommonUI */ = {
-			isa = PBXGroup;
-			children = (
-				0C1FEEFE29C0FC7E00E90B30 /* PlainListPaginated.swift */,
-				0C1FEF0229C102A400E90B30 /* PlainGridPaginated.swift */,
-			);
-			name = CommonUI;
-			sourceTree = "<group>";
-		};
 		0C875D9229C09EBF001A4EAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C8B68E729C1D6BB000B05C1 /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				0C8B68EA29C1D771000B05C1 /* Design */,
+				0C8B68EF29C1D7A9000B05C1 /* Views */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		0C8B68EA29C1D771000B05C1 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				0C8B68EB29C1D789000B05C1 /* Colors.swift */,
+				0C8B68EC29C1D789000B05C1 /* TextViewModifier.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		0C8B68EF29C1D7A9000B05C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C1FEEFE29C0FC7E00E90B30 /* PlainListPaginated.swift */,
+				0C1FEF0229C102A400E90B30 /* PlainGridPaginated.swift */,
+				0C8B68E829C1D6E0000B05C1 /* ErrorView.swift */,
+				0C8B68F029C1D7DA000B05C1 /* Line.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0C93444029BF9FD0002DDF2F = {
@@ -703,11 +731,8 @@
 			isa = PBXGroup;
 			children = (
 				0C1FEEF029C0F78A00E90B30 /* Common */,
-				0C1FEEFD29C0FC4E00E90B30 /* CommonUI */,
+				0C8B68E729C1D6BB000B05C1 /* CommonUI */,
 				0C93447B29BFA0C7002DDF2F /* CharactersList */,
-				0C1FEEEA29C0F28A00E90B30 /* CharactersListViewModel.swift */,
-				0C1FEEEC29C0F2B200E90B30 /* CharactersListRouter.swift */,
-				0C1FEEE829C0F27000E90B30 /* CharactersListView.swift */,
 				0C93447C29BFA0D6002DDF2F /* CharacterDetail */,
 				0C93447929BFA0AD002DDF2F /* MobileTests */,
 				0C93447A29BFA0BA002DDF2F /* MobileUITests */,
@@ -739,6 +764,9 @@
 				0C1B854D29BFA64600671265 /* Assembly */,
 				0C1B854E29BFA65100671265 /* Model */,
 				0C1B854F29BFA65600671265 /* UI */,
+				0C1FEEEA29C0F28A00E90B30 /* CharactersListViewModel.swift */,
+				0C1FEEEC29C0F2B200E90B30 /* CharactersListRouter.swift */,
+				0C1FEEE829C0F27000E90B30 /* CharactersListView.swift */,
 			);
 			path = CharactersList;
 			sourceTree = "<group>";
@@ -1108,6 +1136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C8B68EE29C1D789000B05C1 /* TextViewModifier.swift in Sources */,
 				0C1FEEEB29C0F28A00E90B30 /* CharactersListViewModel.swift in Sources */,
 				0C875DA129C0A44C001A4EAD /* MockCharactersRepository.swift in Sources */,
 				0C1FEEE929C0F27000E90B30 /* CharactersListView.swift in Sources */,
@@ -1115,10 +1144,13 @@
 				0C1FEEE729C0F1FA00E90B30 /* CharactersListAssembler.swift in Sources */,
 				0C1FEEED29C0F2B200E90B30 /* CharactersListRouter.swift in Sources */,
 				0C1FEEFA29C0F82900E90B30 /* Router.swift in Sources */,
+				0C8B68E929C1D6E0000B05C1 /* ErrorView.swift in Sources */,
 				0C1FEEF629C0F7FB00E90B30 /* ListItems.swift in Sources */,
 				0C1FEEFC29C0F84300E90B30 /* AccessibilityIdentifierConstants.swift in Sources */,
 				0C875DA329C0A455001A4EAD /* MockCharacter.swift in Sources */,
+				0C8B68F129C1D7DA000B05C1 /* Line.swift in Sources */,
 				0C1FEEFF29C0FC7E00E90B30 /* PlainListPaginated.swift in Sources */,
+				0C8B68ED29C1D789000B05C1 /* Colors.swift in Sources */,
 				0C1FEEF829C0F80700E90B30 /* ErrorDescription.swift in Sources */,
 				0C875DA229C0A452001A4EAD /* MockCharactersPage.swift in Sources */,
 				0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */,
