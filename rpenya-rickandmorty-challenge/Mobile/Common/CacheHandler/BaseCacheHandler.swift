@@ -21,7 +21,7 @@ extension BaseCacheHandler {
             repository.saveObject(key: repositoryKey, value: newTimestamp)
             return true
         } else {
-            return true
+            return false
         }
     }
 }
