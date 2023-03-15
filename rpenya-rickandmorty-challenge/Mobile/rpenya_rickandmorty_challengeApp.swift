@@ -22,7 +22,9 @@ struct rpenya_rickandmorty_challengeApp: App {
                 print("rpenya_rickandmorty_challengeApp :: active")
             case .inactive:
                 print("rpenya_rickandmorty_challengeApp :: inactive")
-                CacheHandler().cacheCheck()
+                let cache = CacheHandler()
+                cache.setURLCacheLimits()
+                cache.cacheCheck()
             case .background:
                 print("rpenya_rickandmorty_challengeApp :: background")
             @unknown default:

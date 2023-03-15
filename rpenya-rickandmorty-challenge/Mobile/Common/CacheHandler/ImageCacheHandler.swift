@@ -9,24 +9,23 @@
 import Foundation
 import Kingfisher
 
-protocol ImageCacheHandler {
-    func resetImageCacheIfNeeded(newTimestamp: Double, with repository: UserDefaultsRepository)
+protocol ImageCacheHandler: BaseCacheHandler {
+    func resetImageCacheIfNeeded(newTimestamp: Double, cacheTimeInSeconds: Double, repositoryKey: String, with repository: UserDefaultsRepository)
 }
 
 extension ImageCacheHandler {
-    func resetImageCacheIfNeeded(newTimestamp: Double, cacheTimeInSeconds: Double = MobileConstants.Cache.cacheTimeInSeconds, with repository: UserDefaultsRepository) {
-        guard let savedTimestamp = repository.loadObject(key: MobileConstants.UserDefault.lastCleanCacheTimestamp) as? Double else {
-            repository.saveObject(key: MobileConstants.UserDefault.lastCleanCacheTimestamp, value: newTimestamp)
-            return
-        }
-        if newTimestamp - savedTimestamp > cacheTimeInSeconds {
+    func resetImageCacheIfNeeded(newTimestamp: Double, cacheTimeInSeconds: Double = MobileConstants.Cache.imageCacheTimeInSeconds, repositoryKey: String = MobileConstants.UserDefault.lastCleanImageCacheTimestamp, with repository: UserDefaultsRepository) {
+        if shouldResetCache(newTimestamp: newTimestamp, cacheTimeInSeconds: cacheTimeInSeconds, repositoryKey: repositoryKey, with: repository) {
             resetImageCache()
-            repository.saveObject(key: MobileConstants.UserDefault.lastCleanCacheTimestamp, value: newTimestamp)
         }
     }
     
     func resetImageCache() {
         let cache = ImageCache.default
+        Task {
+            print(try! await cache.diskStorageSize)
+            print(cache.memoryStorage)
+        }
         cache.clearMemoryCache()
         cache.clearDiskCache { print("resetImageCache done") }
     }

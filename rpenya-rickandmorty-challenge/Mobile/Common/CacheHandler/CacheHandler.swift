@@ -7,8 +7,15 @@
 
 import Foundation
 
-struct CacheHandler: ImageCacheHandler {
+struct CacheHandler: ImageCacheHandler, URLCacheHandler {
+    func setURLCacheLimits() {
+        increaseCacheSize(memoryCapacity: MobileConstants.Cache.memoryCapacity, diskCapacity: MobileConstants.Cache.diskCapacity)
+    }
+    
     func cacheCheck() {
-        resetImageCacheIfNeeded(newTimestamp: Date().timeIntervalSince1970, with: UserDefaultsRepository())
+        let currentDate = Date().timeIntervalSince1970
+        let repository = UserDefaultsRepository()
+        resetImageCacheIfNeeded(newTimestamp: currentDate, with: repository)
+        resetURLCacheIfNeeded(newTimestamp: currentDate, with: repository)
     }
 }

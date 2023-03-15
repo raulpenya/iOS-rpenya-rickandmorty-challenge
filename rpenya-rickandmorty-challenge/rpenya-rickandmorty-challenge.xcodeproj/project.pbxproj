@@ -105,6 +105,7 @@
 		0CFEC67829C231C100AF9319 /* MobileConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67729C231C100AF9319 /* MobileConstants.swift */; };
 		0CFEC67A29C2331600AF9319 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67929C2331600AF9319 /* UserDefaultsRepository.swift */; };
 		0CFEC67C29C23C8600AF9319 /* URLCacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67B29C23C8600AF9319 /* URLCacheHandler.swift */; };
+		0CFEC67E29C2422E00AF9319 /* BaseCacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67D29C2422E00AF9319 /* BaseCacheHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -289,6 +290,7 @@
 		0CFEC67729C231C100AF9319 /* MobileConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileConstants.swift; sourceTree = "<group>"; };
 		0CFEC67929C2331600AF9319 /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
 		0CFEC67B29C23C8600AF9319 /* URLCacheHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCacheHandler.swift; sourceTree = "<group>"; };
+		0CFEC67D29C2422E00AF9319 /* BaseCacheHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCacheHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -833,6 +835,7 @@
 				0CFEC67229C2310D00AF9319 /* CacheHandler.swift */,
 				0CFEC67429C2314800AF9319 /* ImageCacheHandler.swift */,
 				0CFEC67B29C23C8600AF9319 /* URLCacheHandler.swift */,
+				0CFEC67D29C2422E00AF9319 /* BaseCacheHandler.swift */,
 			);
 			path = CacheHandler;
 			sourceTree = "<group>";
@@ -1228,6 +1231,7 @@
 				0CFEC67329C2310D00AF9319 /* CacheHandler.swift in Sources */,
 				0C1FEF0329C102A400E90B30 /* PlainGridPaginated.swift in Sources */,
 				0C1FEEF529C0F7FB00E90B30 /* ButtonItem.swift in Sources */,
+				0CFEC67E29C2422E00AF9319 /* BaseCacheHandler.swift in Sources */,
 				0C1FEEEF29C0F2CB00E90B30 /* CharacterThinViewEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
