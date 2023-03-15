@@ -95,9 +95,11 @@
 		0C8B68F929C1DAC5000B05C1 /* CharactersListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68F829C1DAC5000B05C1 /* CharactersListItem.swift */; };
 		0C8B68FB29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68FA29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift */; };
 		0C8B68FF29C1EDDC000B05C1 /* CharacterListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68FE29C1EDDC000B05C1 /* CharacterListCellView.swift */; };
+		0C8D897029C2578C00BD86E6 /* BaseCacheHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D896F29C2578C00BD86E6 /* BaseCacheHandlerTests.swift */; };
+		0C8D897229C257B700BD86E6 /* ImageCacheHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D897129C257B700BD86E6 /* ImageCacheHandlerTests.swift */; };
+		0C8D897429C257CD00BD86E6 /* URLCacheHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D897329C257CD00BD86E6 /* URLCacheHandlerTests.swift */; };
 		0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */; };
 		0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93445029BF9FD2002DDF2F /* Assets.xcassets */; };
-		0C93445E29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93445D29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift */; };
 		0C93446829BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93446729BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITests.swift */; };
 		0CFEC67129C22F8200AF9319 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0CFEC67029C22F8200AF9319 /* Kingfisher */; };
 		0CFEC67329C2310D00AF9319 /* CacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67229C2310D00AF9319 /* CacheHandler.swift */; };
@@ -278,11 +280,13 @@
 		0C8B68F829C1DAC5000B05C1 /* CharactersListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListItem.swift; sourceTree = "<group>"; };
 		0C8B68FA29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersPagesViewEntity.swift; sourceTree = "<group>"; };
 		0C8B68FE29C1EDDC000B05C1 /* CharacterListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCellView.swift; sourceTree = "<group>"; };
+		0C8D896F29C2578C00BD86E6 /* BaseCacheHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCacheHandlerTests.swift; sourceTree = "<group>"; };
+		0C8D897129C257B700BD86E6 /* ImageCacheHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheHandlerTests.swift; sourceTree = "<group>"; };
+		0C8D897329C257CD00BD86E6 /* URLCacheHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCacheHandlerTests.swift; sourceTree = "<group>"; };
 		0C93444929BF9FD0002DDF2F /* rpenya-rickandmorty-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-rickandmorty-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeApp.swift; sourceTree = "<group>"; };
 		0C93445029BF9FD2002DDF2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C93445929BF9FD3002DDF2F /* rpenya-rickandmorty-challengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rpenya-rickandmorty-challengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C93445D29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeTests.swift; sourceTree = "<group>"; };
 		0C93446329BF9FD3002DDF2F /* rpenya-rickandmorty-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rpenya-rickandmorty-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93446729BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeUITests.swift; sourceTree = "<group>"; };
 		0CFEC67229C2310D00AF9319 /* CacheHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHandler.swift; sourceTree = "<group>"; };
@@ -730,6 +734,16 @@
 			path = ViewItems;
 			sourceTree = "<group>";
 		};
+		0C8D896E29C2576700BD86E6 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				0C8D896F29C2578C00BD86E6 /* BaseCacheHandlerTests.swift */,
+				0C8D897129C257B700BD86E6 /* ImageCacheHandlerTests.swift */,
+				0C8D897329C257CD00BD86E6 /* URLCacheHandlerTests.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		0C93444029BF9FD0002DDF2F = {
 			isa = PBXGroup;
 			children = (
@@ -793,7 +807,7 @@
 		0C93447929BFA0AD002DDF2F /* MobileTests */ = {
 			isa = PBXGroup;
 			children = (
-				0C93445D29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift */,
+				0C8D896E29C2576700BD86E6 /* Cache */,
 			);
 			path = MobileTests;
 			sourceTree = "<group>";
@@ -1240,7 +1254,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C93445E29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift in Sources */,
+				0C8D897029C2578C00BD86E6 /* BaseCacheHandlerTests.swift in Sources */,
+				0C8D897429C257CD00BD86E6 /* URLCacheHandlerTests.swift in Sources */,
+				0C8D897229C257B700BD86E6 /* ImageCacheHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
