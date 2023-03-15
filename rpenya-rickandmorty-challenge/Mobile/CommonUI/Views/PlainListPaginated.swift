@@ -11,17 +11,16 @@ import SwiftUI
 //https://www.appcoda.com/swiftui-lazyvgrid-lazyhgrid/
 
 struct PlainListPaginated: View {
-    let listItems: ListItemsPaginated
+    let listItems: ListItems
     
     var body: some View {
         List (listItems.items) { anyItem in
             ForEach(listItems.items) { item in
                 Text("PlainGridPaginated :: unknown item")
             }
-            
-            if listItems.isListFull == false {
+            if let listItems = listItems as? ListItemsPaginated, listItems.isListCompleted == false {
                 Text("PlainGridPaginated :: bottom reached").onAppear {
-                    listItems.fetchData()
+                    listItems.didReachListBottomAction()
                 }
             }
         }.listStyle(.plain)

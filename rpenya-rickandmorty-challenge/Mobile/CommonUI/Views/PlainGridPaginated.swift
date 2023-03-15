@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PlainGridPaginated: View {
+    let listItems: ListItems
+    
     var twoColumnGrid = [GridItem(.flexible(), spacing: 0), GridItem(.flexible(), spacing: 0)]
     var symbols = ["keyboard", "hifispeaker.fill", "printer.fill", "tv.fill", "desktopcomputer", "headphones", "tv.music.note", "mic", "plus.bubble", "video"]
     var colors: [Color] = [.yellow, .purple, .green]
@@ -21,18 +23,18 @@ struct PlainGridPaginated: View {
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: UIScreen.main.bounds.width/2)
                         .background(colors[$0 % colors.count])
                 }
-//                if listItems.isListFull == false {
+                if let listItems = listItems as? ListItemsPaginated, listItems.isListCompleted == false {
                     Text("PlainGridPaginated :: bottom reached").onAppear {
-                        print("PlainGridPaginated :: bottom reached")
+                        listItems.didReachListBottomAction()
                     }
-//                }
+                }
             }
         }
     }
 }
 
-struct PlainGridPaginated_Previews: PreviewProvider {
-    static var previews: some View {
-        PlainGridPaginated()
-    }
-}
+//struct PlainGridPaginated_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlainGridPaginated()
+//    }
+//}

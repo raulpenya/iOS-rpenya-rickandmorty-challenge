@@ -11,9 +11,9 @@ protocol ListItems {
     var items: [AnyItem] { get set }
 }
 
-protocol ListItemsPaginated: ListItems {
-    var isListFull: Bool { get set }
-    var fetchData: (() -> Void) { get set }
+protocol ListItemsPaginated {
+    var isListCompleted: Bool { get set }
+    var didReachListBottomAction: (() -> Void) { get set }
 }
 
 struct AnyItem: Identifiable {

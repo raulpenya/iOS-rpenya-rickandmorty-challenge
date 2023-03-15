@@ -22,7 +22,7 @@ struct CharactersListView: View {
                 case .failed(let error):
                     ErrorView(errorMessage: error.text, action: viewModel.refreshData)
                 case .loaded(let listItems):
-                    PlainGridPaginated()
+                    PlainGridPaginated(listItems: listItems)
                 }
             }
             .navigationTitle(NSLocalizedString("_title", comment: ""))

@@ -15,6 +15,12 @@ struct CharacterThinViewEntity {
    let imageUrl: String
 }
 
+extension CharacterThinViewEntity {
+    func transformToListItem() -> ListItem {
+        return CharactersListItem(character: self)
+    }
+}
+
 extension Character {
     func transformToUICharacterThin() -> CharacterThinViewEntity {
         return CharacterThinViewEntity(id: id, name: name, status: status, imageUrl: imageUrl)

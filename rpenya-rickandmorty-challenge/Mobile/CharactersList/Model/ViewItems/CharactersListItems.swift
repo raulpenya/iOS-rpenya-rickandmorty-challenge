@@ -7,6 +7,8 @@
 
 import Foundation
 
-struct CharactersListItems: ListItems {
+struct CharactersListItems: ListItems, ListItemsPaginated {
     var items: [AnyItem]
+    var isListCompleted: Bool
+    var didReachListBottomAction: (() -> Void)
 }
