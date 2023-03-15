@@ -31,21 +31,30 @@ class CharactersListViewModel: ObservableObject {
     @Published private(set) var state = State.idle
     let getCharactersByPageNumberUseCase: GetCharactersByPageNumber
     var cancellableSet: Set<AnyCancellable> = []
-    var charactersPages: CharactersPagesViewEntity = CharactersPagesViewEntity()
+    var currentCharacters: CharactersPagesViewEntity = CharactersPagesViewEntity()
     
     init(getCharactersByPageNumberUseCase: GetCharactersByPageNumber) {
         self.getCharactersByPageNumberUseCase = getCharactersByPageNumberUseCase
     }
     
     func loadData() {
-        getCharactersPage()
+        getCharactersInitialPagePage()
+    }
+    
+    func didReachListBottomAction() {
+        if let nextPage = currentCharacters.currentPage.nextPage {
+            getCharactersPage(with: nextPage)
+        }
     }
     
     @Sendable func refreshData() {
-        getCharactersPage()
+        currentCharacters = CharactersPagesViewEntity()
+        getCharactersInitialPagePage()
     }
-    
-    func getCharactersPage() {
+}
+
+extension CharactersListViewModel {
+    func getCharactersInitialPagePage() {
         getCharactersPage(with: 1)
     }
     
@@ -65,11 +74,16 @@ class CharactersListViewModel: ObservableObject {
     }
     
     func receiveResult(_ result: CharactersPage) {
-        print(result)
+        updateView(with: currentCharacters.add(newPage: result))
     }
     
     func receiveError(_ error: Error) {
         let error = error.transformToErrorDescription()
         state = .failed(error)
+    }
+    
+    func updateView(with charactersPages: CharactersPagesViewEntity) {
+        currentCharacters = charactersPages
+        state = .loaded(charactersPages.transformToListItems(didReachListBottomAction: didReachListBottomAction))
     }
 }

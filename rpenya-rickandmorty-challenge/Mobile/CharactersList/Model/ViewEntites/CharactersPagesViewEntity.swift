@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Domain
 
 struct CharactersPagesViewEntity {
     var characters: [CharacterThinViewEntity] = []
@@ -13,7 +14,19 @@ struct CharactersPagesViewEntity {
 }
 
 extension CharactersPagesViewEntity {
-    func transformToListItems(isListCompleted: Bool, didReachListBottomAction: @escaping (() -> Void)) -> ListItems {
-        return CharactersListItems(items: characters.compactMap { $0.transformToListItem().transformToAnyItem() }, isListCompleted: isListCompleted, didReachListBottomAction: didReachListBottomAction)
+    func add(newPage: CharactersPage) -> CharactersPagesViewEntity {
+        var currentCharacters = characters
+        currentCharacters.append(contentsOf: newPage.characters.compactMap { $0.transformToUICharacterThin() })
+        return CharactersPagesViewEntity(characters: currentCharacters, currentPage: newPage.pageInfo.transformToUI())
+    }
+    
+    func transformToListItems(didReachListBottomAction: @escaping (() -> Void)) -> ListItems {
+        return CharactersListItems(items: characters.compactMap { $0.transformToListItem().transformToAnyItem() }, isListCompleted: isListCompleted(), didReachListBottomAction: didReachListBottomAction)
+    }
+}
+
+extension CharactersPagesViewEntity {
+    func isListCompleted() -> Bool {
+        return currentPage.isLastPage()
     }
 }

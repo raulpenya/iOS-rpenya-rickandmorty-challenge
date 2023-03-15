@@ -17,11 +17,15 @@ struct PlainGridPaginated: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: twoColumnGrid, spacing: 0) {
-                ForEach((0...99), id: \.self) {
-                    Image(systemName: symbols[$0 % symbols.count])
-                        .font(.system(size: 30))
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: UIScreen.main.bounds.width/2)
-                        .background(colors[$0 % colors.count])
+                ForEach(listItems.items) { anyItem in
+                    if let item = anyItem.item as? CharactersListItem {
+                        Image(systemName: symbols[symbols.count-1])
+                            .font(.system(size: 30))
+                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: UIScreen.main.bounds.width/2)
+                            .background(colors[colors.count-1])
+                    } else {
+                        Text("PlainListView :: unknown item")
+                    }
                 }
                 if let listItems = listItems as? ListItemsPaginated, listItems.isListCompleted == false {
                     Text("PlainGridPaginated :: bottom reached").onAppear {
