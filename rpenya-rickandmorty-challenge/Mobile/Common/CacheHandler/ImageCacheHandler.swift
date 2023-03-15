@@ -22,10 +22,6 @@ extension ImageCacheHandler {
     
     func resetImageCache() {
         let cache = ImageCache.default
-        Task {
-            print(try! await cache.diskStorageSize)
-            print(cache.memoryStorage)
-        }
         cache.clearMemoryCache()
         cache.clearDiskCache { print("resetImageCache done") }
     }

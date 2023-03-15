@@ -12,7 +12,7 @@ protocol URLCacheHandler: BaseCacheHandler {
 }
 
 extension URLCacheHandler {
-    func resetURLCacheIfNeeded(newTimestamp: Double, cacheTimeInSeconds: Double = MobileConstants.Cache.urlCacheTimeInSeconds, repositoryKey: String = MobileConstants.UserDefault.lastCleanImageCacheTimestamp, with repository: UserDefaultsRepository) {
+    func resetURLCacheIfNeeded(newTimestamp: Double, cacheTimeInSeconds: Double = MobileConstants.Cache.urlCacheTimeInSeconds, repositoryKey: String = MobileConstants.UserDefault.lastCleanURLCacheTimestamp, with repository: UserDefaultsRepository) {
         if shouldResetCache(newTimestamp: newTimestamp, cacheTimeInSeconds: cacheTimeInSeconds, repositoryKey: repositoryKey, with: repository) {
             resetURLCache()
         }
