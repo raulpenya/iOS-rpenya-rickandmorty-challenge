@@ -11,9 +11,23 @@ import SwiftUI
 
 @main
 struct rpenya_rickandmorty_challengeApp: App {
+    @Environment(\.scenePhase) private var scenePhase
     var body: some Scene {
         WindowGroup {
             CharactersListAssemblerInjection().resolve()
+        }
+        .onChange(of: scenePhase) { (newScenePhase) in
+            switch newScenePhase {
+            case .active:
+                print("rpenya_rickandmorty_challengeApp :: active")
+            case .inactive:
+                print("rpenya_rickandmorty_challengeApp :: inactive")
+                CacheHandler().cacheCheck()
+            case .background:
+                print("rpenya_rickandmorty_challengeApp :: background")
+            @unknown default:
+                break
+            }
         }
     }
 }

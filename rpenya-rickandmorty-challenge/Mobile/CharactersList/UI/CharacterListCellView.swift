@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Kingfisher
 //https://trailingclosure.com/device-motion-effect/
 //https://www.avanderlee.com/swiftui/downloading-caching-images/
 
@@ -17,7 +17,9 @@ struct CharacterListCellView: View {
     
     var item: CharactersListItem
     var body: some View {
-        AsyncImage(url: URL(string: item.getImageUrl())!)
+        KFImage(URL(string: item.getImageUrl())!).placeholder({ _ in
+            ProgressView()
+        })
             .aspectRatio(contentMode: .fill)
             .frame(width: CharacterListCellView.width, height: CharacterListCellView.height, alignment: .center)
             .clipped()
