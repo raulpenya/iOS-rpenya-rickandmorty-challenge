@@ -6,14 +6,8 @@
   
 */
 
-//"proceed_checkout" = "Proceed to checkout";
-//"payment" = "Payment";
-//"eshop" = "Cabify eShop";
-//"shopping_basket" = "Shopping basket";
-//"accept" = "Accept";
-//"cancel" = "Cancel";
-//"purchase_completed_title" = "Purchase completed!";
-//"purchase_completed_message" = "Your order has been received and we'll processing it in the next hours. Thank you for trusting us!";
-//"errorview_title" = "Oops!";
-//"errorview_message" = "An error ocurred:";
-//"refresh" = "Refresh";
+"accept" = "Accept";
+"cancel" = "Cancel";
+"errorview_title" = "Oops!";
+"errorview_message" = "An error ocurred:";
+"refresh" = "Refresh";
