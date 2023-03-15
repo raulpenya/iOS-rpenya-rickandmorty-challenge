@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//https://trailingclosure.com/device-motion-effect/
 //https://www.avanderlee.com/swiftui/downloading-caching-images/
 
 struct CharacterListCellView: View {
