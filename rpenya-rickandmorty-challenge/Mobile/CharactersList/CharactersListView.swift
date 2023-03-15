@@ -31,6 +31,10 @@ struct CharactersListView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                 }
+            }.fullScreenCover(isPresented: $viewModel.presentCharacterDetail) {
+                if let dependencies = viewModel.transformToCharacterDetailDependencies() {
+                    router.destination(dependencies)
+                }
             }
 //            .sheet(isPresented: $viewModel.presentShoppingBasketDetail) {
 //                if let dependencies = viewModel.transformToShoppingBasketDetailDependencies() {

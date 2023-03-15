@@ -19,6 +19,10 @@ extension CharacterThinViewEntity {
     func transformToListItem(onTapGesture: @escaping ((ListItemSelectable) -> Void)) -> ListItem {
         return CharactersListItem(character: self, onTapGesture: onTapGesture)
     }
+    
+    func transformToCharacterFatViewEntity() -> CharacterFatViewEntity {
+        return CharacterFatViewEntity(id: id, name: name, status: .none, species: nil, type: nil, gender: .none, originName: nil, locationName: nil, imageUrl: imageUrl)
+    }
 }
 
 extension Character {

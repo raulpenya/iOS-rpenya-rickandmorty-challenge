@@ -7,7 +7,7 @@
 
 import Combine
 
-class GetCharacterById: UseCase {
+public class GetCharacterById: UseCase {
     typealias T = Character
     typealias Q = GetCharacterByIdRequestValues
     

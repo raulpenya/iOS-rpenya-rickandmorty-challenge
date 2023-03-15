@@ -24,6 +24,7 @@ struct PlainGridPaginated: View {
                     }
                 }
                 if let listItems = listItems as? ListItemsPaginated, listItems.isListCompleted == false {
+                    Text("PlainGridPaginated :: bottom reached")
                     Text("PlainGridPaginated :: bottom reached").onAppear {
                         listItems.didReachListBottomAction()
                     }

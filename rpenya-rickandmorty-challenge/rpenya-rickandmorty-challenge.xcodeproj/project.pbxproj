@@ -98,6 +98,10 @@
 		0C8D897029C2578C00BD86E6 /* BaseCacheHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D896F29C2578C00BD86E6 /* BaseCacheHandlerTests.swift */; };
 		0C8D897229C257B700BD86E6 /* ImageCacheHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D897129C257B700BD86E6 /* ImageCacheHandlerTests.swift */; };
 		0C8D897429C257CD00BD86E6 /* URLCacheHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D897329C257CD00BD86E6 /* URLCacheHandlerTests.swift */; };
+		0C8D897629C25AB900BD86E6 /* CharacterDetailAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D897529C25AB900BD86E6 /* CharacterDetailAssembler.swift */; };
+		0C8D897829C25AD700BD86E6 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D897729C25AD700BD86E6 /* CharacterDetailViewModel.swift */; };
+		0C8D897A29C25AE400BD86E6 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D897929C25AE400BD86E6 /* CharacterDetailView.swift */; };
+		0C8D897E29C25C4100BD86E6 /* CharacterFatViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D897D29C25C4100BD86E6 /* CharacterFatViewEntity.swift */; };
 		0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */; };
 		0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93445029BF9FD2002DDF2F /* Assets.xcassets */; };
 		0C93446829BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93446729BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITests.swift */; };
@@ -283,6 +287,10 @@
 		0C8D896F29C2578C00BD86E6 /* BaseCacheHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCacheHandlerTests.swift; sourceTree = "<group>"; };
 		0C8D897129C257B700BD86E6 /* ImageCacheHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheHandlerTests.swift; sourceTree = "<group>"; };
 		0C8D897329C257CD00BD86E6 /* URLCacheHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCacheHandlerTests.swift; sourceTree = "<group>"; };
+		0C8D897529C25AB900BD86E6 /* CharacterDetailAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailAssembler.swift; sourceTree = "<group>"; };
+		0C8D897729C25AD700BD86E6 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
+		0C8D897929C25AE400BD86E6 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		0C8D897D29C25C4100BD86E6 /* CharacterFatViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFatViewEntity.swift; sourceTree = "<group>"; };
 		0C93444929BF9FD0002DDF2F /* rpenya-rickandmorty-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-rickandmorty-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeApp.swift; sourceTree = "<group>"; };
 		0C93445029BF9FD2002DDF2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -604,6 +612,7 @@
 		0C1B855029BFA66500671265 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
+				0C8D897529C25AB900BD86E6 /* CharacterDetailAssembler.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -611,6 +620,7 @@
 		0C1B855129BFA66D00671265 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C8D897D29C25C4100BD86E6 /* CharacterFatViewEntity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -839,6 +849,8 @@
 				0C1B855029BFA66500671265 /* Assembly */,
 				0C1B855129BFA66D00671265 /* Model */,
 				0C1B855229BFA67500671265 /* UI */,
+				0C8D897729C25AD700BD86E6 /* CharacterDetailViewModel.swift */,
+				0C8D897929C25AE400BD86E6 /* CharacterDetailView.swift */,
 			);
 			path = CharacterDetail;
 			sourceTree = "<group>";
@@ -1218,6 +1230,7 @@
 				0C8B68EE29C1D789000B05C1 /* TextViewModifier.swift in Sources */,
 				0C1FEEEB29C0F28A00E90B30 /* CharactersListViewModel.swift in Sources */,
 				0C8B68FF29C1EDDC000B05C1 /* CharacterListCellView.swift in Sources */,
+				0C8D897E29C25C4100BD86E6 /* CharacterFatViewEntity.swift in Sources */,
 				0C875DA129C0A44C001A4EAD /* MockCharactersRepository.swift in Sources */,
 				0CFEC67529C2314800AF9319 /* ImageCacheHandler.swift in Sources */,
 				0C1FEEE929C0F27000E90B30 /* CharactersListView.swift in Sources */,
@@ -1225,9 +1238,11 @@
 				0C1FEEE729C0F1FA00E90B30 /* CharactersListAssembler.swift in Sources */,
 				0C1FEEED29C0F2B200E90B30 /* CharactersListRouter.swift in Sources */,
 				0C1FEEFA29C0F82900E90B30 /* Router.swift in Sources */,
+				0C8D897A29C25AE400BD86E6 /* CharacterDetailView.swift in Sources */,
 				0C8B68E929C1D6E0000B05C1 /* ErrorView.swift in Sources */,
 				0C1FEEF629C0F7FB00E90B30 /* ListItems.swift in Sources */,
 				0C1FEEFC29C0F84300E90B30 /* AccessibilityIdentifierConstants.swift in Sources */,
+				0C8D897829C25AD700BD86E6 /* CharacterDetailViewModel.swift in Sources */,
 				0CFEC67829C231C100AF9319 /* MobileConstants.swift in Sources */,
 				0C8B68F729C1DAB5000B05C1 /* CharactersListItems.swift in Sources */,
 				0C875DA329C0A455001A4EAD /* MockCharacter.swift in Sources */,
@@ -1247,6 +1262,7 @@
 				0C1FEEF529C0F7FB00E90B30 /* ButtonItem.swift in Sources */,
 				0CFEC67E29C2422E00AF9319 /* BaseCacheHandler.swift in Sources */,
 				0C1FEEEF29C0F2CB00E90B30 /* CharacterThinViewEntity.swift in Sources */,
+				0C8D897629C25AB900BD86E6 /* CharacterDetailAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
