@@ -10,11 +10,12 @@ import Foundation
 import Kingfisher
 
 protocol ImageCacheHandler: BaseCacheHandler {
-    func resetImageCacheIfNeeded(newTimestamp: Double, cacheTimeInSeconds: Double, repositoryKey: String, with repository: UserDefaultsRepository)
+    func resetImageCacheIfNeeded(newTimestamp: Double, cacheTimeInSeconds: Double, repositoryKey: String, with repository: KeyValueRepository)
+    func resetImageCache()
 }
 
 extension ImageCacheHandler {
-    func resetImageCacheIfNeeded(newTimestamp: Double, cacheTimeInSeconds: Double = MobileConstants.Cache.imageCacheTimeInSeconds, repositoryKey: String = MobileConstants.UserDefault.lastCleanImageCacheTimestamp, with repository: UserDefaultsRepository) {
+    func resetImageCacheIfNeeded(newTimestamp: Double, cacheTimeInSeconds: Double = MobileConstants.Cache.imageCacheTimeInSeconds, repositoryKey: String = MobileConstants.UserDefault.lastCleanImageCacheTimestamp, with repository: KeyValueRepository) {
         if shouldResetCache(newTimestamp: newTimestamp, cacheTimeInSeconds: cacheTimeInSeconds, repositoryKey: repositoryKey, with: repository) {
             resetImageCache()
         }

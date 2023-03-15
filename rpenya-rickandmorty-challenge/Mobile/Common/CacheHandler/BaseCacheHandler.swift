@@ -8,11 +8,11 @@
 import Foundation
 
 protocol BaseCacheHandler {
-    func shouldResetCache(newTimestamp: Double, cacheTimeInSeconds: Double, repositoryKey: String, with repository: UserDefaultsRepository) -> Bool
+    func shouldResetCache(newTimestamp: Double, cacheTimeInSeconds: Double, repositoryKey: String, with repository: KeyValueRepository) -> Bool
 }
 
 extension BaseCacheHandler {
-    func shouldResetCache(newTimestamp: Double, cacheTimeInSeconds: Double, repositoryKey: String, with repository: UserDefaultsRepository) -> Bool {
+    func shouldResetCache(newTimestamp: Double, cacheTimeInSeconds: Double, repositoryKey: String, with repository: KeyValueRepository) -> Bool {
         guard let savedTimestamp = repository.loadObject(key: repositoryKey) as? Double else {
             repository.saveObject(key: repositoryKey, value: newTimestamp)
             return false
