@@ -17,11 +17,13 @@ protocol ListItemsPaginated: ListItems {
 }
 
 struct AnyItem: Identifiable {
-    var id = UUID()
     let item: ListItem
+    var id: String { item.id }
 }
 
-protocol ListItem { }
+protocol ListItem {
+    var id: String { get set }
+}
 
 extension ListItem {
     func transformToAnyItem() -> AnyItem {

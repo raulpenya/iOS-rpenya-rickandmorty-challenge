@@ -90,6 +90,10 @@
 		0C8B68ED29C1D789000B05C1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68EB29C1D789000B05C1 /* Colors.swift */; };
 		0C8B68EE29C1D789000B05C1 /* TextViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68EC29C1D789000B05C1 /* TextViewModifier.swift */; };
 		0C8B68F129C1D7DA000B05C1 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68F029C1D7DA000B05C1 /* Line.swift */; };
+		0C8B68F329C1D8E8000B05C1 /* PageInfoViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68F229C1D8E8000B05C1 /* PageInfoViewEntity.swift */; };
+		0C8B68F729C1DAB5000B05C1 /* CharactersListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68F629C1DAB5000B05C1 /* CharactersListItems.swift */; };
+		0C8B68F929C1DAC5000B05C1 /* CharactersListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68F829C1DAC5000B05C1 /* CharactersListItem.swift */; };
+		0C8B68FB29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68FA29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift */; };
 		0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */; };
 		0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93445029BF9FD2002DDF2F /* Assets.xcassets */; };
 		0C93445E29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93445D29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift */; };
@@ -261,6 +265,10 @@
 		0C8B68EB29C1D789000B05C1 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0C8B68EC29C1D789000B05C1 /* TextViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewModifier.swift; sourceTree = "<group>"; };
 		0C8B68F029C1D7DA000B05C1 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		0C8B68F229C1D8E8000B05C1 /* PageInfoViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageInfoViewEntity.swift; sourceTree = "<group>"; };
+		0C8B68F629C1DAB5000B05C1 /* CharactersListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListItems.swift; sourceTree = "<group>"; };
+		0C8B68F829C1DAC5000B05C1 /* CharactersListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListItem.swift; sourceTree = "<group>"; };
+		0C8B68FA29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersPagesViewEntity.swift; sourceTree = "<group>"; };
 		0C93444929BF9FD0002DDF2F /* rpenya-rickandmorty-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-rickandmorty-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeApp.swift; sourceTree = "<group>"; };
 		0C93445029BF9FD2002DDF2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -559,7 +567,8 @@
 		0C1B854E29BFA65100671265 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0C1FEEEE29C0F2CB00E90B30 /* CharacterThinViewEntity.swift */,
+				0C8B68F429C1DA50000B05C1 /* ViewEntites */,
+				0C8B68F529C1DA59000B05C1 /* ViewItems */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -680,6 +689,25 @@
 				0C8B68F029C1D7DA000B05C1 /* Line.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0C8B68F429C1DA50000B05C1 /* ViewEntites */ = {
+			isa = PBXGroup;
+			children = (
+				0C8B68FA29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift */,
+				0C1FEEEE29C0F2CB00E90B30 /* CharacterThinViewEntity.swift */,
+				0C8B68F229C1D8E8000B05C1 /* PageInfoViewEntity.swift */,
+			);
+			path = ViewEntites;
+			sourceTree = "<group>";
+		};
+		0C8B68F529C1DA59000B05C1 /* ViewItems */ = {
+			isa = PBXGroup;
+			children = (
+				0C8B68F629C1DAB5000B05C1 /* CharactersListItems.swift */,
+				0C8B68F829C1DAC5000B05C1 /* CharactersListItem.swift */,
+			);
+			path = ViewItems;
 			sourceTree = "<group>";
 		};
 		0C93444029BF9FD0002DDF2F = {
@@ -1147,12 +1175,16 @@
 				0C8B68E929C1D6E0000B05C1 /* ErrorView.swift in Sources */,
 				0C1FEEF629C0F7FB00E90B30 /* ListItems.swift in Sources */,
 				0C1FEEFC29C0F84300E90B30 /* AccessibilityIdentifierConstants.swift in Sources */,
+				0C8B68F729C1DAB5000B05C1 /* CharactersListItems.swift in Sources */,
 				0C875DA329C0A455001A4EAD /* MockCharacter.swift in Sources */,
 				0C8B68F129C1D7DA000B05C1 /* Line.swift in Sources */,
 				0C1FEEFF29C0FC7E00E90B30 /* PlainListPaginated.swift in Sources */,
+				0C8B68FB29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift in Sources */,
+				0C8B68F329C1D8E8000B05C1 /* PageInfoViewEntity.swift in Sources */,
 				0C8B68ED29C1D789000B05C1 /* Colors.swift in Sources */,
 				0C1FEEF829C0F80700E90B30 /* ErrorDescription.swift in Sources */,
 				0C875DA229C0A452001A4EAD /* MockCharactersPage.swift in Sources */,
+				0C8B68F929C1DAC5000B05C1 /* CharactersListItem.swift in Sources */,
 				0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */,
 				0C1FEF0329C102A400E90B30 /* PlainGridPaginated.swift in Sources */,
 				0C1FEEF529C0F7FB00E90B30 /* ButtonItem.swift in Sources */,

@@ -31,7 +31,7 @@ class CharactersListViewModel: ObservableObject {
     @Published private(set) var state = State.idle
     let getCharactersByPageNumberUseCase: GetCharactersByPageNumber
     var cancellableSet: Set<AnyCancellable> = []
-//    var chrarcters: [Charac]
+    var charactersPages: CharactersPagesViewEntity = CharactersPagesViewEntity()
     
     init(getCharactersByPageNumberUseCase: GetCharactersByPageNumber) {
         self.getCharactersByPageNumberUseCase = getCharactersByPageNumberUseCase
@@ -56,10 +56,10 @@ class CharactersListViewModel: ObservableObject {
                 print(error.localizedDescription)
                 self?.receiveError(error)
             case .finished:
-                print("ProductsListViewModel :: getProductsWithPromotions :: publisher finished")
+                print("CharactersListViewModel :: getCharactersPage :: publisher finished")
             }
         } receiveValue: { [weak self] result in
-            print("ProductsListViewModel :: getProductsWithPromotions :: result :: \(result)")
+            print("CharactersListViewModel :: getCharactersPage :: result :: \(result)")
             self?.receiveResult(result)
         }.store(in: &cancellableSet)
     }
