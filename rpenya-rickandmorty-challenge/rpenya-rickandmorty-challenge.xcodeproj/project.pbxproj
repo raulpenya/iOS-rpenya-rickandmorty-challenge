@@ -94,6 +94,7 @@
 		0C8B68F729C1DAB5000B05C1 /* CharactersListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68F629C1DAB5000B05C1 /* CharactersListItems.swift */; };
 		0C8B68F929C1DAC5000B05C1 /* CharactersListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68F829C1DAC5000B05C1 /* CharactersListItem.swift */; };
 		0C8B68FB29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68FA29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift */; };
+		0C8B68FF29C1EDDC000B05C1 /* CharacterListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68FE29C1EDDC000B05C1 /* CharacterListCellView.swift */; };
 		0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */; };
 		0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93445029BF9FD2002DDF2F /* Assets.xcassets */; };
 		0C93445E29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93445D29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift */; };
@@ -269,6 +270,7 @@
 		0C8B68F629C1DAB5000B05C1 /* CharactersListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListItems.swift; sourceTree = "<group>"; };
 		0C8B68F829C1DAC5000B05C1 /* CharactersListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListItem.swift; sourceTree = "<group>"; };
 		0C8B68FA29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersPagesViewEntity.swift; sourceTree = "<group>"; };
+		0C8B68FE29C1EDDC000B05C1 /* CharacterListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCellView.swift; sourceTree = "<group>"; };
 		0C93444929BF9FD0002DDF2F /* rpenya-rickandmorty-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-rickandmorty-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeApp.swift; sourceTree = "<group>"; };
 		0C93445029BF9FD2002DDF2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -576,6 +578,7 @@
 		0C1B854F29BFA65600671265 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0C8B68FE29C1EDDC000B05C1 /* CharacterListCellView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1166,6 +1169,7 @@
 			files = (
 				0C8B68EE29C1D789000B05C1 /* TextViewModifier.swift in Sources */,
 				0C1FEEEB29C0F28A00E90B30 /* CharactersListViewModel.swift in Sources */,
+				0C8B68FF29C1EDDC000B05C1 /* CharacterListCellView.swift in Sources */,
 				0C875DA129C0A44C001A4EAD /* MockCharactersRepository.swift in Sources */,
 				0C1FEEE929C0F27000E90B30 /* CharactersListView.swift in Sources */,
 				0C875DA429C0A458001A4EAD /* MockPageInfo.swift in Sources */,
