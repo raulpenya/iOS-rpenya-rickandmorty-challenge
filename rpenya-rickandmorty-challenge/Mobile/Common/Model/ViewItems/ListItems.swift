@@ -30,3 +30,7 @@ extension ListItem {
         return  AnyItem(item: self)
     }
 }
+
+protocol ListItemSelectable {
+    var onTapGesture: ((ListItemSelectable) -> Void) { get set }
+}

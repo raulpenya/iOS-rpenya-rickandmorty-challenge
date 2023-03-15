@@ -16,8 +16,8 @@ struct CharacterThinViewEntity {
 }
 
 extension CharacterThinViewEntity {
-    func transformToListItem() -> ListItem {
-        return CharactersListItem(character: self)
+    func transformToListItem(onTapGesture: @escaping ((ListItemSelectable) -> Void)) -> ListItem {
+        return CharactersListItem(character: self, onTapGesture: onTapGesture)
     }
 }
 

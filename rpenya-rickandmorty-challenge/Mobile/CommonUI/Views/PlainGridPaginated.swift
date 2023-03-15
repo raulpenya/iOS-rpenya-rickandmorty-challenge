@@ -16,7 +16,9 @@ struct PlainGridPaginated: View {
             LazyVGrid(columns: twoColumnGrid, spacing: PlainGridPaginated.cellsPadding) {
                 ForEach(listItems.items) { anyItem in
                     if let item = anyItem.item as? CharactersListItem {
-                        CharacterListCellView(item: item).frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height)
+                        CharacterListCellView(item: item).frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height).onTapGesture {
+                            item.onTapGesture(item)
+                        }
                     } else {
                         Text("PlainListView :: unknown item")
                     }

@@ -7,13 +7,15 @@
 
 import Foundation
 
-struct CharactersListItem: ListItem {
+struct CharactersListItem: ListItem, ListItemSelectable {
     var id: String
     let character: CharacterThinViewEntity
+    var onTapGesture: ((ListItemSelectable) -> Void)
     
-    init(character: CharacterThinViewEntity) {
+    init(character: CharacterThinViewEntity, onTapGesture: @escaping ((ListItemSelectable) -> Void)) {
         self.id = character.id
         self.character = character
+        self.onTapGesture = onTapGesture
     }
     
     func getName() -> String {

@@ -51,6 +51,10 @@ class CharactersListViewModel: ObservableObject {
         currentCharacters = CharactersPagesViewEntity()
         getCharactersInitialPagePage()
     }
+    
+    func didSelectItem(_ item: ListItemSelectable) {
+        print(item)
+    }
 }
 
 extension CharactersListViewModel {
@@ -84,6 +88,6 @@ extension CharactersListViewModel {
     
     func updateView(with charactersPages: CharactersPagesViewEntity) {
         currentCharacters = charactersPages
-        state = .loaded(charactersPages.transformToListItems(didReachListBottomAction: didReachListBottomAction))
+        state = .loaded(charactersPages.transformToListItems(didReachListBottomAction: didReachListBottomAction, onTapGesture: didSelectItem))
     }
 }
