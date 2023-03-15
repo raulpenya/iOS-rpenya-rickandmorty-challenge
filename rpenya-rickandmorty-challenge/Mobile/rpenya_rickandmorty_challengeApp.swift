@@ -7,13 +7,26 @@
 
 import SwiftUI
 
-//https://tanaschita.com/20220404-understanding-the-difference-between-appdelegate-scenedelegate-and-swiftui-app-protocol/
-
 @main
 struct rpenya_rickandmorty_challengeApp: App {
+    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
     var body: some Scene {
         WindowGroup {
             CharactersListAssemblerInjection().resolve()
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+                    print("didBecomeActiveNotification")
+                    let cache = CacheHandler()
+                    cache.checkCache()
+                }
         }
+    }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        print("UIApplicationDelegate :: didFinishLaunchingWithOptions")
+        let cache = CacheHandler()
+        cache.setURLCacheLimits()
+        return true
     }
 }

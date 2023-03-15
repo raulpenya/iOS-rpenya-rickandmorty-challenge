@@ -95,10 +95,19 @@
 		0C8B68F929C1DAC5000B05C1 /* CharactersListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68F829C1DAC5000B05C1 /* CharactersListItem.swift */; };
 		0C8B68FB29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68FA29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift */; };
 		0C8B68FF29C1EDDC000B05C1 /* CharacterListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B68FE29C1EDDC000B05C1 /* CharacterListCellView.swift */; };
+		0C8D897029C2578C00BD86E6 /* BaseCacheHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D896F29C2578C00BD86E6 /* BaseCacheHandlerTests.swift */; };
+		0C8D897229C257B700BD86E6 /* ImageCacheHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D897129C257B700BD86E6 /* ImageCacheHandlerTests.swift */; };
+		0C8D897429C257CD00BD86E6 /* URLCacheHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D897329C257CD00BD86E6 /* URLCacheHandlerTests.swift */; };
 		0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */; };
 		0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93445029BF9FD2002DDF2F /* Assets.xcassets */; };
-		0C93445E29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93445D29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift */; };
 		0C93446829BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93446729BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITests.swift */; };
+		0CFEC67129C22F8200AF9319 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0CFEC67029C22F8200AF9319 /* Kingfisher */; };
+		0CFEC67329C2310D00AF9319 /* CacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67229C2310D00AF9319 /* CacheHandler.swift */; };
+		0CFEC67529C2314800AF9319 /* ImageCacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67429C2314800AF9319 /* ImageCacheHandler.swift */; };
+		0CFEC67829C231C100AF9319 /* MobileConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67729C231C100AF9319 /* MobileConstants.swift */; };
+		0CFEC67A29C2331600AF9319 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67929C2331600AF9319 /* UserDefaultsRepository.swift */; };
+		0CFEC67C29C23C8600AF9319 /* URLCacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67B29C23C8600AF9319 /* URLCacheHandler.swift */; };
+		0CFEC67E29C2422E00AF9319 /* BaseCacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67D29C2422E00AF9319 /* BaseCacheHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,13 +280,21 @@
 		0C8B68F829C1DAC5000B05C1 /* CharactersListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListItem.swift; sourceTree = "<group>"; };
 		0C8B68FA29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersPagesViewEntity.swift; sourceTree = "<group>"; };
 		0C8B68FE29C1EDDC000B05C1 /* CharacterListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCellView.swift; sourceTree = "<group>"; };
+		0C8D896F29C2578C00BD86E6 /* BaseCacheHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCacheHandlerTests.swift; sourceTree = "<group>"; };
+		0C8D897129C257B700BD86E6 /* ImageCacheHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheHandlerTests.swift; sourceTree = "<group>"; };
+		0C8D897329C257CD00BD86E6 /* URLCacheHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCacheHandlerTests.swift; sourceTree = "<group>"; };
 		0C93444929BF9FD0002DDF2F /* rpenya-rickandmorty-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-rickandmorty-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeApp.swift; sourceTree = "<group>"; };
 		0C93445029BF9FD2002DDF2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C93445929BF9FD3002DDF2F /* rpenya-rickandmorty-challengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rpenya-rickandmorty-challengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C93445D29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeTests.swift; sourceTree = "<group>"; };
 		0C93446329BF9FD3002DDF2F /* rpenya-rickandmorty-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rpenya-rickandmorty-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93446729BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeUITests.swift; sourceTree = "<group>"; };
+		0CFEC67229C2310D00AF9319 /* CacheHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHandler.swift; sourceTree = "<group>"; };
+		0CFEC67429C2314800AF9319 /* ImageCacheHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheHandler.swift; sourceTree = "<group>"; };
+		0CFEC67729C231C100AF9319 /* MobileConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileConstants.swift; sourceTree = "<group>"; };
+		0CFEC67929C2331600AF9319 /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
+		0CFEC67B29C23C8600AF9319 /* URLCacheHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCacheHandler.swift; sourceTree = "<group>"; };
+		0CFEC67D29C2422E00AF9319 /* BaseCacheHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCacheHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +333,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CFEC67129C22F8200AF9319 /* Kingfisher in Frameworks */,
 				0C1B850829BFA1BD00671265 /* Domain.framework in Frameworks */,
 				0C1B84E529BFA1B200671265 /* Data.framework in Frameworks */,
 			);
@@ -634,7 +652,9 @@
 			isa = PBXGroup;
 			children = (
 				0C1FEEF129C0F79C00E90B30 /* Model */,
+				0CFEC67629C2315000AF9319 /* CacheHandler */,
 				0C1FEEFB29C0F84200E90B30 /* AccessibilityIdentifierConstants.swift */,
+				0CFEC67729C231C100AF9319 /* MobileConstants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -645,6 +665,7 @@
 				0C1FEEF229C0F7A600E90B30 /* ViewItems */,
 				0C1FEEF729C0F80700E90B30 /* ErrorDescription.swift */,
 				0C1FEEF929C0F82900E90B30 /* Router.swift */,
+				0CFEC67929C2331600AF9319 /* UserDefaultsRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -713,6 +734,16 @@
 			path = ViewItems;
 			sourceTree = "<group>";
 		};
+		0C8D896E29C2576700BD86E6 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				0C8D896F29C2578C00BD86E6 /* BaseCacheHandlerTests.swift */,
+				0C8D897129C257B700BD86E6 /* ImageCacheHandlerTests.swift */,
+				0C8D897329C257CD00BD86E6 /* URLCacheHandlerTests.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		0C93444029BF9FD0002DDF2F = {
 			isa = PBXGroup;
 			children = (
@@ -776,7 +807,7 @@
 		0C93447929BFA0AD002DDF2F /* MobileTests */ = {
 			isa = PBXGroup;
 			children = (
-				0C93445D29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift */,
+				0C8D896E29C2576700BD86E6 /* Cache */,
 			);
 			path = MobileTests;
 			sourceTree = "<group>";
@@ -810,6 +841,17 @@
 				0C1B855229BFA67500671265 /* UI */,
 			);
 			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
+		0CFEC67629C2315000AF9319 /* CacheHandler */ = {
+			isa = PBXGroup;
+			children = (
+				0CFEC67229C2310D00AF9319 /* CacheHandler.swift */,
+				0CFEC67429C2314800AF9319 /* ImageCacheHandler.swift */,
+				0CFEC67B29C23C8600AF9319 /* URLCacheHandler.swift */,
+				0CFEC67D29C2422E00AF9319 /* BaseCacheHandler.swift */,
+			);
+			path = CacheHandler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -924,6 +966,9 @@
 				0C1B850729BFA1BD00671265 /* PBXTargetDependency */,
 			);
 			name = "rpenya-rickandmorty-challenge";
+			packageProductDependencies = (
+				0CFEC67029C22F8200AF9319 /* Kingfisher */,
+			);
 			productName = "rpenya-rickandmorty-challenge";
 			productReference = 0C93444929BF9FD0002DDF2F /* rpenya-rickandmorty-challenge.app */;
 			productType = "com.apple.product-type.application";
@@ -1011,6 +1056,9 @@
 				Base,
 			);
 			mainGroup = 0C93444029BF9FD0002DDF2F;
+			packageReferences = (
+				0CFEC66F29C22F8200AF9319 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 0C93444A29BF9FD0002DDF2F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1171,6 +1219,7 @@
 				0C1FEEEB29C0F28A00E90B30 /* CharactersListViewModel.swift in Sources */,
 				0C8B68FF29C1EDDC000B05C1 /* CharacterListCellView.swift in Sources */,
 				0C875DA129C0A44C001A4EAD /* MockCharactersRepository.swift in Sources */,
+				0CFEC67529C2314800AF9319 /* ImageCacheHandler.swift in Sources */,
 				0C1FEEE929C0F27000E90B30 /* CharactersListView.swift in Sources */,
 				0C875DA429C0A458001A4EAD /* MockPageInfo.swift in Sources */,
 				0C1FEEE729C0F1FA00E90B30 /* CharactersListAssembler.swift in Sources */,
@@ -1179,10 +1228,13 @@
 				0C8B68E929C1D6E0000B05C1 /* ErrorView.swift in Sources */,
 				0C1FEEF629C0F7FB00E90B30 /* ListItems.swift in Sources */,
 				0C1FEEFC29C0F84300E90B30 /* AccessibilityIdentifierConstants.swift in Sources */,
+				0CFEC67829C231C100AF9319 /* MobileConstants.swift in Sources */,
 				0C8B68F729C1DAB5000B05C1 /* CharactersListItems.swift in Sources */,
 				0C875DA329C0A455001A4EAD /* MockCharacter.swift in Sources */,
 				0C8B68F129C1D7DA000B05C1 /* Line.swift in Sources */,
 				0C1FEEFF29C0FC7E00E90B30 /* PlainListPaginated.swift in Sources */,
+				0CFEC67C29C23C8600AF9319 /* URLCacheHandler.swift in Sources */,
+				0CFEC67A29C2331600AF9319 /* UserDefaultsRepository.swift in Sources */,
 				0C8B68FB29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift in Sources */,
 				0C8B68F329C1D8E8000B05C1 /* PageInfoViewEntity.swift in Sources */,
 				0C8B68ED29C1D789000B05C1 /* Colors.swift in Sources */,
@@ -1190,8 +1242,10 @@
 				0C875DA229C0A452001A4EAD /* MockCharactersPage.swift in Sources */,
 				0C8B68F929C1DAC5000B05C1 /* CharactersListItem.swift in Sources */,
 				0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */,
+				0CFEC67329C2310D00AF9319 /* CacheHandler.swift in Sources */,
 				0C1FEF0329C102A400E90B30 /* PlainGridPaginated.swift in Sources */,
 				0C1FEEF529C0F7FB00E90B30 /* ButtonItem.swift in Sources */,
+				0CFEC67E29C2422E00AF9319 /* BaseCacheHandler.swift in Sources */,
 				0C1FEEEF29C0F2CB00E90B30 /* CharacterThinViewEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1200,7 +1254,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C93445E29BF9FD3002DDF2F /* rpenya_rickandmorty_challengeTests.swift in Sources */,
+				0C8D897029C2578C00BD86E6 /* BaseCacheHandlerTests.swift in Sources */,
+				0C8D897429C257CD00BD86E6 /* URLCacheHandlerTests.swift in Sources */,
+				0C8D897229C257B700BD86E6 /* ImageCacheHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1789,6 +1845,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0CFEC66F29C22F8200AF9319 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0CFEC67029C22F8200AF9319 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CFEC66F29C22F8200AF9319 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0C93444129BF9FD0002DDF2F /* Project object */;
 }
