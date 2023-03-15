@@ -23,4 +23,8 @@ struct CharactersListItem: ListItem {
     func getImageUrl() -> String {
         return character.imageUrl
     }
+    
+    func getLocationName() -> String? {
+        return character.locationName
+    }
 }

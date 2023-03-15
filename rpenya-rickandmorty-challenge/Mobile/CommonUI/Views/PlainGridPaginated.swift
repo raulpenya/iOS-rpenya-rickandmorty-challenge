@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct PlainGridPaginated: View {
+    private static let cellsPadding: CGFloat = 4
     let listItems: ListItems
-    let twoColumnGrid = [GridItem(.flexible(), spacing: 4), GridItem(.flexible(), spacing: 4)]
+    let twoColumnGrid = [GridItem(.flexible(), spacing: cellsPadding), GridItem(.flexible(), spacing: cellsPadding)]
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: twoColumnGrid, spacing: 4) {
+            LazyVGrid(columns: twoColumnGrid, spacing: PlainGridPaginated.cellsPadding) {
                 ForEach(listItems.items) { anyItem in
                     if let item = anyItem.item as? CharactersListItem {
                         CharacterListCellView(item: item).frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height)
@@ -25,7 +26,7 @@ struct PlainGridPaginated: View {
                         listItems.didReachListBottomAction()
                     }
                 }
-            }.padding(.horizontal, 4)
+            }.padding(.horizontal, PlainGridPaginated.cellsPadding)
         }
     }
 }

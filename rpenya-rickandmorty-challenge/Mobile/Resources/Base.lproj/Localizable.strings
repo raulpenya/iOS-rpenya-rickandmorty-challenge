@@ -11,3 +11,5 @@
 "errorview_title" = "Oops!";
 "errorview_message" = "An error ocurred:";
 "refresh" = "Refresh";
+"location" = "Location:";
+"status" = "Status:";

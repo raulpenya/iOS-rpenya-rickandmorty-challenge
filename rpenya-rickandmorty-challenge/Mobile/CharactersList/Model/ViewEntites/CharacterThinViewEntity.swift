@@ -9,10 +9,10 @@ import Foundation
 import Domain
 
 struct CharacterThinViewEntity {
-   let id: String
-   let name: String
-   let status: Status
-   let imageUrl: String
+    let id: String
+    let name: String
+    let locationName: String?
+    let imageUrl: String
 }
 
 extension CharacterThinViewEntity {
@@ -23,6 +23,6 @@ extension CharacterThinViewEntity {
 
 extension Character {
     func transformToUICharacterThin() -> CharacterThinViewEntity {
-        return CharacterThinViewEntity(id: id, name: name, status: status, imageUrl: imageUrl)
+        return CharacterThinViewEntity(id: id, name: name, locationName: locationName, imageUrl: imageUrl)
     }
 }
