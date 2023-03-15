@@ -25,7 +25,13 @@ struct CharactersListView: View {
                     PlainGridPaginated(listItems: listItems).refreshable(action: viewModel.refreshData)
                 }
             }
-            .navigationTitle(NSLocalizedString("_title", comment: ""))
+            .toolbar {
+                ToolbarItem(placement: .automatic) {
+                    Image("title_image")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
+            }
 //            .sheet(isPresented: $viewModel.presentShoppingBasketDetail) {
 //                if let dependencies = viewModel.transformToShoppingBasketDetailDependencies() {
 //                    router.destination(dependencies)
