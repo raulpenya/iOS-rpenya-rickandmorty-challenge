@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+struct TitleLightTextModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content.font(.system(.title3, weight: .semibold))
+            .foregroundColor(Colors.cellTextColor)
+            .lineLimit(1)
+            .minimumScaleFactor(0.01)
+    }
+}
+
 struct TitleTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.title, weight: .semibold))

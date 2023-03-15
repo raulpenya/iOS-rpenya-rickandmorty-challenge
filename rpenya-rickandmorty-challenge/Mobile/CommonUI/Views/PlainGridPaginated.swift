@@ -9,20 +9,13 @@ import SwiftUI
 
 struct PlainGridPaginated: View {
     let listItems: ListItems
-    
-    var twoColumnGrid = [GridItem(.flexible(), spacing: 0), GridItem(.flexible(), spacing: 0)]
-    var symbols = ["keyboard", "hifispeaker.fill", "printer.fill", "tv.fill", "desktopcomputer", "headphones", "tv.music.note", "mic", "plus.bubble", "video"]
-    var colors: [Color] = [.yellow, .purple, .green]
-    
+    let twoColumnGrid = [GridItem(.flexible(), spacing: 4), GridItem(.flexible(), spacing: 4)]
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: twoColumnGrid, spacing: 0) {
+            LazyVGrid(columns: twoColumnGrid, spacing: 4) {
                 ForEach(listItems.items) { anyItem in
                     if let item = anyItem.item as? CharactersListItem {
-                        Image(systemName: symbols[symbols.count-1])
-                            .font(.system(size: 30))
-                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: UIScreen.main.bounds.width/2)
-                            .background(colors[colors.count-1])
+                        CharacterListCellView(item: item).frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height)
                     } else {
                         Text("PlainListView :: unknown item")
                     }
@@ -32,7 +25,7 @@ struct PlainGridPaginated: View {
                         listItems.didReachListBottomAction()
                     }
                 }
-            }
+            }.padding(.horizontal, 4)
         }
     }
 }

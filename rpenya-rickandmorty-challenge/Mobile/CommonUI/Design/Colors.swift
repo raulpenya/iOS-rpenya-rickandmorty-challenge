@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Colors {
+    static let cellTextColor: Color = Color(red: 245/255, green: 245/255, blue: 245/255)
     static let textColor: Color = Color(red: 22/255, green: 22/255, blue: 29/255)
     static let shadowColor: Color = .black.opacity(0.3)
     static let completeButtonBackgroundColor: Color = Color(.systemGreen)
