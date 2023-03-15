@@ -12,7 +12,7 @@ struct CacheHandler: ImageCacheHandler, URLCacheHandler {
         increaseCacheSize(memoryCapacity: MobileConstants.Cache.memoryCapacity, diskCapacity: MobileConstants.Cache.diskCapacity)
     }
     
-    func cacheCheck() {
+    func checkCache() {
         let currentDate = Date().timeIntervalSince1970
         let repository = UserDefaultsRepository()
         resetImageCacheIfNeeded(newTimestamp: currentDate, with: repository)
