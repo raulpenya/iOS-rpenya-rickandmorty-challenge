@@ -25,8 +25,8 @@ struct PlainGridPaginatedView: View {
                     }
                 }
                 if let listItems = listItems as? ListItemsPaginated, listItems.isListCompleted == false {
-                    Text("PlainGridPaginated :: bottom reached")
-                    Text("PlainGridPaginated :: bottom reached").onAppear {
+                    CharacterListDummyCellView().frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height)
+                    CharacterListDummyCellView().frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height).onAppear {
                         listItems.didReachListBottomAction()
                     }
                 }

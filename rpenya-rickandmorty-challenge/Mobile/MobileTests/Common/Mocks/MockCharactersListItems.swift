@@ -11,7 +11,7 @@ import Foundation
 
 struct MockCharactersListItems {
     static func givenCharactersListItems() -> CharactersListItems {
-        return CharactersListItems(items: [MockCharactersListItem.givenCharactersListItem1().transformToAnyItem(), MockCharactersListItem.givenCharactersListItem2().transformToAnyItem()], isListCompleted: true) {
+        return CharactersListItems(items: [MockCharactersListItem.givenCharactersListItem1().transformToAnyItem(), MockCharactersListItem.givenCharactersListItem2().transformToAnyItem()], isListCompleted: false) {
             print("MockCharactersListItems")
         }
     }

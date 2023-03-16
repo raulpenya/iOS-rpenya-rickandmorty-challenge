@@ -10,7 +10,7 @@ import Domain
 import Combine
 
 class CharacterDetailViewModel: ObservableObject {
-    @Published private(set) var state = State.idle
+    @Published private(set) var state = ViewModelState.idle
     @Published var dismissCharacterDetail: Bool = false
     let getCharacterByIdUseCase: GetCharacterById
     var currentCharacter: CharacterFatViewEntity
