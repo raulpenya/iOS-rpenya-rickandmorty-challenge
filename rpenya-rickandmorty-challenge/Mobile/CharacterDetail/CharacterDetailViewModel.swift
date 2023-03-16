@@ -12,14 +12,47 @@ import Combine
 class CharacterDetailViewModel: ObservableObject {
     @Published private(set) var state = State.idle
     let getCharacterByIdUseCase: GetCharacterById
-    let character: CharacterFatViewEntity
+    var currentCharacter: CharacterFatViewEntity
+    var cancellableSet: Set<AnyCancellable> = []
     
     init(getCharacterByIdUseCase: GetCharacterById, character: CharacterFatViewEntity) {
         self.getCharacterByIdUseCase = getCharacterByIdUseCase
-        self.character = character
+        self.currentCharacter = character
     }
     
     func loadData() {
-        print(character)
+        updateView(with: currentCharacter)
+        getCharacter(with: currentCharacter.id)
+    }
+}
+
+extension CharacterDetailViewModel {
+    func getCharacter(with id: String) {
+        getCharacterByIdUseCase.execute(GetCharacterByIdRequestValues(id: id)).receive(on: RunLoop.main).sink { [weak self] completion in
+            switch completion {
+            case .failure(let error):
+                print(error.localizedDescription)
+                self?.receiveError(error)
+            case .finished:
+                print("CharactersListViewModel :: getCharactersPage :: publisher finished")
+            }
+        } receiveValue: { [weak self] result in
+            print("CharactersListViewModel :: getCharactersPage :: result :: \(result)")
+            self?.receiveResult(result)
+        }.store(in: &cancellableSet)
+    }
+    
+    func receiveResult(_ result: Character) {
+        updateView(with: result.transformToUIharacterFat())
+    }
+    
+    func receiveError(_ error: Error) {
+        let error = error.transformToErrorDescription()
+        state = .failed(error)
+    }
+    
+    func updateView(with character: CharacterFatViewEntity) {
+        currentCharacter = character
+        state = .loaded(character.transformToCharacterDetailItems())
     }
 }

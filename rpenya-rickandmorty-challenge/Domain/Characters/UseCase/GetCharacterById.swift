@@ -17,7 +17,7 @@ public class GetCharacterById: UseCase {
         self.charactersRepository = charactersRepository
     }
     
-    func execute(_ requestValues: GetCharacterByIdRequestValues) -> AnyPublisher<Character, Error> {
+    public func execute(_ requestValues: GetCharacterByIdRequestValues) -> AnyPublisher<Character, Error> {
         return charactersRepository.getCharacterById(requestValues)
     }
 }

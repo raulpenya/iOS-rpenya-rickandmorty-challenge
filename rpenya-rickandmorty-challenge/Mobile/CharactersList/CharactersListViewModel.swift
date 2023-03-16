@@ -64,6 +64,7 @@ class CharactersListViewModel: ObservableObject {
 
 extension CharactersListViewModel {
     func getCharactersInitialPagePage() {
+        state = .loading
         getCharactersPage(with: 1)
     }
     
