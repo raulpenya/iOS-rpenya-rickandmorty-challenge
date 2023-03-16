@@ -12,7 +12,7 @@ struct CharacterImageView: View {
     let url: URL
     var body: some View {
         KFImage(url).placeholder({ _ in
-            ProgressView()
+            LoadingView()
         })
         .resizable()
         .aspectRatio(contentMode: .fit)

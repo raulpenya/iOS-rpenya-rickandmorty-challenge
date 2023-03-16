@@ -26,9 +26,8 @@ struct PlainGridPaginatedView: View {
                 }
                 if let listItems = listItems as? ListItemsPaginated, listItems.isListCompleted == false {
                     CharacterListDummyCellView().frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height)
-                    CharacterListDummyCellView().frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height).onAppear {
-                        listItems.didReachListBottomAction()
-                    }
+                    CharacterListDummyCellView().frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height)
+                        .onAppear { listItems.didReachListBottomAction() }
                 }
             }.padding(.horizontal, PlainGridPaginatedView.cellsPadding)
         }

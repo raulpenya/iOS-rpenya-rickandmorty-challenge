@@ -10,7 +10,7 @@ import SwiftUI
 struct CharacterListDummyCellView: View {
     var body: some View {
         VStack {
-            ProgressView()
+            LoadingView()
         }.frame(maxWidth: .infinity, maxHeight: .infinity).background {
             RoundedRectangle(cornerRadius: 12.0).fill(.white)
                 .shadow(color: Colors.shadowColor, radius: 5)
