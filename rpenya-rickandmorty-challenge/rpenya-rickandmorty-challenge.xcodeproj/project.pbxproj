@@ -379,6 +379,7 @@
 		0CF5DA6229C390A10040B3B0 /* CharactersListViewModelStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModelStateTests.swift; sourceTree = "<group>"; };
 		0CF5DA6429C390BC0040B3B0 /* CharactersListViewModelFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModelFlowTests.swift; sourceTree = "<group>"; };
 		0CF5DA6629C390D60040B3B0 /* CharactersListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListRouterTests.swift; sourceTree = "<group>"; };
+		0CF5DA6829C39B6E0040B3B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0CFEC67229C2310D00AF9319 /* CacheHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHandler.swift; sourceTree = "<group>"; };
 		0CFEC67429C2314800AF9319 /* ImageCacheHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheHandler.swift; sourceTree = "<group>"; };
 		0CFEC67729C231C100AF9319 /* MobileConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileConstants.swift; sourceTree = "<group>"; };
@@ -1567,6 +1568,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0C1B854629BFA5D300671265 /* Base */,
+				0CF5DA6829C39B6E0040B3B0 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
