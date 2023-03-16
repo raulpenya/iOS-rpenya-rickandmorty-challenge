@@ -19,11 +19,9 @@ struct CharacterDetailView: View {
                 case .loading:
                     ProgressView()
                 case .failed(let error):
-                    ProgressView()
-//                    ErrorView(errorMessage: error.text, action: viewModel.refreshData)
+                    ErrorView(errorMessage: error.text, action: viewModel.refreshData)
                 case .loaded(let listItems):
-                    ProgressView()
-//                    PlainGridPaginated(listItems: listItems).refreshable(action: viewModel.refreshData)
+                    PlainListView(listItems: listItems)
                 }
             }
         }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CharacterDetailImageCellView: View {
+    let item: CharacterDetailItem
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,6 +16,6 @@ struct CharacterDetailImageCellView: View {
 
 struct CharacterDetailImageCellView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterDetailImageCellView()
+        CharacterDetailImageCellView(item: MockCharacterDetailItem.givenCharacterDetailItem1())
     }
 }

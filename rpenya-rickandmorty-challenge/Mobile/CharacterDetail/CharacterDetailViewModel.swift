@@ -24,6 +24,10 @@ class CharacterDetailViewModel: ObservableObject {
         updateView(with: currentCharacter)
         getCharacter(with: currentCharacter.id)
     }
+    
+    @Sendable func refreshData() {
+        loadData()
+    }
 }
 
 extension CharacterDetailViewModel {

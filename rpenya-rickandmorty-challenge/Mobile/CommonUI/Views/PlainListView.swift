@@ -12,20 +12,17 @@ struct PlainListView: View {
     
     var body: some View {
         List (listItems.items) { anyItem in
-//            if let item = anyItem.item as? ProductListItem {
-//                ProductCells(item: item).listRowSeparator(.hidden).background {
-//                    RoundedRectangle(cornerRadius: 12.0)
-//                        .shadow(color: Colors.shadowColor, radius: 5)
-//                }
-//            } else {
-//                Text("PlainListView :: unknown item")
-//            }
+            if let item = anyItem.item as? CharacterDetailItem {
+                CharacterDetailCell(item: item).listRowSeparator(.hidden)
+            } else {
+                Text("PlainListView :: unknown item")
+            }
         }.listStyle(.plain)
     }
 }
 
-//struct PlainList_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PlainListView(listItems: ProductsListModelPreviewProvider.getProductsListItem())
-//    }
-//}
+struct PlainList_Previews: PreviewProvider {
+    static var previews: some View {
+        PlainListView(listItems: MockCharactersListItems.givenCharactersListItems())
+    }
+}
