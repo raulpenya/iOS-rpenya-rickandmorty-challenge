@@ -24,7 +24,7 @@ struct CharacterDetailImageCellView: View {
                 }
                 .frame(width: UIScreen.main.bounds.width, height: 60, alignment: .leading)
                 .background {
-                    LinearGradient(gradient: Gradient(colors: [.black.opacity(0), .black.opacity(0.7)]), startPoint: .bottom, endPoint: .top)
+                    LinearGradient(gradient: Gradient(colors: [.black.opacity(0), .black.opacity(0.8)]), startPoint: .bottom, endPoint: .top)
                 }
             }
             .cornerRadius(8, corners: [.topLeft, .topRight])
