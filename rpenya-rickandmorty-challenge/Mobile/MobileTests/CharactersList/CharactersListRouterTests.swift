@@ -11,8 +11,8 @@ import XCTest
 final class CharactersListRouterTests: XCTestCase {
     func test_destination() {
         //Given
-        let router = ProductsListRouter()
-        let dependencies = ShoppingBasketDetailDependencies(shoppingBasket: MockShoppingBasketViewEntity.givenShoppingBasket(), delegate: MockProductsListViewModel.getModel())
+        let router = CharactersListRouter()
+        let dependencies = CharacterDetailDependencies(character: MockCharacterFatViewEntity.givenCharacterFat1())
         //When
         let destination = router.destination(dependencies)
         //Then
