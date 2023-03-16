@@ -46,7 +46,7 @@ struct LoadingView: View {
     }
 }
         
-struct CustomSpinner_Previews: PreviewProvider {
+struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
         LoadingView()
     }
