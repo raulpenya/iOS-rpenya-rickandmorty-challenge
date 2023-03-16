@@ -19,8 +19,7 @@ struct CharacterDetailImageCellView: View {
             .aspectRatio(contentMode: .fit)
             .overlay(alignment: .topLeading) {
                 HStackLayout {
-                    Button { item.dismiss() } label: { Image("icCloseLight") }
-                    .frame(width: 60, height: 60)
+                    CloseButton(action: item.dismiss)
                 }
                 .frame(width: UIScreen.main.bounds.width, height: 60, alignment: .leading)
                 .background {
