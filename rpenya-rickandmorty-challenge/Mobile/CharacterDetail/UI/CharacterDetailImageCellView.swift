@@ -30,6 +30,7 @@ struct CharacterDetailImageCellView: View {
                 LinearGradient(gradient: Gradient(colors: [.black.opacity(0), .black.opacity(0.7)]), startPoint: .bottom, endPoint: .top)
             }
         }
+        .cornerRadius(8, corners: [.topLeft, .topRight])
     }
 }
 

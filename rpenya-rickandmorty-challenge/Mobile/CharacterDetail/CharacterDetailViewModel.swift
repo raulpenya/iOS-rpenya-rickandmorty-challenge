@@ -43,10 +43,10 @@ extension CharacterDetailViewModel {
                 print(error.localizedDescription)
                 self?.receiveError(error)
             case .finished:
-                print("CharactersListViewModel :: getCharactersPage :: publisher finished")
+                print("CharacterDetailViewModel :: getCharacter :: publisher finished")
             }
         } receiveValue: { [weak self] result in
-            print("CharactersListViewModel :: getCharactersPage :: result :: \(result)")
+            print("CharacterDetailViewModel :: getCharacter :: result :: \(result)")
             self?.receiveResult(result)
         }.store(in: &cancellableSet)
     }
