@@ -30,7 +30,7 @@ final class CharactersPagesViewEntityTests: XCTestCase {
     
     func test_isListCompleted_true() {
         //Given
-        var charactersPages = CharactersPagesViewEntity(currentPage: MockPageInfoViewEntity.givenPageInfo(nextPage: nil))
+        let charactersPages = CharactersPagesViewEntity(currentPage: MockPageInfoViewEntity.givenPageInfo(nextPage: nil))
         //When
         let result = charactersPages.isListCompleted()
         //Then
@@ -39,7 +39,7 @@ final class CharactersPagesViewEntityTests: XCTestCase {
     
     func test_isListCompleted_false() {
         //Given
-        var charactersPages = CharactersPagesViewEntity(currentPage: MockPageInfoViewEntity.givenPageInfo())
+        let charactersPages = CharactersPagesViewEntity(currentPage: MockPageInfoViewEntity.givenPageInfo())
         //When
         let result = charactersPages.isListCompleted()
         //Then
