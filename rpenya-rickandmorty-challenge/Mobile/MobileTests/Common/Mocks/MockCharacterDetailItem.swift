@@ -5,9 +5,8 @@
 //  Created by raulbot on 16/3/23.
 //
 
-#if DEBUG
-
 import Foundation
+@testable import rpenya_rickandmorty_challenge
 
 struct MockCharacterDetailItem {
     static func givenCharacterDetailItem1() -> CharacterDetailItem {
@@ -28,5 +27,3 @@ struct MockCharacterDetailItem {
         return CharacterDetailInfoItem(title: "_origin", info: MockCharacterFatViewEntity.originName1)
     }
 }
-
-#endif

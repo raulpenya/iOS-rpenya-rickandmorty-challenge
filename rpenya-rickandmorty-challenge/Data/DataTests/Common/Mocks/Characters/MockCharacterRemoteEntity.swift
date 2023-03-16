@@ -18,6 +18,8 @@ struct MockCharacterRemoteEntity {
     static let location1 = MockLocationRemoteEntity.givenLocationRemoteEntity()
     static let gender1 = "Male"
     static let imageUrl1 = "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+    static let episodes1: [String] = ["https://rickandmortyapi.com/api/episode/1",
+                                      "https://rickandmortyapi.com/api/episode/2"]
     
     static let id2 = 2
     static let name2 = "Morty Smith"
@@ -28,12 +30,14 @@ struct MockCharacterRemoteEntity {
     static let location2 = MockLocationRemoteEntity.givenLocationRemoteEntity()
     static let gender2 = "Male"
     static let imageUrl2 = "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+    static let episodes2: [String] = ["https://rickandmortyapi.com/api/episode/1",
+                                      "https://rickandmortyapi.com/api/episode/2"]
     
     static func givenCharacterRemoteEntity1(id: Int? = id1, name: String? = name1, imageUrl: String? = imageUrl1) -> CharacterRemoteEntity {
-        return CharacterRemoteEntity(id: id, name: name, status: status1, species: species1, type: type1, origin: origin1, location: location1, gender: gender1, imageUrl: imageUrl)
+        return CharacterRemoteEntity(id: id, name: name, status: status1, species: species1, type: type1, origin: origin1, location: location1, gender: gender1, imageUrl: imageUrl, episodes: episodes1)
     }
     
     static func givenCharacterRemoteEntity2() -> CharacterRemoteEntity {
-        return CharacterRemoteEntity(id: id2, name: name2, status: status2, species: species2, type: type2, origin: origin2, location: location2, gender: gender2, imageUrl: imageUrl2)
+        return CharacterRemoteEntity(id: id2, name: name2, status: status2, species: species2, type: type2, origin: origin2, location: location2, gender: gender2, imageUrl: imageUrl2, episodes: episodes2)
     }
 }

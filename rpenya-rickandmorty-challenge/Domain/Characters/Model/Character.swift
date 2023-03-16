@@ -51,8 +51,9 @@ public struct Character {
     public let originName: String?
     public let locationName: String?
     public let imageUrl: String
+    public let episodes: [String]
     
-    public init(id: String, name: String, status: Status, species: String?, type: String?, gender: Gender, originName: String?, locationName: String?, imageUrl: String) {
+    public init(id: String, name: String, status: Status, species: String?, type: String?, gender: Gender, originName: String?, locationName: String?, imageUrl: String, episodes: [String]) {
         self.id = id
         self.name = name
         self.status = status
@@ -62,5 +63,6 @@ public struct Character {
         self.originName = originName
         self.locationName = locationName
         self.imageUrl = imageUrl
+        self.episodes = episodes
     }
 }

@@ -18,6 +18,7 @@ struct CharacterFatViewEntity {
     let originName: String?
     let locationName: String?
     let imageUrl: String
+    let episodes: [String]
 }
 
 extension CharacterFatViewEntity {
@@ -49,12 +50,15 @@ extension CharacterFatViewEntity {
         if let type = type.nilIfEmpty() {
             items.append(CharacterDetailInfoItem(title: NSLocalizedString("_type", comment: ""), info: type).transformToAnyItem())
         }
+        if !episodes.isEmpty {
+            items.append(CharacterDetailInfoItem(title: NSLocalizedString("_episodes", comment: ""), info: episodes.joined(separator: ",")).transformToAnyItem())
+        }
         return items
     }
 }
 
 extension Character {
     func transformToUIharacterFat() -> CharacterFatViewEntity {
-        return CharacterFatViewEntity(id: id, name: name, status: status, species: species, type: type, gender: gender, originName: originName, locationName: locationName, imageUrl: imageUrl)
+        return CharacterFatViewEntity(id: id, name: name, status: status, species: species, type: type, gender: gender, originName: originName, locationName: locationName, imageUrl: imageUrl, episodes: episodes)
     }
 }

@@ -18,6 +18,7 @@ struct MockCharacter {
     static let origin1: String = "Earth (Replacement Dimension)"
     static let location1: String = "Earth (Replacement Dimension)"
     static let imageUrl1: String = "https://rickandmortyapi.com/api/character/avatar/821.jpeg"
+    static let episodes1: [String] = ["1","2","3"]
     
     static let id2: String = "822"
     static let name2: String = "Young Jerry"
@@ -28,12 +29,13 @@ struct MockCharacter {
     static let origin2: String = "Earth (Unknown dimension)"
     static let location2: String = "Earth (Unknown dimension)"
     static let imageUrl2: String = "https://rickandmortyapi.com/api/character/avatar/822.jpeg"
+    static let episodes2: [String] = ["1","2","3"]
     
     static func givenCharacter1() -> Character {
-        return Character(id: id1, name: name1, status: status1, species: species1, type: type1, gender: gender1, originName: origin1, locationName: location1, imageUrl: imageUrl1)
+        return Character(id: id1, name: name1, status: status1, species: species1, type: type1, gender: gender1, originName: origin1, locationName: location1, imageUrl: imageUrl1, episodes: episodes1)
     }
     
     static func givenCharacter2() -> Character {
-        return Character(id: id2, name: name2, status: status2, species: species2, type: type2, gender: gender2, originName: origin2, locationName: location2, imageUrl: imageUrl2)
+        return Character(id: id2, name: name2, status: status2, species: species2, type: type2, gender: gender2, originName: origin2, locationName: location2, imageUrl: imageUrl2, episodes: episodes2)
     }
 }
