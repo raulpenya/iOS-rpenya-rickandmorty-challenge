@@ -6,11 +6,21 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CharacterDetailImageCellView: View {
     let item: CharacterDetailItem
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        KFImage(URL(string: item.getImageUrl())!).placeholder({ _ in
+            ProgressView()
+        })
+        .resizable()
+        .aspectRatio(contentMode: .fit)
+        .background {
+            RoundedRectangle(cornerRadius: 0.0)
+                .fill(Color.green)
+        }
+        
     }
 }
 

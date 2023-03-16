@@ -11,18 +11,16 @@ struct CharacterDetailView: View {
     @ObservedObject var viewModel: CharacterDetailViewModel
     
     var body: some View {
-        NavigationView {
-            VStack {
-                switch viewModel.state {
-                case .idle:
-                    Color.clear.onAppear(perform: viewModel.loadData)
-                case .loading:
-                    ProgressView()
-                case .failed(let error):
-                    ErrorView(errorMessage: error.text, action: viewModel.refreshData)
-                case .loaded(let listItems):
-                    PlainListView(listItems: listItems)
-                }
+        VStack {
+            switch viewModel.state {
+            case .idle:
+                Color.clear.onAppear(perform: viewModel.loadData)
+            case .loading:
+                ProgressView()
+            case .failed(let error):
+                ErrorView(errorMessage: error.text, action: viewModel.refreshData)
+            case .loaded(let listItems):
+                PlainListView(listItems: listItems).clipped().edgesIgnoringSafeArea([.top, .bottom])
             }
         }
     }

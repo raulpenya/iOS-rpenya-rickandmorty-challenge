@@ -17,6 +17,7 @@ struct CharacterListCellView: View {
     
     var item: CharactersListItem
     var body: some View {
+        //TODO: fix force URL
         KFImage(URL(string: item.getImageUrl())!).placeholder({ _ in
             ProgressView()
         })

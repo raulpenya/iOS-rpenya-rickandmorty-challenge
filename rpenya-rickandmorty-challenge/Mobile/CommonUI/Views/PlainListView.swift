@@ -13,7 +13,7 @@ struct PlainListView: View {
     var body: some View {
         List (listItems.items) { anyItem in
             if let item = anyItem.item as? CharacterDetailItem {
-                CharacterDetailCell(item: item).listRowSeparator(.hidden)
+                CharacterDetailCell(item: item).listRowSeparator(.hidden).listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             } else {
                 Text("PlainListView :: unknown item")
             }
