@@ -9,7 +9,7 @@ import XCTest
 @testable import Data
 
 final class StringTests: XCTestCase {
-    func test_getURLLastComponent() {
+    func test_getURLLastComponent_success() {
         //Given
         let string = "https://rickandmortyapi.com/api/episode/1"
         //When
@@ -17,5 +17,14 @@ final class StringTests: XCTestCase {
         //Then
         XCTAssertNotNil(number)
         XCTAssertEqual(number, "1")
+    }
+    
+    func test_getURLLastComponent_nil() {
+        //Given
+        let string = ""
+        //When
+        let number = string.getURLLastComponent()
+        //Then
+        XCTAssertNil(number)
     }
 }
