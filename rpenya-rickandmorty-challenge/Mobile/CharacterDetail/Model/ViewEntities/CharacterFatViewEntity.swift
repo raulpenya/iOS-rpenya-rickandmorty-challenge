@@ -37,16 +37,16 @@ extension CharacterFatViewEntity {
     
     func transformToCharacterDetailInfoItems() -> [AnyItem] {
         var items: [AnyItem] = []
-        if let originName = originName {
+        if let originName = originName.nilIfEmpty() {
             items.append(CharacterDetailInfoItem(title: NSLocalizedString("_origin", comment: ""), info: originName).transformToAnyItem())
         }
-        if let locationName = locationName {
+        if let locationName = locationName.nilIfEmpty() {
             items.append(CharacterDetailInfoItem(title: NSLocalizedString("_location", comment: ""), info: locationName).transformToAnyItem())
         }
-        if let species = species {
+        if let species = species.nilIfEmpty() {
             items.append(CharacterDetailInfoItem(title: NSLocalizedString("_species", comment: ""), info: species).transformToAnyItem())
         }
-        if let type = type {
+        if let type = type.nilIfEmpty() {
             items.append(CharacterDetailInfoItem(title: NSLocalizedString("_type", comment: ""), info: type).transformToAnyItem())
         }
         return items

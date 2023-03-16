@@ -33,20 +33,4 @@ struct CharacterDetailHeaderInfoItem: CharacterDetailItem {
     func getGenderString() -> String {
         return character.gender.rawValue
     }
-
-    func getOriginName() -> String? {
-        return character.originName.nilIfEmpty()
-    }
-
-    func getLocationName() -> String? {
-        return character.locationName.nilIfEmpty()
-    }
-
-    func getSpecies() -> String? {
-        return character.species.nilIfEmpty()
-    }
-
-    func getType() -> String? {
-        return character.type.nilIfEmpty()
-    }
 }
