@@ -48,7 +48,6 @@ struct LoadingView: View {
         
 struct CustomSpinner_Previews: PreviewProvider {
     static var previews: some View {
-//        CustomSpinner(frameSize: 90).padding()
         LoadingView()
     }
 }
