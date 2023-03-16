@@ -5,9 +5,8 @@
 //  Created by raulbot on 15/3/23.
 //
 
-#if DEBUG
-
 import Foundation
+@testable import rpenya_rickandmorty_challenge
 
 struct MockCharactersListItem {
     static func givenCharactersListItem1() -> CharactersListItem {
@@ -22,6 +21,3 @@ struct MockCharactersListItem {
         }
     }
 }
-
-#endif
-

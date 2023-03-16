@@ -21,8 +21,8 @@ struct PlainListView: View {
     }
 }
 
-struct PlainList_Previews: PreviewProvider {
-    static var previews: some View {
-        PlainListView(listItems: MockCharactersListItems.givenCharactersListItems())
-    }
-}
+//struct PlainList_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlainListView(listItems: MockCharactersListItems.givenCharactersListItems())
+//    }
+//}

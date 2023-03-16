@@ -18,8 +18,9 @@ struct CharacterRemoteEntity: Decodable, Identifiable {
     let location: LocationRemoteEntity?
     let gender: String?
     let imageUrl: String?
+    let episodes: [String]?
     
-    init(id: Int?, name: String?, status: String?, species: String?, type: String?, origin: OriginRemoteEntity?, location: LocationRemoteEntity?, gender: String?, imageUrl: String?) {
+    init(id: Int?, name: String?, status: String?, species: String?, type: String?, origin: OriginRemoteEntity?, location: LocationRemoteEntity?, gender: String?, imageUrl: String?, episodes: [String]?) {
         self.id = id
         self.name = name
         self.status = status
@@ -29,6 +30,7 @@ struct CharacterRemoteEntity: Decodable, Identifiable {
         self.location = location
         self.gender = gender
         self.imageUrl = imageUrl
+        self.episodes = episodes
     }
     
     enum CodingKeys: String, CodingKey {
@@ -41,6 +43,7 @@ struct CharacterRemoteEntity: Decodable, Identifiable {
         case origin = "origin"
         case location = "location"
         case imageUrl = "image"
+        case episodes = "episode"
     }
 }
 
@@ -57,6 +60,10 @@ extension CharacterRemoteEntity {
         if let gender = gender {
             genderenum = Gender(rawValue: gender)
         }
-        return Character(id: String(id), name: name, status: statusenum, species: species, type: type, gender: genderenum, originName: origin?.name, locationName: location?.name, imageUrl: imageUrl)
+        var domainEpisodes: [String] = []
+        if let episodes = episodes {
+            domainEpisodes = episodes.compactMap { $0.getURLLastComponent() }
+        }
+        return Character(id: String(id), name: name, status: statusenum, species: species, type: type, gender: genderenum, originName: origin?.name, locationName: location?.name, imageUrl: imageUrl, episodes: domainEpisodes)
     }
 }

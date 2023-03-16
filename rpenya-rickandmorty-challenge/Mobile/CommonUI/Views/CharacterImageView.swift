@@ -19,8 +19,8 @@ struct CharacterImageView: View {
     }
 }
 
-struct CharacterImageView_Previews: PreviewProvider {
-    static var previews: some View {
-        CharacterImageView(url: URL(string: MockCharacterFatViewEntity.imageUrl1)!)
-    }
-}
+//struct CharacterImageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CharacterImageView(url: URL(string: MockCharacterFatViewEntity.imageUrl1)!)
+//    }
+//}

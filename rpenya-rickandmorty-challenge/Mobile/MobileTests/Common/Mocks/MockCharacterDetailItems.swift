@@ -5,14 +5,11 @@
 //  Created by raulbot on 16/3/23.
 //
 
-#if DEBUG
-
 import Foundation
+@testable import rpenya_rickandmorty_challenge
 
 struct MockCharacterDetailItems {
     static func givenCharacterDetailItems() -> CharacterDetailItems {
         return CharacterDetailItems(items: [MockCharacterDetailItem.givenCharacterDetailItem1().transformToAnyItem(), MockCharacterDetailItem.givenCharacterDetailItem2().transformToAnyItem()])
     }
 }
-
-#endif

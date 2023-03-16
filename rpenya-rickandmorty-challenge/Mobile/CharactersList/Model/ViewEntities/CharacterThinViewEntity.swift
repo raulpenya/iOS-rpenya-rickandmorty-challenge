@@ -22,7 +22,7 @@ extension CharacterThinViewEntity {
     }
     
     func transformToCharacterFatViewEntity() -> CharacterFatViewEntity {
-        return CharacterFatViewEntity(id: id, name: name, status: status, species: nil, type: nil, gender: gender, originName: nil, locationName: nil, imageUrl: imageUrl)
+        return CharacterFatViewEntity(id: id, name: name, status: status, species: nil, type: nil, gender: gender, originName: nil, locationName: nil, imageUrl: imageUrl, episodes: [])
     }
 }
 

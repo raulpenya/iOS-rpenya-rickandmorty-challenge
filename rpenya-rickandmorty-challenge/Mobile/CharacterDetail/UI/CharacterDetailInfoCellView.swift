@@ -20,8 +20,8 @@ struct CharacterDetailInfoCellView: View {
     }
 }
 
-struct CharacterDetailInfoSubCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        CharacterDetailInfoCellView(item: MockCharacterDetailItem.giveCharacterDetailInfoSubItem1())
-    }
-}
+//struct CharacterDetailInfoSubCellView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CharacterDetailInfoCellView(item: MockCharacterDetailItem.giveCharacterDetailInfoSubItem1())
+//    }
+//}

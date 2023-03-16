@@ -27,7 +27,59 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0C1B84CF29BFA1B100671265"
+            BuildableName = "Data.framework"
+            BlueprintName = "Data"
+            ReferencedContainer = "container:rpenya-rickandmorty-challenge.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0C1B84D829BFA1B200671265"
+            BuildableName = "DataTests.xctest"
+            BlueprintName = "DataTests"
+            ReferencedContainer = "container:rpenya-rickandmorty-challenge.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0C1B84F229BFA1BC00671265"
+            BuildableName = "Domain.framework"
+            BlueprintName = "Domain"
+            ReferencedContainer = "container:rpenya-rickandmorty-challenge.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0C1B84FB29BFA1BC00671265"
+            BuildableName = "DomainTests.xctest"
+            BlueprintName = "DomainTests"
+            ReferencedContainer = "container:rpenya-rickandmorty-challenge.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0C93444829BF9FD0002DDF2F"
+            BuildableName = "rpenya-rickandmorty-challenge.app"
+            BlueprintName = "rpenya-rickandmorty-challenge"
+            ReferencedContainer = "container:rpenya-rickandmorty-challenge.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0C93445829BF9FD3002DDF2F"
+            BuildableName = "rpenya-rickandmorty-challengeTests.xctest"
+            BlueprintName = "rpenya-rickandmorty-challengeTests"
+            ReferencedContainer = "container:rpenya-rickandmorty-challenge.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0C93446229BF9FD3002DDF2F"
+            BuildableName = "rpenya-rickandmorty-challengeUITests.xctest"
+            BlueprintName = "rpenya-rickandmorty-challengeUITests"
+            ReferencedContainer = "container:rpenya-rickandmorty-challenge.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO"

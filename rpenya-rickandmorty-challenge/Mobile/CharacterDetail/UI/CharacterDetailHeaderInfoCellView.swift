@@ -26,8 +26,8 @@ struct CharacterDetailHeaderInfoCellView: View {
     }
 }
 
-struct CharacterDetailInfoCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        CharacterDetailHeaderInfoCellView(item: MockCharacterDetailItem.givenCharacterDetailItem2())
-    }
-}
+//struct CharacterDetailInfoCellView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CharacterDetailHeaderInfoCellView(item: MockCharacterDetailItem.givenCharacterDetailItem2())
+//    }
+//}
