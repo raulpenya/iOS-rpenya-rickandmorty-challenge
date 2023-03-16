@@ -51,7 +51,7 @@ extension CharacterFatViewEntity {
             items.append(CharacterDetailInfoItem(title: NSLocalizedString("_type", comment: ""), info: type).transformToAnyItem())
         }
         if !episodes.isEmpty {
-            items.append(CharacterDetailInfoItem(title: NSLocalizedString("_episodes", comment: ""), info: episodes.joined(separator: ",")).transformToAnyItem())
+            items.append(CharacterDetailInfoItem(title: NSLocalizedString("_episodes", comment: ""), info: episodes.joined(separator: ", ")).transformToAnyItem())
         }
         return items
     }

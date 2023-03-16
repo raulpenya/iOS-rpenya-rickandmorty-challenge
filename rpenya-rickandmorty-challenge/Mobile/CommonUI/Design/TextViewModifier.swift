@@ -57,7 +57,7 @@ struct Title2TextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.title2, weight: .bold))
             .foregroundColor(Colors.textColor)
-            .lineLimit(2)
+//            .lineLimit(2)
             .minimumScaleFactor(0.01)
     }
 }
