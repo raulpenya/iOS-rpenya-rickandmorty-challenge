@@ -25,13 +25,14 @@ struct CharacterListCellView: View {
             VStackLayout(alignment: .leading, spacing: 0) {
                 Text(item.getName()).modifier(TitleLightTextModifier())
                     .padding([.top,.leading,.trailing], CharacterListCellView.padding)
-                if let locationName = item.getLocationName() {
-                    Text(locationName).modifier(SubtitleLightTextModifier())
-                        .padding([.bottom,.leading,.trailing], CharacterListCellView.padding)
-                }
-            }.frame(width: CharacterListCellView.width, alignment: .leading)
+                HStack {
+                    Text(item.getGenderString()).modifier(SubtitleLightTextModifier())
+                    Text("|").modifier(SubtitleLightTextModifier())
+                    Text(item.getStatusString()).modifier(StatusTextModifier(color: item.getStatusColor()))
+                }.frame(maxWidth: .infinity, alignment: .leading).padding([.bottom,.leading,.trailing], CharacterListCellView.padding)
+            }.frame(maxWidth: .infinity)
                 .background {
-                    LinearGradient(gradient: Gradient(colors: [.black.opacity(0.7), .black.opacity(0)]), startPoint: .bottom, endPoint: .top)
+                    LinearGradient(gradient: Gradient(colors: [.black.opacity(0.8), .black.opacity(0)]), startPoint: .bottom, endPoint: .top)
                 }
         }.cornerRadius(8)
     }

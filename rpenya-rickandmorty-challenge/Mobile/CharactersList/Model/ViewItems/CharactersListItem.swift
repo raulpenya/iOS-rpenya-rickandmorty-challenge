@@ -5,7 +5,7 @@
 //  Created by raulbot on 15/3/23.
 //
 
-import Foundation
+import SwiftUI
 
 struct CharactersListItem: ListItem, ListItemSelectable {
     var id: String
@@ -26,7 +26,15 @@ struct CharactersListItem: ListItem, ListItemSelectable {
         return character.imageUrl
     }
     
-    func getLocationName() -> String? {
-        return character.locationName
+    func getStatusString() -> String {
+        return character.status.rawValue
+    }
+    
+    func getStatusColor() -> Color {
+        return character.status.getColor()
+    }
+    
+    func getGenderString() -> String {
+        return character.gender.rawValue
     }
 }

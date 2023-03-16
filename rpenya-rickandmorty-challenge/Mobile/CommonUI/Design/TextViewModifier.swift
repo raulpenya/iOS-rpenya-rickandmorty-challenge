@@ -44,7 +44,7 @@ struct StatusTextModifier: ViewModifier {
     }
 }
 
-struct GenderTextModifier: ViewModifier {
+struct SubheadlineTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.subheadline, weight: .semibold))
             .foregroundColor(Colors.textColor)

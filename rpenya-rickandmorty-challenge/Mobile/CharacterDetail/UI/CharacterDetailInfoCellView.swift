@@ -15,8 +15,8 @@ struct CharacterDetailInfoCellView: View {
             Text(item.getName()).modifier(TitleTextModifier())
                     .padding(.trailing, 10).frame(maxWidth: .infinity, alignment: .leading)
             HStack {
-                Text(item.getGenderString()).modifier(GenderTextModifier())
-                Text("|").modifier(GenderTextModifier())
+                Text(item.getGenderString()).modifier(SubheadlineTextModifier())
+                Text("|").modifier(SubheadlineTextModifier())
                 Text(item.getStatusString()).modifier(StatusTextModifier(color: item.getStatusColor()))
             }.frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.bottom, CharacterDetailInfoCellView.padding)
