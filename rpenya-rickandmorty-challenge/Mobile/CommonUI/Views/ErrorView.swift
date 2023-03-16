@@ -17,7 +17,7 @@ struct ErrorView: View {
                 .modifier(TitleTextModifier())
                 .padding(.top, 16)
             Text(NSLocalizedString("errorview_message", comment: ""))
-                .modifier(UnitsTextModifier())
+                .modifier(Title3TextModifier())
                 .padding(.top, 8)
             Text(errorMessage)
                 .multilineTextAlignment(.center)
@@ -31,7 +31,7 @@ struct ErrorView: View {
             }.padding([.top, .bottom], 10)
         }.frame(width: 320).background {
             RoundedRectangle(cornerRadius: 12.0)
-                .fill(Colors.cellsBackgroundColor)
+                .fill(Colors.errorViewBackgroundColor)
                 .shadow(color: Colors.shadowColor, radius: 5)
         }
     }

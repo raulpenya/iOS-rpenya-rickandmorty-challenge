@@ -5,7 +5,7 @@
 //  Created by raulbot on 16/3/23.
 //
 
-import Foundation
+import SwiftUI
 
 enum CharacterDetailCellView {
     case headerImage
@@ -33,7 +33,31 @@ struct CharacterDetailItem: ListItem {
         return character.imageUrl
     }
     
+    func getStatusString() -> String {
+        return character.status.rawValue
+    }
+    
+    func getStatusColor() -> Color {
+        return character.status.getColor()
+    }
+    
+    func getGenderString() -> String {
+        return character.gender.rawValue
+    }
+    
+    func getOriginName() -> String? {
+        return character.originName.nilIfEmpty()
+    }
+    
     func getLocationName() -> String? {
-        return character.locationName
+        return character.locationName.nilIfEmpty()
+    }
+    
+    func getSpecies() -> String? {
+        return character.species.nilIfEmpty()
+    }
+    
+    func getType() -> String? {
+        return character.type.nilIfEmpty()
     }
 }
