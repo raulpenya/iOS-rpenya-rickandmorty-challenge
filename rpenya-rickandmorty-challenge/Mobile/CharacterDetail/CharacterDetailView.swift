@@ -9,19 +9,24 @@ import SwiftUI
 
 struct CharacterDetailView: View {
     @ObservedObject var viewModel: CharacterDetailViewModel
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        VStack {
-            switch viewModel.state {
-            case .idle:
-                Color.clear.onAppear(perform: viewModel.loadData)
-            case .loading:
-                ProgressView()
-            case .failed(let error):
-                ErrorView(errorMessage: error.text, action: viewModel.refreshData)
-            case .loaded(let listItems):
-                PlainListView(listItems: listItems)//.clipped().edgesIgnoringSafeArea([.top, .bottom])
+        NavigationView {
+            VStack {
+                switch viewModel.state {
+                case .idle:
+                    Color.clear.onAppear(perform: viewModel.loadData)
+                case .loading:
+                    ProgressView()
+                case .failed(let error):
+                    ErrorView(errorMessage: error.text, action: viewModel.refreshData)
+                case .loaded(let listItems):
+                    PlainListView(listItems: listItems)//.clipped().edgesIgnoringSafeArea([.top, .bottom])
+                }
             }
+        }.onChange(of: viewModel.dismissCharacterDetail) { _ in
+            dismiss()
         }
     }
 }

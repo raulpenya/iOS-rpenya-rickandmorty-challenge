@@ -31,7 +31,7 @@ class CharacterDetailViewModel: ObservableObject {
     }
     
     func dismissButtonPressed() {
-        print("dismissButtonPressed")
+        dismissCharacterDetail = true
     }
 }
 

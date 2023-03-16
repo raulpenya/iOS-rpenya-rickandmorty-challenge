@@ -18,13 +18,12 @@ struct CharacterDetailImageCellView: View {
         .aspectRatio(contentMode: .fit)
         .overlay(alignment: .topLeading) {
             HStackLayout {
-                Button("_close") {
-                    print("CharacterDetailImageCellView :: close")
+                Button {
+                    item.dismiss()
+                } label: {
+                    Image("icCloseLight")
                 }
-                .frame(width: 60, height: 60).background {
-                    RoundedRectangle(cornerRadius: 12.0)
-                        .fill(Colors.cellsBackgroundColor)
-                }
+                .frame(width: 60, height: 60)
             }
             .frame(width: UIScreen.main.bounds.width, height: 60, alignment: .leading)
             .background {
