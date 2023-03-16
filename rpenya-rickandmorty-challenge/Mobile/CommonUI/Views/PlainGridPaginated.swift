@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct PlainGridPaginated: View {
-    private static let cellsPadding: CGFloat = 4
     let listItems: ListItems
     let twoColumnGrid = [GridItem(.flexible(), spacing: cellsPadding), GridItem(.flexible(), spacing: cellsPadding)]
+    private static let cellsPadding: CGFloat = 4
+    
     var body: some View {
         ScrollView {
             LazyVGrid(columns: twoColumnGrid, spacing: PlainGridPaginated.cellsPadding) {
@@ -34,8 +35,8 @@ struct PlainGridPaginated: View {
     }
 }
 
-//struct PlainGridPaginated_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PlainGridPaginated()
-//    }
-//}
+struct PlainGridPaginated_Previews: PreviewProvider {
+    static var previews: some View {
+        PlainGridPaginated(listItems: MockCharactersListItems.givenCharactersListItems())
+    }
+}

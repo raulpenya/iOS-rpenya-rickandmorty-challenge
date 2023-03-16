@@ -41,9 +41,6 @@ struct CharacterListCellView: View {
 
 struct CharacterListCellView_Previews: PreviewProvider {
     static var previews: some View {
-        let item = CharactersListItem(character: CharacterThinViewEntity(id: "2", name: "Morty Smith", locationName: "Earth (Replacement Dimension)", imageUrl: "https://rickandmortyapi.com/api/character/avatar/2.jpeg")) { item in
-            print(item)
-        }
-        CharacterListCellView(item: item)
+        CharacterListCellView(item: MockCharactersListItem.givenCharactersListItem1())
     }
 }

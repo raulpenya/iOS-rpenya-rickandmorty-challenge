@@ -120,6 +120,8 @@
 		0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */; };
 		0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93445029BF9FD2002DDF2F /* Assets.xcassets */; };
 		0C93446829BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93446729BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITests.swift */; };
+		0CF5DA1729C324240040B3B0 /* MockCharactersListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5DA1629C324240040B3B0 /* MockCharactersListItems.swift */; };
+		0CF5DA1829C3244E0040B3B0 /* MockCharactersListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5DA1629C324240040B3B0 /* MockCharactersListItems.swift */; };
 		0CFEC67129C22F8200AF9319 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0CFEC67029C22F8200AF9319 /* Kingfisher */; };
 		0CFEC67329C2310D00AF9319 /* CacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67229C2310D00AF9319 /* CacheHandler.swift */; };
 		0CFEC67529C2314800AF9319 /* ImageCacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67429C2314800AF9319 /* ImageCacheHandler.swift */; };
@@ -322,6 +324,7 @@
 		0C93445929BF9FD3002DDF2F /* rpenya-rickandmorty-challengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rpenya-rickandmorty-challengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93446329BF9FD3002DDF2F /* rpenya-rickandmorty-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rpenya-rickandmorty-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93446729BF9FD3002DDF2F /* rpenya_rickandmorty_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_rickandmorty_challengeUITests.swift; sourceTree = "<group>"; };
+		0CF5DA1629C324240040B3B0 /* MockCharactersListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharactersListItems.swift; sourceTree = "<group>"; };
 		0CFEC67229C2310D00AF9319 /* CacheHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHandler.swift; sourceTree = "<group>"; };
 		0CFEC67429C2314800AF9319 /* ImageCacheHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheHandler.swift; sourceTree = "<group>"; };
 		0CFEC67729C231C100AF9319 /* MobileConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileConstants.swift; sourceTree = "<group>"; };
@@ -730,6 +733,7 @@
 				0C61E19829C28133008B3C68 /* MockCharacterThinViewEntity.swift */,
 				0C61E1A229C281C8008B3C68 /* MockCharacterFatViewEntity.swift */,
 				0C61E19A29C2813E008B3C68 /* MockPageInfoViewEntity.swift */,
+				0CF5DA1629C324240040B3B0 /* MockCharactersListItems.swift */,
 				0C61E19C29C2814C008B3C68 /* MockCharactersListItem.swift */,
 				0C61E19E29C28189008B3C68 /* MockCharactersListViewModel.swift */,
 				0C61E1A029C281AE008B3C68 /* MockCharacterDetailViewModel.swift */,
@@ -1296,6 +1300,7 @@
 				0C8B68E929C1D6E0000B05C1 /* ErrorView.swift in Sources */,
 				0C1FEEF629C0F7FB00E90B30 /* ListItems.swift in Sources */,
 				0C1FEEFC29C0F84300E90B30 /* AccessibilityIdentifierConstants.swift in Sources */,
+				0CF5DA1829C3244E0040B3B0 /* MockCharactersListItems.swift in Sources */,
 				0C61E1A929C2825C008B3C68 /* MockPageInfoViewEntity.swift in Sources */,
 				0C8D897829C25AD700BD86E6 /* CharacterDetailViewModel.swift in Sources */,
 				0CFEC67829C231C100AF9319 /* MobileConstants.swift in Sources */,
@@ -1330,6 +1335,7 @@
 				0C61E1A529C281F1008B3C68 /* MockGetCharactersByPageNumber.swift in Sources */,
 				0C61E1A129C281AE008B3C68 /* MockCharacterDetailViewModel.swift in Sources */,
 				0C61E19529C27DA5008B3C68 /* MockUserDefaultsRepository.swift in Sources */,
+				0CF5DA1729C324240040B3B0 /* MockCharactersListItems.swift in Sources */,
 				0C61E1A729C281FE008B3C68 /* MockGetCharacterById.swift in Sources */,
 				0C61E1A329C281C8008B3C68 /* MockCharacterFatViewEntity.swift in Sources */,
 				0C8D897029C2578C00BD86E6 /* BaseCacheHandlerTests.swift in Sources */,

@@ -30,7 +30,7 @@ struct MockCharacterFatViewEntity {
     static let gender2 = Gender.male
     static let originName2 = "Earth(ReplacementDimension)"
     static let locationName2 = "Earth(ReplacementDimension)"
-    static let imageUrl2 = "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+    static let imageUrl2 = "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
     
     static func givenCharacterFat1() -> CharacterFatViewEntity {
         return CharacterFatViewEntity(id: id1, name: name1, status: status1, species: species1, type: type1, gender: gender1, originName: originName1, locationName: locationName1, imageUrl: imageUrl1)

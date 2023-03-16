@@ -36,11 +36,6 @@ struct CharactersListView: View {
                     router.destination(dependencies)
                 }
             }
-//            .sheet(isPresented: $viewModel.presentShoppingBasketDetail) {
-//                if let dependencies = viewModel.transformToShoppingBasketDetailDependencies() {
-//                    router.destination(dependencies)
-//                }
-//            }
         }
     }
 }
