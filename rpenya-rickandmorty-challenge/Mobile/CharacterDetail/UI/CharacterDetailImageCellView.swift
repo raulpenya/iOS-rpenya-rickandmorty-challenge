@@ -6,17 +6,12 @@
 //
 
 import SwiftUI
-import Kingfisher
 
 struct CharacterDetailImageCellView: View {
     let item: CharacterDetailItem
     var body: some View {
         if let item = item as? CharacterDetailImageItem {
-            KFImage(URL(string: item.getImageUrl())!).placeholder({ _ in
-                ProgressView()
-            })
-            .resizable()
-            .aspectRatio(contentMode: .fit)
+            CharacterImageView(url: URL(string: item.getImageUrl())!)
             .overlay(alignment: .topLeading) {
                 HStackLayout {
                     CloseButton(action: item.dismiss)

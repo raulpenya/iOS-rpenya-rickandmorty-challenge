@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Kingfisher
 
 struct CharacterListCellView: View {
     static let width = (UIScreen.main.bounds.width/2)-6
@@ -16,11 +15,7 @@ struct CharacterListCellView: View {
     var item: CharactersListItem
     var body: some View {
         //TODO: fix force URL
-        KFImage(URL(string: item.getImageUrl())!).placeholder({ _ in
-            ProgressView()
-        })
-        .resizable()
-        .aspectRatio(contentMode: .fit)
+        CharacterImageView(url: URL(string: item.getImageUrl())!)
         .overlay(alignment: .bottomLeading) {
             VStackLayout(alignment: .leading, spacing: 0) {
                 Text(item.getName()).modifier(TitleLightTextModifier())
