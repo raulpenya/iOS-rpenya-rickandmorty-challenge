@@ -22,7 +22,7 @@ struct CharactersListView: View {
                 case .failed(let error):
                     ErrorView(errorMessage: error.text, action: viewModel.refreshData)
                 case .loaded(let listItems):
-                    PlainGridPaginated(listItems: listItems).refreshable(action: viewModel.refreshData)
+                    PlainGridPaginatedView(listItems: listItems).refreshable(action: viewModel.refreshData)
                 }
             }
             .toolbar {
@@ -31,12 +31,11 @@ struct CharactersListView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                 }
+            }.fullScreenCover(isPresented: $viewModel.presentCharacterDetail) {
+                if let dependencies = viewModel.transformToCharacterDetailDependencies() {
+                    router.destination(dependencies)
+                }
             }
-//            .sheet(isPresented: $viewModel.presentShoppingBasketDetail) {
-//                if let dependencies = viewModel.transformToShoppingBasketDetailDependencies() {
-//                    router.destination(dependencies)
-//                }
-//            }
         }
     }
 }

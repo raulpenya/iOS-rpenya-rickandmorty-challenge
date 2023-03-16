@@ -10,7 +10,7 @@ import SwiftUI
 struct TitleLightTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.title3, weight: .semibold))
-            .foregroundColor(Colors.cellTextColor)
+            .foregroundColor(Colors.listCellTextColor)
             .lineLimit(1)
             .minimumScaleFactor(0.01)
     }
@@ -19,7 +19,7 @@ struct TitleLightTextModifier: ViewModifier {
 struct SubtitleLightTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.subheadline, weight: .semibold))
-            .foregroundColor(Colors.cellTextColor)
+            .foregroundColor(Colors.listCellTextColor)
             .lineLimit(1)
             .minimumScaleFactor(0.01)
     }
@@ -34,19 +34,19 @@ struct TitleTextModifier: ViewModifier {
     }
 }
 
-struct SubtitleTextModifier: ViewModifier {
+struct StatusTextModifier: ViewModifier {
+    let color: Color
     func body(content: Content) -> some View {
-        content.font(.system(.subheadline, weight: .regular))
-            .foregroundColor(Colors.textColor)
-            .frame(maxWidth: .infinity, alignment: .topLeading)
-            .lineLimit(2)
+        content.font(.system(.subheadline, weight: .semibold))
+            .foregroundColor(color)
+            .lineLimit(1)
             .minimumScaleFactor(0.01)
     }
 }
 
-struct PriceTextModifier: ViewModifier {
+struct SubheadlineTextModifier: ViewModifier {
     func body(content: Content) -> some View {
-        content.font(.system(.title, weight: .bold))
+        content.font(.system(.subheadline, weight: .semibold))
             .foregroundColor(Colors.textColor)
             .lineLimit(1)
             .minimumScaleFactor(0.01)
@@ -57,35 +57,24 @@ struct Title2TextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.title2, weight: .bold))
             .foregroundColor(Colors.textColor)
+            .lineLimit(2)
+            .minimumScaleFactor(0.01)
+    }
+}
+
+struct Title2RegularTextModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content.font(.system(.title2, weight: .regular))
+            .foregroundColor(Colors.textColor)
             .lineLimit(1)
             .minimumScaleFactor(0.01)
     }
 }
 
-struct UnitsTextModifier: ViewModifier {
+struct Title3TextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.title3, weight: .semibold))
             .foregroundColor(Colors.textColor)
             .minimumScaleFactor(0.01)
-    }
-}
-
-struct AddRemoveButtonTextModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content.font(.title)
-            .foregroundColor(Colors.addRemoveButtonTextColor)
-            .bold()
-            .minimumScaleFactor(0.01)
-    }
-}
-
-struct CompleteButtonTextModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content.font(.title)
-            .foregroundColor(Colors.completeButtonTextColor)
-            .bold()
-            .lineLimit(2)
-            .minimumScaleFactor(0.01)
-            .padding(.all, 6)
     }
 }

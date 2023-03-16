@@ -7,7 +7,7 @@
 
 import Combine
 
-class GetCharacterById: UseCase {
+public class GetCharacterById: UseCase {
     typealias T = Character
     typealias Q = GetCharacterByIdRequestValues
     
@@ -17,7 +17,7 @@ class GetCharacterById: UseCase {
         self.charactersRepository = charactersRepository
     }
     
-    func execute(_ requestValues: GetCharacterByIdRequestValues) -> AnyPublisher<Character, Error> {
+    public func execute(_ requestValues: GetCharacterByIdRequestValues) -> AnyPublisher<Character, Error> {
         return charactersRepository.getCharacterById(requestValues)
     }
 }

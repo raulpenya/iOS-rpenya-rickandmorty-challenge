@@ -7,6 +7,15 @@
 
 import Foundation
 
-class CharactersListRouter {
+class CharactersListRouter: Router {
+    typealias T = CharacterDetailView
+    typealias Q = CharacterDetailDependencies
     
+    func destination(_ dependencies: CharacterDetailDependencies) -> CharacterDetailView {
+        return CharacterDetailAssemblerInjection().resolve(character: dependencies.character)
+    }
+}
+
+struct CharacterDetailDependencies: Dependecies {
+    let character: CharacterFatViewEntity
 }

@@ -7,13 +7,14 @@
 
 import SwiftUI
 
-struct PlainGridPaginated: View {
-    private static let cellsPadding: CGFloat = 4
+struct PlainGridPaginatedView: View {
     let listItems: ListItems
     let twoColumnGrid = [GridItem(.flexible(), spacing: cellsPadding), GridItem(.flexible(), spacing: cellsPadding)]
+    private static let cellsPadding: CGFloat = 4
+    
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: twoColumnGrid, spacing: PlainGridPaginated.cellsPadding) {
+            LazyVGrid(columns: twoColumnGrid, spacing: PlainGridPaginatedView.cellsPadding) {
                 ForEach(listItems.items) { anyItem in
                     if let item = anyItem.item as? CharactersListItem {
                         CharacterListCellView(item: item).frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height).onTapGesture {
@@ -24,17 +25,18 @@ struct PlainGridPaginated: View {
                     }
                 }
                 if let listItems = listItems as? ListItemsPaginated, listItems.isListCompleted == false {
+                    Text("PlainGridPaginated :: bottom reached")
                     Text("PlainGridPaginated :: bottom reached").onAppear {
                         listItems.didReachListBottomAction()
                     }
                 }
-            }.padding(.horizontal, PlainGridPaginated.cellsPadding)
+            }.padding(.horizontal, PlainGridPaginatedView.cellsPadding)
         }
     }
 }
 
-//struct PlainGridPaginated_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PlainGridPaginated()
-//    }
-//}
+struct PlainGridPaginated_Previews: PreviewProvider {
+    static var previews: some View {
+        PlainGridPaginatedView(listItems: MockCharactersListItems.givenCharactersListItems())
+    }
+}

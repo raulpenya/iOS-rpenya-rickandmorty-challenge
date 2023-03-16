@@ -29,9 +29,11 @@ enum State: Equatable {
 
 class CharactersListViewModel: ObservableObject {
     @Published private(set) var state = State.idle
+    @Published var presentCharacterDetail: Bool = false
     let getCharactersByPageNumberUseCase: GetCharactersByPageNumber
     var cancellableSet: Set<AnyCancellable> = []
     var currentCharacters: CharactersPagesViewEntity = CharactersPagesViewEntity()
+    var selectedCharacter: CharacterThinViewEntity? = nil
     
     init(getCharactersByPageNumberUseCase: GetCharactersByPageNumber) {
         self.getCharactersByPageNumberUseCase = getCharactersByPageNumberUseCase
@@ -53,12 +55,16 @@ class CharactersListViewModel: ObservableObject {
     }
     
     func didSelectItem(_ item: ListItemSelectable) {
-        print(item)
+        if let item = item as? CharactersListItem {
+            selectedCharacter = item.character
+            presentCharacterDetail = true
+        }
     }
 }
 
 extension CharactersListViewModel {
     func getCharactersInitialPagePage() {
+        state = .loading
         getCharactersPage(with: 1)
     }
     
@@ -89,5 +95,12 @@ extension CharactersListViewModel {
     func updateView(with charactersPages: CharactersPagesViewEntity) {
         currentCharacters = charactersPages
         state = .loaded(charactersPages.transformToListItems(didReachListBottomAction: didReachListBottomAction, onTapGesture: didSelectItem))
+    }
+}
+
+extension CharactersListViewModel {
+    func transformToCharacterDetailDependencies() -> CharacterDetailDependencies? {
+        guard let selectedCharacter = selectedCharacter else { return nil }
+        return CharacterDetailDependencies(character: selectedCharacter.transformToCharacterFatViewEntity())
     }
 }

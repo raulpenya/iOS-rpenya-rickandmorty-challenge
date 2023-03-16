@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct Colors {
-    static let cellTextColor: Color = Color(red: 245/255, green: 245/255, blue: 245/255)
-    static let textColor: Color = Color(red: 22/255, green: 22/255, blue: 29/255)
+    static let listCellTextColor: Color = Color(red: 245/255, green: 245/255, blue: 245/255)
+    static let textColor: Color = .black
     static let shadowColor: Color = .black.opacity(0.3)
-    static let completeButtonBackgroundColor: Color = Color(.systemGreen)
-    static let completeButtonDisabledBackgroundColor: Color = Color(.systemGreen).opacity(0.2)
     static let completeButtonTextColor: Color = .white
-    static let addRemoveButtonBackgroundColor: Color = Color(.systemGreen).opacity(0.5)
-    static let addRemoveButtonTextColor: Color = .white
-    static let cellsBackgroundColor: Color = Color(red: 220/255, green: 220/255, blue: 220/255)
+    static let errorViewBackgroundColor: Color = Color(red: 220/255, green: 220/255, blue: 220/255)
+    static let statusAlive: Color = .green
+    static let statusDead: Color = .red
+    static let statusUnknown: Color = .gray
 }
