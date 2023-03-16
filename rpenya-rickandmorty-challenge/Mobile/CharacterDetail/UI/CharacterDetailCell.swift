@@ -13,6 +13,8 @@ struct CharacterDetailCell: View {
         switch item.view {
         case .headerImage:
             CharacterDetailImageCellView(item: item).listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+        case .headerInfo:
+            CharacterDetailHeaderInfoCellView(item: item)
         case .info:
             CharacterDetailInfoCellView(item: item)
         }

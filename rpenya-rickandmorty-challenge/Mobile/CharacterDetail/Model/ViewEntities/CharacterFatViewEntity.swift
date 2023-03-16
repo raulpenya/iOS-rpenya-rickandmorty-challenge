@@ -21,12 +21,35 @@ struct CharacterFatViewEntity {
 }
 
 extension CharacterFatViewEntity {
-    func transformToCharacterDetailItems(dismiss: @escaping (() -> Void)) -> CharacterDetailItems {
-        return CharacterDetailItems(items: [transformToCharacterDetailItem(view: .headerImage, dismiss: dismiss).transformToAnyItem(), transformToCharacterDetailItem(view: .info, dismiss: dismiss).transformToAnyItem()])
+    func transformToCharacterDetailItems(dismiss: @escaping (() -> Void)) -> ListItems {
+        var items = [transformToCharacterDetailImageItem(dismiss: dismiss), transformToCharacterDetailHeaderInfoItem()]
+        items.append(contentsOf: transformToCharacterDetailInfoItems())
+        return CharacterDetailItems(items: items)
     }
     
-    func transformToCharacterDetailItem(view: CharacterDetailCellView, dismiss: @escaping (() -> Void)) -> CharacterDetailItem {
-        return CharacterDetailItem(character: self, view: view, dismiss: dismiss)
+    func transformToCharacterDetailImageItem(dismiss: @escaping (() -> Void)) -> AnyItem {
+        return CharacterDetailImageItem(character: self, dismiss: dismiss).transformToAnyItem()
+    }
+    
+    func transformToCharacterDetailHeaderInfoItem() -> AnyItem {
+        return CharacterDetailHeaderInfoItem(character: self).transformToAnyItem()
+    }
+    
+    func transformToCharacterDetailInfoItems() -> [AnyItem] {
+        var items: [AnyItem] = []
+        if let originName = originName {
+            items.append(CharacterDetailInfoItem(title: NSLocalizedString("_origin", comment: ""), info: originName).transformToAnyItem())
+        }
+        if let locationName = locationName {
+            items.append(CharacterDetailInfoItem(title: NSLocalizedString("_location", comment: ""), info: locationName).transformToAnyItem())
+        }
+        if let species = species {
+            items.append(CharacterDetailInfoItem(title: NSLocalizedString("_species", comment: ""), info: species).transformToAnyItem())
+        }
+        if let type = type {
+            items.append(CharacterDetailInfoItem(title: NSLocalizedString("_type", comment: ""), info: type).transformToAnyItem())
+        }
+        return items
     }
 }
 
