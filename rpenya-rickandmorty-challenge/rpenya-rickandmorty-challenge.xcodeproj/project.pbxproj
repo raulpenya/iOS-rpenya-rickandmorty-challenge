@@ -129,6 +129,8 @@
 		0CF5DA2429C32A320040B3B0 /* MockCharacterDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5DA2329C32A320040B3B0 /* MockCharacterDetailItem.swift */; };
 		0CF5DA2529C32A880040B3B0 /* MockCharacterDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5DA2329C32A320040B3B0 /* MockCharacterDetailItem.swift */; };
 		0CF5DA2629C32AE50040B3B0 /* MockCharacterDetailItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5DA2129C32A240040B3B0 /* MockCharacterDetailItems.swift */; };
+		0CF5DA2829C32B370040B3B0 /* CharacterDetailImageCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5DA2729C32B370040B3B0 /* CharacterDetailImageCellView.swift */; };
+		0CF5DA2A29C32B420040B3B0 /* CharacterDetailInfoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5DA2929C32B420040B3B0 /* CharacterDetailInfoCellView.swift */; };
 		0CFEC67129C22F8200AF9319 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0CFEC67029C22F8200AF9319 /* Kingfisher */; };
 		0CFEC67329C2310D00AF9319 /* CacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67229C2310D00AF9319 /* CacheHandler.swift */; };
 		0CFEC67529C2314800AF9319 /* ImageCacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67429C2314800AF9319 /* ImageCacheHandler.swift */; };
@@ -337,6 +339,8 @@
 		0CF5DA1F29C328870040B3B0 /* CharacterDetailItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailItems.swift; sourceTree = "<group>"; };
 		0CF5DA2129C32A240040B3B0 /* MockCharacterDetailItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterDetailItems.swift; sourceTree = "<group>"; };
 		0CF5DA2329C32A320040B3B0 /* MockCharacterDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterDetailItem.swift; sourceTree = "<group>"; };
+		0CF5DA2729C32B370040B3B0 /* CharacterDetailImageCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailImageCellView.swift; sourceTree = "<group>"; };
+		0CF5DA2929C32B420040B3B0 /* CharacterDetailInfoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailInfoCellView.swift; sourceTree = "<group>"; };
 		0CFEC67229C2310D00AF9319 /* CacheHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHandler.swift; sourceTree = "<group>"; };
 		0CFEC67429C2314800AF9319 /* ImageCacheHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheHandler.swift; sourceTree = "<group>"; };
 		0CFEC67729C231C100AF9319 /* MobileConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileConstants.swift; sourceTree = "<group>"; };
@@ -669,6 +673,8 @@
 		0C1B855229BFA67500671265 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0CF5DA2729C32B370040B3B0 /* CharacterDetailImageCellView.swift */,
+				0CF5DA2929C32B420040B3B0 /* CharacterDetailInfoCellView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1338,12 +1344,14 @@
 				0C1FEEFC29C0F84300E90B30 /* AccessibilityIdentifierConstants.swift in Sources */,
 				0CF5DA1829C3244E0040B3B0 /* MockCharactersListItems.swift in Sources */,
 				0C61E1A929C2825C008B3C68 /* MockPageInfoViewEntity.swift in Sources */,
+				0CF5DA2829C32B370040B3B0 /* CharacterDetailImageCellView.swift in Sources */,
 				0C8D897829C25AD700BD86E6 /* CharacterDetailViewModel.swift in Sources */,
 				0CFEC67829C231C100AF9319 /* MobileConstants.swift in Sources */,
 				0C8B68F729C1DAB5000B05C1 /* CharactersListItems.swift in Sources */,
 				0C875DA329C0A455001A4EAD /* MockCharacter.swift in Sources */,
 				0C8B68F129C1D7DA000B05C1 /* Line.swift in Sources */,
 				0C1FEEFF29C0FC7E00E90B30 /* PlainListPaginated.swift in Sources */,
+				0CF5DA2A29C32B420040B3B0 /* CharacterDetailInfoCellView.swift in Sources */,
 				0CFEC67C29C23C8600AF9319 /* URLCacheHandler.swift in Sources */,
 				0CFEC67A29C2331600AF9319 /* UserDefaultsRepository.swift in Sources */,
 				0C8B68FB29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift in Sources */,
