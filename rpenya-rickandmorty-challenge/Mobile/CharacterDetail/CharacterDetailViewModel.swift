@@ -11,6 +11,7 @@ import Combine
 
 class CharacterDetailViewModel: ObservableObject {
     @Published private(set) var state = State.idle
+    @Published var dismissCharacterDetail: Bool = false
     let getCharacterByIdUseCase: GetCharacterById
     var currentCharacter: CharacterFatViewEntity
     var cancellableSet: Set<AnyCancellable> = []
@@ -27,6 +28,10 @@ class CharacterDetailViewModel: ObservableObject {
     
     @Sendable func refreshData() {
         loadData()
+    }
+    
+    func dismissButtonPressed() {
+        print("dismissButtonPressed")
     }
 }
 
@@ -57,6 +62,6 @@ extension CharacterDetailViewModel {
     
     func updateView(with character: CharacterFatViewEntity) {
         currentCharacter = character
-        state = .loaded(character.transformToCharacterDetailItems())
+        state = .loaded(character.transformToCharacterDetailItems(dismiss: dismissButtonPressed))
     }
 }

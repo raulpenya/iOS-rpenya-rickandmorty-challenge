@@ -21,12 +21,12 @@ struct CharacterFatViewEntity {
 }
 
 extension CharacterFatViewEntity {
-    func transformToCharacterDetailItems() -> CharacterDetailItems {
-        return CharacterDetailItems(items: [transformToCharacterDetailItem(view: .headerImage).transformToAnyItem(), transformToCharacterDetailItem(view: .info).transformToAnyItem()])
+    func transformToCharacterDetailItems(dismiss: @escaping (() -> Void)) -> CharacterDetailItems {
+        return CharacterDetailItems(items: [transformToCharacterDetailItem(view: .headerImage, dismiss: dismiss).transformToAnyItem(), transformToCharacterDetailItem(view: .info, dismiss: dismiss).transformToAnyItem()])
     }
     
-    func transformToCharacterDetailItem(view: CharacterDetailCellView) -> CharacterDetailItem {
-        return CharacterDetailItem(character: self, view: view)
+    func transformToCharacterDetailItem(view: CharacterDetailCellView, dismiss: @escaping (() -> Void)) -> CharacterDetailItem {
+        return CharacterDetailItem(character: self, view: view, dismiss: dismiss)
     }
 }
 

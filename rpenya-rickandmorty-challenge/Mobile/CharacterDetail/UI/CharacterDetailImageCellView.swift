@@ -16,11 +16,21 @@ struct CharacterDetailImageCellView: View {
         })
         .resizable()
         .aspectRatio(contentMode: .fit)
-        .background {
-            RoundedRectangle(cornerRadius: 0.0)
-                .fill(Color.green)
+        .overlay(alignment: .topLeading) {
+            HStackLayout {
+                Button("_close") {
+                    print("CharacterDetailImageCellView :: close")
+                }
+                .frame(width: 60, height: 60).background {
+                    RoundedRectangle(cornerRadius: 12.0)
+                        .fill(Colors.cellsBackgroundColor)
+                }
+            }
+            .frame(width: UIScreen.main.bounds.width, height: 60, alignment: .leading)
+            .background {
+                LinearGradient(gradient: Gradient(colors: [.black.opacity(0), .black.opacity(0.7)]), startPoint: .bottom, endPoint: .top)
+            }
         }
-        
     }
 }
 

@@ -12,7 +12,7 @@ struct CharacterDetailCell: View {
     var body: some View {
         switch item.view {
         case .headerImage:
-            CharacterDetailImageCellView(item: item)
+            CharacterDetailImageCellView(item: item).listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
         case .info:
             CharacterDetailInfoCellView(item: item)
         }
