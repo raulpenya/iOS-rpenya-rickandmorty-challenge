@@ -9,7 +9,6 @@ import SwiftUI
 import Combine
 
 class LoadingTimer {
-
     let publisher = Timer.publish(every: 0.1, on: .main, in: .default)
     private var timerCancellable: Cancellable?
 
@@ -23,10 +22,8 @@ class LoadingTimer {
 }
 
 struct LoadingView: View {
-
     @State private var index = 0
     private static let max = 74
-
     private let images = (0...LoadingView.max).map { UIImage(named: "2a705f9140404a13e67dad0305c9f868qbRQudLp50l5ELBl-\($0).png")! }
     private var timer = LoadingTimer()
 
