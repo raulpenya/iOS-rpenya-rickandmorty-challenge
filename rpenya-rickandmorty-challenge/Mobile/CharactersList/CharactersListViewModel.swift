@@ -9,13 +9,13 @@ import Foundation
 import Domain
 import Combine
 
-enum State: Equatable {
+enum ViewModelState: Equatable {
     case idle
     case loading
     case failed(ErrorDescription)
     case loaded(ListItems)
     
-    static func == (lhs: State, rhs: State) -> Bool {
+    static func == (lhs: ViewModelState, rhs: ViewModelState) -> Bool {
         switch (lhs, rhs) {
         case (.idle, .idle), (.loading, .loading):
             return true
@@ -28,7 +28,7 @@ enum State: Equatable {
 }
 
 class CharactersListViewModel: ObservableObject {
-    @Published private(set) var state = State.idle
+    @Published private(set) var state = ViewModelState.idle
     @Published var presentCharacterDetail: Bool = false
     let getCharactersByPageNumberUseCase: GetCharactersByPageNumber
     var cancellableSet: Set<AnyCancellable> = []

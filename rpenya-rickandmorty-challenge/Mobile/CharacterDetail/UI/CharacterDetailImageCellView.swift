@@ -6,31 +6,23 @@
 //
 
 import SwiftUI
-import Kingfisher
 
 struct CharacterDetailImageCellView: View {
     let item: CharacterDetailItem
     var body: some View {
-        KFImage(URL(string: item.getImageUrl())!).placeholder({ _ in
-            ProgressView()
-        })
-        .resizable()
-        .aspectRatio(contentMode: .fit)
-        .overlay(alignment: .topLeading) {
-            HStackLayout {
-                Button {
-                    item.dismiss()
-                } label: {
-                    Image("icCloseLight")
+        if let item = item as? CharacterDetailImageItem {
+            CharacterImageView(url: URL(string: item.getImageUrl())!)
+            .overlay(alignment: .topLeading) {
+                HStackLayout {
+                    CloseButton(action: item.dismiss)
                 }
-                .frame(width: 60, height: 60)
+                .frame(width: UIScreen.main.bounds.width, height: 60, alignment: .leading)
+                .background {
+                    LinearGradient(gradient: Gradient(colors: [.black.opacity(0), .black.opacity(0.8)]), startPoint: .bottom, endPoint: .top)
+                }
             }
-            .frame(width: UIScreen.main.bounds.width, height: 60, alignment: .leading)
-            .background {
-                LinearGradient(gradient: Gradient(colors: [.black.opacity(0), .black.opacity(0.7)]), startPoint: .bottom, endPoint: .top)
-            }
+            .cornerRadius(8, corners: [.topLeft, .topRight])
         }
-        .cornerRadius(8, corners: [.topLeft, .topRight])
     }
 }
 

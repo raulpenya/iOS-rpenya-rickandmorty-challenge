@@ -18,7 +18,7 @@ struct CharactersListView: View {
                 case .idle:
                     Color.clear.onAppear(perform: viewModel.loadData)
                 case .loading:
-                    ProgressView()
+                    LoadingView()
                 case .failed(let error):
                     ErrorView(errorMessage: error.text, action: viewModel.refreshData)
                 case .loaded(let listItems):
