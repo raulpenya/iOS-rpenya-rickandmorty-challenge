@@ -137,6 +137,7 @@
 		0CF5DA4729C36AD60040B3B0 /* CharacterListDummyCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5DA4629C36AD60040B3B0 /* CharacterListDummyCellView.swift */; };
 		0CF5DA4929C36CE90040B3B0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5DA4829C36CE90040B3B0 /* LoadingView.swift */; };
 		0CF5DA5029C37FCA0040B3B0 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5DA4F29C37FCA0040B3B0 /* String+Extensions.swift */; };
+		0CF5DA5529C386AF0040B3B0 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5DA5429C386AF0040B3B0 /* StringTests.swift */; };
 		0CFEC67129C22F8200AF9319 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0CFEC67029C22F8200AF9319 /* Kingfisher */; };
 		0CFEC67329C2310D00AF9319 /* CacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67229C2310D00AF9319 /* CacheHandler.swift */; };
 		0CFEC67529C2314800AF9319 /* ImageCacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67429C2314800AF9319 /* ImageCacheHandler.swift */; };
@@ -361,6 +362,7 @@
 		0CF5DA4629C36AD60040B3B0 /* CharacterListDummyCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListDummyCellView.swift; sourceTree = "<group>"; };
 		0CF5DA4829C36CE90040B3B0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0CF5DA4F29C37FCA0040B3B0 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		0CF5DA5429C386AF0040B3B0 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		0CFEC67229C2310D00AF9319 /* CacheHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHandler.swift; sourceTree = "<group>"; };
 		0CFEC67429C2314800AF9319 /* ImageCacheHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheHandler.swift; sourceTree = "<group>"; };
 		0CFEC67729C231C100AF9319 /* MobileConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileConstants.swift; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 				0C1B852729BFA40B00671265 /* NetworkingDataSource */,
 				0C1FEEB129C0C95A00E90B30 /* Characters */,
 				0C1B853929BFA45700671265 /* ApiTests.swift */,
+				0CF5DA5429C386AF0040B3B0 /* StringTests.swift */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
@@ -1337,6 +1340,7 @@
 				0C1B853B29BFA45900671265 /* ApiTests.swift in Sources */,
 				0C1FEEE029C0CEE700E90B30 /* MockCharactersPageRemoteEntity.swift in Sources */,
 				0C875DA029C0A43B001A4EAD /* MockCharactersPage.swift in Sources */,
+				0CF5DA5529C386AF0040B3B0 /* StringTests.swift in Sources */,
 				0C1B852E29BFA41800671265 /* MockSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

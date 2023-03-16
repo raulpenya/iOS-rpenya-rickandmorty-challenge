@@ -36,6 +36,7 @@ final class CharacterRemoteEntityTests: XCTestCase {
         XCTAssertEqual(character.location?.name, domainCharacter?.locationName)
         XCTAssertEqual(character.type, domainCharacter?.type)
         XCTAssertEqual(character.species, domainCharacter?.species)
+        XCTAssertEqual(character.episodes?.count, domainCharacter?.episodes.count)
     }
     
     func tests_CharacterRemoteEntity_transform_withoutID() {
