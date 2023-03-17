@@ -72,6 +72,7 @@
 		0C61E1A529C281F1008B3C68 /* MockGetCharactersByPageNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E1A429C281F1008B3C68 /* MockGetCharactersByPageNumber.swift */; };
 		0C61E1A729C281FE008B3C68 /* MockGetCharacterById.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E1A629C281FE008B3C68 /* MockGetCharacterById.swift */; };
 		0C73DDE129C52338005FE064 /* CharacterDetailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C73DDDF29C52336005FE064 /* CharacterDetailUITests.swift */; };
+		0C73DDE329C52D7F005FE064 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C73DDE229C52D7F005FE064 /* VisualEffectView.swift */; };
 		0C875D6229C080F7001A4EAD /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D6129C080F7001A4EAD /* UseCase.swift */; };
 		0C875D6429C08180001A4EAD /* CharactersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D6329C08180001A4EAD /* CharactersPage.swift */; };
 		0C875D6629C0818F001A4EAD /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D6529C0818F001A4EAD /* Character.swift */; };
@@ -333,6 +334,7 @@
 		0C61E1A429C281F1008B3C68 /* MockGetCharactersByPageNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetCharactersByPageNumber.swift; sourceTree = "<group>"; };
 		0C61E1A629C281FE008B3C68 /* MockGetCharacterById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetCharacterById.swift; sourceTree = "<group>"; };
 		0C73DDDF29C52336005FE064 /* CharacterDetailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailUITests.swift; sourceTree = "<group>"; };
+		0C73DDE229C52D7F005FE064 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		0C875D6129C080F7001A4EAD /* UseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		0C875D6329C08180001A4EAD /* CharactersPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersPage.swift; sourceTree = "<group>"; };
 		0C875D6529C0818F001A4EAD /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -846,6 +848,16 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		0C73DDE429C52DB6005FE064 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				0C1FEF0229C102A400E90B30 /* PlainGridPaginatedWithHeaderView.swift */,
+				0C42D95629C4836F00719A2D /* PlainVGridPaginatedView.swift */,
+				0C42D95429C482B200719A2D /* PlainHGridView.swift */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
 		0C875D9229C09EBF001A4EAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -876,14 +888,13 @@
 		0C8B68EF29C1D7A9000B05C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0C1FEF0229C102A400E90B30 /* PlainGridPaginatedWithHeaderView.swift */,
-				0C42D95429C482B200719A2D /* PlainHGridView.swift */,
-				0C42D95629C4836F00719A2D /* PlainVGridPaginatedView.swift */,
+				0C73DDE429C52DB6005FE064 /* Grid */,
 				0CF5DA1929C3256A0040B3B0 /* PlainListView.swift */,
 				0C8B68E829C1D6E0000B05C1 /* ErrorView.swift */,
 				0CF5DA4229C3672F0040B3B0 /* CloseButton.swift */,
 				0CF5DA4429C367E70040B3B0 /* CharacterImageView.swift */,
 				0C8B68F029C1D7DA000B05C1 /* Line.swift */,
+				0C73DDE229C52D7F005FE064 /* VisualEffectView.swift */,
 				0CF5DA4829C36CE90040B3B0 /* LoadingView.swift */,
 			);
 			path = Views;
@@ -1534,6 +1545,7 @@
 				0C875DA329C0A455001A4EAD /* MockCharacter.swift in Sources */,
 				0C8B68F129C1D7DA000B05C1 /* Line.swift in Sources */,
 				0CF5DA2A29C32B420040B3B0 /* CharacterDetailHeaderInfoCellView.swift in Sources */,
+				0C73DDE329C52D7F005FE064 /* VisualEffectView.swift in Sources */,
 				0CFEC67C29C23C8600AF9319 /* URLCacheHandler.swift in Sources */,
 				0CFEC67A29C2331600AF9319 /* UserDefaultsRepository.swift in Sources */,
 				0C8B68FB29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift in Sources */,

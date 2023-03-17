@@ -15,9 +15,3 @@ struct CharacterDetailImageCellView: View {
         }
     }
 }
-
-//struct CharacterDetailImageCellView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CharacterDetailImageCellView(item: MockCharacterDetailItem.givenCharacterDetailItem1())
-//    }
-//}

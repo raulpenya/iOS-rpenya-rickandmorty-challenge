@@ -33,9 +33,3 @@ struct CharacterListCellView: View {
         }
     }
 }
-
-//struct CharacterListCellView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CharacterListCellView(item: MockCharactersListItem.givenCharactersListItem1())
-//    }
-//}

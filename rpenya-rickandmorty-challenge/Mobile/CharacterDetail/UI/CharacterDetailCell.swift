@@ -20,9 +20,3 @@ struct CharacterDetailCell: View {
         }
     }
 }
-
-//struct CharacterDetailCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CharacterDetailCell(item: MockCharacterDetailItem.givenCharacterDetailItem1())
-//    }
-//}

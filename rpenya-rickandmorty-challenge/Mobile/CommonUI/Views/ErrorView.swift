@@ -36,11 +36,3 @@ struct ErrorView: View {
         }
     }
 }
-
-struct ErrorAlert_Previews: PreviewProvider {
-    static var previews: some View {
-        ErrorView(errorMessage: "fdsafhidsfldsahfdlsaf fdksaf") {
-            print("refresh")
-        }
-    }
-}

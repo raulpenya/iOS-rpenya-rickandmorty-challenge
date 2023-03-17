@@ -42,9 +42,3 @@ struct CharactersListView: View {
         }
     }
 }
-
-struct CharactersListView_Previews: PreviewProvider {
-    static var previews: some View {
-        CharactersListAssemblerInjection().resolve()
-    }
-}

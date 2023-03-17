@@ -22,9 +22,3 @@ struct PlainGridPaginatedWithHeaderView: View {
         }
     }
 }
-
-//struct PlainGridPaginated_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PlainGridPaginatedView(listItems: MockCharactersListItems.givenCharactersListItems())
-//    }
-//}

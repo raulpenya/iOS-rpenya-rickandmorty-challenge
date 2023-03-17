@@ -17,9 +17,3 @@ struct CharacterListDummyCellView: View {
         }
     }
 }
-
-struct CharacterListDummyCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        CharacterListDummyCellView()
-    }
-}

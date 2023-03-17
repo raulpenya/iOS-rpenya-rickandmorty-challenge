@@ -31,9 +31,3 @@ struct PlainVGridPaginatedView: View {
         }.padding(.bottom, PlainVGridPaginatedView.bottomInset)
     }
 }
-
-//struct PlainVGridPaginatedView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PlainVGridPaginatedView()
-//    }
-//}
