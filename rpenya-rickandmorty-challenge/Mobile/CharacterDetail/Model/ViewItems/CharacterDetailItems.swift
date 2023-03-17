@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct CharacterDetailItems: ListItems {
+struct CharacterDetailItems: ListItems, ListItemsDismissable {
     var items: [AnyItem]
+    var dismiss: (() -> Void)
 }

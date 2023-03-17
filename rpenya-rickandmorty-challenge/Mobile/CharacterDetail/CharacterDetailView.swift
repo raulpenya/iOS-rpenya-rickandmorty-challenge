@@ -22,7 +22,7 @@ struct CharacterDetailView: View {
                 case .failed(let error):
                     ErrorView(errorMessage: error.text, action: viewModel.refreshData)
                 case .loaded(let listItems):
-                    PlainListView(listItems: listItems)//.clipped().edgesIgnoringSafeArea([.top, .bottom])
+                    PlainListView(listItems: listItems)
                 }
             }
         }.onChange(of: viewModel.dismissCharacterDetail) { _ in

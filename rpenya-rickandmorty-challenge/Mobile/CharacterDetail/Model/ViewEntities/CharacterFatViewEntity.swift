@@ -23,13 +23,13 @@ struct CharacterFatViewEntity {
 
 extension CharacterFatViewEntity {
     func transformToCharacterDetailItems(dismiss: @escaping (() -> Void)) -> ListItems {
-        var items = [transformToCharacterDetailImageItem(dismiss: dismiss), transformToCharacterDetailHeaderInfoItem()]
+        var items = [transformToCharacterDetailImageItem(), transformToCharacterDetailHeaderInfoItem()]
         items.append(contentsOf: transformToCharacterDetailInfoItems())
-        return CharacterDetailItems(items: items)
+        return CharacterDetailItems(items: items, dismiss: dismiss)
     }
     
-    func transformToCharacterDetailImageItem(dismiss: @escaping (() -> Void)) -> AnyItem {
-        return CharacterDetailImageItem(character: self, dismiss: dismiss).transformToAnyItem()
+    func transformToCharacterDetailImageItem() -> AnyItem {
+        return CharacterDetailImageItem(character: self).transformToAnyItem()
     }
     
     func transformToCharacterDetailHeaderInfoItem() -> AnyItem {
