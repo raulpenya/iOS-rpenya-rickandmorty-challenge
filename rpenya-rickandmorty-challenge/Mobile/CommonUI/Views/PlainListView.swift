@@ -32,9 +32,3 @@ struct PlainListView: View {
             .cornerRadius(8, corners: [.topLeft, .topRight])
     }
 }
-
-//struct PlainList_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PlainListView(listItems: MockCharactersListItems.givenCharactersListItems())
-//    }
-//}

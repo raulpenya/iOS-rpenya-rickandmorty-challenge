@@ -23,9 +23,3 @@ struct CharactersListFilterCellView: View {
         }
     }
 }
-
-struct CharactersListFilterCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        CharactersListFilterCellView(item: CharactersListFilterItem(filter: FilterViewEntity(text: "Female", isSelected: false), onTapGesture: { _ in }))
-    }
-}
