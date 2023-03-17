@@ -9,10 +9,10 @@ import SwiftUI
 
 struct PlainVGridPaginatedView: View {
     let listItems: ListItems
-    let twoColumnGrid = [GridItem(.flexible(), spacing: PlainGridPaginatedView.cellsPadding), GridItem(.flexible(), spacing: PlainGridPaginatedView.cellsPadding)]
+    let twoColumnGrid = [GridItem(.flexible(), spacing: PlainGridPaginatedWithHeaderView.cellsPadding), GridItem(.flexible(), spacing: PlainGridPaginatedWithHeaderView.cellsPadding)]
     
     var body: some View {
-        LazyVGrid(columns: twoColumnGrid, spacing: PlainGridPaginatedView.cellsPadding) {
+        LazyVGrid(columns: twoColumnGrid, spacing: PlainGridPaginatedWithHeaderView.cellsPadding) {
             ForEach(listItems.items) { anyItem in
                 if let item = anyItem.item as? CharactersListItem {
                     CharacterListCellView(item: item).frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height).onTapGesture {

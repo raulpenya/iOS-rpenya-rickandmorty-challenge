@@ -22,7 +22,7 @@ struct CharactersListView: View {
                 case .failed(let error):
                     ErrorView(errorMessage: error.text, action: viewModel.refreshData)
                 case .loaded(let listItems):
-                    PlainGridPaginatedView(listItems: listItems).refreshable(action: viewModel.refreshData)
+                    PlainGridPaginatedWithHeaderView(listItems: listItems).refreshable(action: viewModel.refreshData)
                 }
             }
             .toolbar {

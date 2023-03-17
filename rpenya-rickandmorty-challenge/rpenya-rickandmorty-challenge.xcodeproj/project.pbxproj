@@ -55,7 +55,7 @@
 		0C1FEEFA29C0F82900E90B30 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEF929C0F82900E90B30 /* Router.swift */; };
 		0C1FEEFC29C0F84300E90B30 /* AccessibilityIdentifierConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEFB29C0F84200E90B30 /* AccessibilityIdentifierConstants.swift */; };
 		0C1FEEFF29C0FC7E00E90B30 /* PlainListPaginated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEFE29C0FC7E00E90B30 /* PlainListPaginated.swift */; };
-		0C1FEF0329C102A400E90B30 /* PlainGridPaginatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEF0229C102A400E90B30 /* PlainGridPaginatedView.swift */; };
+		0C1FEF0329C102A400E90B30 /* PlainGridPaginatedWithHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEF0229C102A400E90B30 /* PlainGridPaginatedWithHeaderView.swift */; };
 		0C42D94B29C477B600719A2D /* CharactersListFilterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D94A29C477B600719A2D /* CharactersListFilterItem.swift */; };
 		0C42D94D29C47AC800719A2D /* CharactersListFilterItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D94C29C47AC800719A2D /* CharactersListFilterItems.swift */; };
 		0C42D94F29C47CDD00719A2D /* FilterViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D94E29C47CDD00719A2D /* FilterViewEntity.swift */; };
@@ -307,7 +307,7 @@
 		0C1FEEF929C0F82900E90B30 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0C1FEEFB29C0F84200E90B30 /* AccessibilityIdentifierConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifierConstants.swift; sourceTree = "<group>"; };
 		0C1FEEFE29C0FC7E00E90B30 /* PlainListPaginated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainListPaginated.swift; sourceTree = "<group>"; };
-		0C1FEF0229C102A400E90B30 /* PlainGridPaginatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainGridPaginatedView.swift; sourceTree = "<group>"; };
+		0C1FEF0229C102A400E90B30 /* PlainGridPaginatedWithHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainGridPaginatedWithHeaderView.swift; sourceTree = "<group>"; };
 		0C42D94A29C477B600719A2D /* CharactersListFilterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListFilterItem.swift; sourceTree = "<group>"; };
 		0C42D94C29C47AC800719A2D /* CharactersListFilterItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListFilterItems.swift; sourceTree = "<group>"; };
 		0C42D94E29C47CDD00719A2D /* FilterViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewEntity.swift; sourceTree = "<group>"; };
@@ -865,7 +865,7 @@
 			isa = PBXGroup;
 			children = (
 				0C1FEEFE29C0FC7E00E90B30 /* PlainListPaginated.swift */,
-				0C1FEF0229C102A400E90B30 /* PlainGridPaginatedView.swift */,
+				0C1FEF0229C102A400E90B30 /* PlainGridPaginatedWithHeaderView.swift */,
 				0C42D95429C482B200719A2D /* PlainHGridView.swift */,
 				0C42D95629C4836F00719A2D /* PlainVGridPaginatedView.swift */,
 				0CF5DA1929C3256A0040B3B0 /* PlainListView.swift */,
@@ -1508,7 +1508,7 @@
 				0CF5DA2E29C33E030040B3B0 /* RoundedCorner.swift in Sources */,
 				0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */,
 				0CFEC67329C2310D00AF9319 /* CacheHandler.swift in Sources */,
-				0C1FEF0329C102A400E90B30 /* PlainGridPaginatedView.swift in Sources */,
+				0C1FEF0329C102A400E90B30 /* PlainGridPaginatedWithHeaderView.swift in Sources */,
 				0CF5DA3329C341640040B3B0 /* Status+Extensions.swift in Sources */,
 				0C1FEEF529C0F7FB00E90B30 /* ButtonItem.swift in Sources */,
 				0CF5DA3929C35D250040B3B0 /* CharacterDetailHeaderInfoItem.swift in Sources */,
