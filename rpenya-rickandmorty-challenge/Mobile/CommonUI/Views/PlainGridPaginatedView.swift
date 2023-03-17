@@ -14,6 +14,16 @@ struct PlainGridPaginatedView: View {
     
     var body: some View {
         ScrollView {
+            ScrollView(.horizontal) {
+                LazyHStack {
+                    ForEach(0...50, id: \.self) { index in
+                        Text(String(index))
+                            .onAppear {
+                                print(index)
+                            }
+                    }
+                }
+            }
             LazyVGrid(columns: twoColumnGrid, spacing: PlainGridPaginatedView.cellsPadding) {
                 ForEach(listItems.items) { anyItem in
                     if let item = anyItem.item as? CharactersListItem {

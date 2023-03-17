@@ -32,6 +32,7 @@ class CharactersListViewModel: ObservableObject {
     @Published var presentCharacterDetail: Bool = false
     let getCharactersByPageNumberUseCase: GetCharactersByPageNumber
     var cancellableSet: Set<AnyCancellable> = []
+    var filters: FiltersViewEntity = FiltersViewEntity.getFilters()
     var currentCharacters: CharactersPagesViewEntity = CharactersPagesViewEntity()
     var selectedCharacter: CharacterThinViewEntity? = nil
     
@@ -58,6 +59,8 @@ class CharactersListViewModel: ObservableObject {
         if let item = item as? CharactersListItem {
             selectedCharacter = item.character
             presentCharacterDetail = true
+        } else if let item = item as? CharactersListFilterItem {
+            print(item)
         }
     }
     
@@ -92,7 +95,7 @@ class CharactersListViewModel: ObservableObject {
     
     func updateView(with charactersPages: CharactersPagesViewEntity) {
         currentCharacters = charactersPages
-        state = .loaded(charactersPages.transformToListItems(didReachListBottomAction: didReachListBottomAction, onTapGesture: didSelectItem))
+        state = .loaded(charactersPages.transformToListItems(filters: filters, didReachListBottomAction: didReachListBottomAction, onTapGesture: didSelectItem))
     }
 }
 

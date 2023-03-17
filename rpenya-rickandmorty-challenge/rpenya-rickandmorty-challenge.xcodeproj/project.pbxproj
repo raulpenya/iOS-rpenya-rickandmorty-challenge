@@ -56,6 +56,10 @@
 		0C1FEEFC29C0F84300E90B30 /* AccessibilityIdentifierConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEFB29C0F84200E90B30 /* AccessibilityIdentifierConstants.swift */; };
 		0C1FEEFF29C0FC7E00E90B30 /* PlainListPaginated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEFE29C0FC7E00E90B30 /* PlainListPaginated.swift */; };
 		0C1FEF0329C102A400E90B30 /* PlainGridPaginatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEF0229C102A400E90B30 /* PlainGridPaginatedView.swift */; };
+		0C42D94B29C477B600719A2D /* CharactersListFilterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D94A29C477B600719A2D /* CharactersListFilterItem.swift */; };
+		0C42D94D29C47AC800719A2D /* CharactersListFilterItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D94C29C47AC800719A2D /* CharactersListFilterItems.swift */; };
+		0C42D94F29C47CDD00719A2D /* FilterViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D94E29C47CDD00719A2D /* FilterViewEntity.swift */; };
+		0C42D95129C47D3800719A2D /* FiltersViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D95029C47D3800719A2D /* FiltersViewEntity.swift */; };
 		0C61E19529C27DA5008B3C68 /* MockUserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E19429C27DA5008B3C68 /* MockUserDefaultsRepository.swift */; };
 		0C61E19729C28124008B3C68 /* MockCharactersPagesViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E19629C28124008B3C68 /* MockCharactersPagesViewEntity.swift */; };
 		0C61E19929C28133008B3C68 /* MockCharacterThinViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E19829C28133008B3C68 /* MockCharacterThinViewEntity.swift */; };
@@ -302,6 +306,10 @@
 		0C1FEEFB29C0F84200E90B30 /* AccessibilityIdentifierConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifierConstants.swift; sourceTree = "<group>"; };
 		0C1FEEFE29C0FC7E00E90B30 /* PlainListPaginated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainListPaginated.swift; sourceTree = "<group>"; };
 		0C1FEF0229C102A400E90B30 /* PlainGridPaginatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainGridPaginatedView.swift; sourceTree = "<group>"; };
+		0C42D94A29C477B600719A2D /* CharactersListFilterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListFilterItem.swift; sourceTree = "<group>"; };
+		0C42D94C29C47AC800719A2D /* CharactersListFilterItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListFilterItems.swift; sourceTree = "<group>"; };
+		0C42D94E29C47CDD00719A2D /* FilterViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewEntity.swift; sourceTree = "<group>"; };
+		0C42D95029C47D3800719A2D /* FiltersViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewEntity.swift; sourceTree = "<group>"; };
 		0C61E19429C27DA5008B3C68 /* MockUserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaultsRepository.swift; sourceTree = "<group>"; };
 		0C61E19629C28124008B3C68 /* MockCharactersPagesViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharactersPagesViewEntity.swift; sourceTree = "<group>"; };
 		0C61E19829C28133008B3C68 /* MockCharacterThinViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterThinViewEntity.swift; sourceTree = "<group>"; };
@@ -870,6 +878,8 @@
 				0C8B68FA29C1DEE5000B05C1 /* CharactersPagesViewEntity.swift */,
 				0C1FEEEE29C0F2CB00E90B30 /* CharacterThinViewEntity.swift */,
 				0C8B68F229C1D8E8000B05C1 /* PageInfoViewEntity.swift */,
+				0C42D95029C47D3800719A2D /* FiltersViewEntity.swift */,
+				0C42D94E29C47CDD00719A2D /* FilterViewEntity.swift */,
 			);
 			path = ViewEntities;
 			sourceTree = "<group>";
@@ -879,6 +889,8 @@
 			children = (
 				0C8B68F629C1DAB5000B05C1 /* CharactersListItems.swift */,
 				0C8B68F829C1DAC5000B05C1 /* CharactersListItem.swift */,
+				0C42D94C29C47AC800719A2D /* CharactersListFilterItems.swift */,
+				0C42D94A29C477B600719A2D /* CharactersListFilterItem.swift */,
 			);
 			path = ViewItems;
 			sourceTree = "<group>";
@@ -1452,10 +1464,12 @@
 				0CF5DA4929C36CE90040B3B0 /* LoadingView.swift in Sources */,
 				0CF5DA4729C36AD60040B3B0 /* CharacterListDummyCellView.swift in Sources */,
 				0C1FEEED29C0F2B200E90B30 /* CharactersListRouter.swift in Sources */,
+				0C42D94D29C47AC800719A2D /* CharactersListFilterItems.swift in Sources */,
 				0C1FEEFA29C0F82900E90B30 /* Router.swift in Sources */,
 				0C8D897A29C25AE400BD86E6 /* CharacterDetailView.swift in Sources */,
 				0CF5DA3F29C364410040B3B0 /* CharacterDetailInfoItem.swift in Sources */,
 				0CF5DA2029C328870040B3B0 /* CharacterDetailItems.swift in Sources */,
+				0C42D94F29C47CDD00719A2D /* FilterViewEntity.swift in Sources */,
 				0CF5DA1D29C328540040B3B0 /* CharacterDetailItem.swift in Sources */,
 				0C8B68E929C1D6E0000B05C1 /* ErrorView.swift in Sources */,
 				0C1FEEF629C0F7FB00E90B30 /* ListItems.swift in Sources */,
@@ -1463,6 +1477,7 @@
 				0CF5DA3129C33E390040B3B0 /* View+Extensions.swift in Sources */,
 				0CF5DA2829C32B370040B3B0 /* CharacterDetailImageCellView.swift in Sources */,
 				0C8D897829C25AD700BD86E6 /* CharacterDetailViewModel.swift in Sources */,
+				0C42D95129C47D3800719A2D /* FiltersViewEntity.swift in Sources */,
 				0CFEC67829C231C100AF9319 /* MobileConstants.swift in Sources */,
 				0C8B68F729C1DAB5000B05C1 /* CharactersListItems.swift in Sources */,
 				0C875DA329C0A455001A4EAD /* MockCharacter.swift in Sources */,
@@ -1480,6 +1495,7 @@
 				0C1FEEF829C0F80700E90B30 /* ErrorDescription.swift in Sources */,
 				0CF5DA3529C349DF0040B3B0 /* String+Extensions.swift in Sources */,
 				0C875DA229C0A452001A4EAD /* MockCharactersPage.swift in Sources */,
+				0C42D94B29C477B600719A2D /* CharactersListFilterItem.swift in Sources */,
 				0C8B68F929C1DAC5000B05C1 /* CharactersListItem.swift in Sources */,
 				0CF5DA2E29C33E030040B3B0 /* RoundedCorner.swift in Sources */,
 				0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */,
