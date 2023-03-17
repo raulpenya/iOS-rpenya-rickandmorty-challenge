@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FilterViewEntity {
+struct FilterViewEntity: Equatable {
     let text: String
     let isSelected: Bool
 }
@@ -19,5 +19,9 @@ extension FilterViewEntity {
     
     func transformToCharactersListFilterItem(onTapGesture: @escaping ((ListItemSelectable) -> Void)) -> CharactersListFilterItem {
         return CharactersListFilterItem(filter: self, onTapGesture: onTapGesture)
+    }
+    
+    func transformToQueryParam() -> String? {
+        return text == FiltersViewEntity.noFilterName ? nil : text
     }
 }

@@ -42,34 +42,37 @@ class CharactersListViewModel: ObservableObject {
     
     func loadData() {
         state = .loading
-        getCharactersInitialPagePage()
+        getCharactersInitialPagePage(filterName: filters.getSelectedFilter().transformToQueryParam())
     }
     
     func didReachListBottomAction() {
         if let nextPage = currentCharacters.currentPage.nextPage {
-            getCharactersPage(with: nextPage)
+            getCharactersPage(with: nextPage, and: filters.getSelectedFilter().transformToQueryParam())
         }
     }
     
     @Sendable func refreshData() {
         currentCharacters = CharactersPagesViewEntity()
-        getCharactersInitialPagePage()
+        getCharactersInitialPagePage(filterName: filters.getSelectedFilter().transformToQueryParam())
     }
     
     func didSelectItem(_ item: ListItemSelectable) {
         if let item = item as? CharactersListItem {
             selectedCharacter = item.character
             presentCharacterDetail = true
-        } else if let item = item as? CharactersListFilterItem {
-            print(item)
+        } else if let item = item as? CharactersListFilterItem, item.filter != filters.getSelectedFilter() {
+            filters = filters.didSelectFilter(item.filter)
+            getCharactersInitialPagePage(filterName: item.filter.transformToQueryParam())
         }
     }
     
-    func getCharactersInitialPagePage() {
-        getCharactersPage(with: 1)
+    func getCharactersInitialPagePage(filterName: String?) {
+        getCharactersPage(with: 1, and: filterName)
     }
     
-    func getCharactersPage(with page: Int) {
+    func getCharactersPage(with page: Int, and filterName: String?) {
+        print(page)
+        print(filterName)
         getCharactersByPageNumberUseCase.execute(GetCharactersByPageNumberRequestValues(page: page)).receive(on: RunLoop.main).sink { [weak self] completion in
             switch completion {
             case .failure(let error):
