@@ -165,6 +165,9 @@
 		0CFE4AB829C4E8CE003BD240 /* MockCharactersListFilterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE4AB129C4E6E4003BD240 /* MockCharactersListFilterItem.swift */; };
 		0CFE4AB929C4E8D3003BD240 /* MockFilterViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE4AB529C4E75F003BD240 /* MockFilterViewEntity.swift */; };
 		0CFE4ABA29C4E8D3003BD240 /* MockFiltersViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE4AB329C4E74E003BD240 /* MockFiltersViewEntity.swift */; };
+		0CFE4ABE29C4F190003BD240 /* FiltersViewEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE4ABD29C4F190003BD240 /* FiltersViewEntityTests.swift */; };
+		0CFE4AC029C4F1A6003BD240 /* FilterViewEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE4ABF29C4F1A6003BD240 /* FilterViewEntityTests.swift */; };
+		0CFE4AC229C4F1BE003BD240 /* CharactersListFilterItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE4AC129C4F1BE003BD240 /* CharactersListFilterItemTests.swift */; };
 		0CFEC67129C22F8200AF9319 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0CFEC67029C22F8200AF9319 /* Kingfisher */; };
 		0CFEC67329C2310D00AF9319 /* CacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67229C2310D00AF9319 /* CacheHandler.swift */; };
 		0CFEC67529C2314800AF9319 /* ImageCacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67429C2314800AF9319 /* ImageCacheHandler.swift */; };
@@ -418,6 +421,9 @@
 		0CFE4AB129C4E6E4003BD240 /* MockCharactersListFilterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharactersListFilterItem.swift; sourceTree = "<group>"; };
 		0CFE4AB329C4E74E003BD240 /* MockFiltersViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFiltersViewEntity.swift; sourceTree = "<group>"; };
 		0CFE4AB529C4E75F003BD240 /* MockFilterViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFilterViewEntity.swift; sourceTree = "<group>"; };
+		0CFE4ABD29C4F190003BD240 /* FiltersViewEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewEntityTests.swift; sourceTree = "<group>"; };
+		0CFE4ABF29C4F1A6003BD240 /* FilterViewEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewEntityTests.swift; sourceTree = "<group>"; };
+		0CFE4AC129C4F1BE003BD240 /* CharactersListFilterItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListFilterItemTests.swift; sourceTree = "<group>"; };
 		0CFEC67229C2310D00AF9319 /* CacheHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHandler.swift; sourceTree = "<group>"; };
 		0CFEC67429C2314800AF9319 /* ImageCacheHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheHandler.swift; sourceTree = "<group>"; };
 		0CFEC67729C231C100AF9319 /* MobileConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileConstants.swift; sourceTree = "<group>"; };
@@ -831,21 +837,9 @@
 		0C61E19329C27D8B008B3C68 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				0CFE4ABB29C4F123003BD240 /* CharactersList */,
+				0CFE4ABC29C4F145003BD240 /* CharacterDetail */,
 				0C61E19429C27DA5008B3C68 /* MockUserDefaultsRepository.swift */,
-				0C61E19629C28124008B3C68 /* MockCharactersPagesViewEntity.swift */,
-				0C61E19829C28133008B3C68 /* MockCharacterThinViewEntity.swift */,
-				0C61E1A229C281C8008B3C68 /* MockCharacterFatViewEntity.swift */,
-				0C61E19A29C2813E008B3C68 /* MockPageInfoViewEntity.swift */,
-				0CFE4AB329C4E74E003BD240 /* MockFiltersViewEntity.swift */,
-				0CFE4AB529C4E75F003BD240 /* MockFilterViewEntity.swift */,
-				0CF5DA1629C324240040B3B0 /* MockCharactersListItems.swift */,
-				0C61E19C29C2814C008B3C68 /* MockCharactersListItem.swift */,
-				0CFE4AAF29C4E6D8003BD240 /* MockCharactersListFilterItems.swift */,
-				0CFE4AB129C4E6E4003BD240 /* MockCharactersListFilterItem.swift */,
-				0C61E19E29C28189008B3C68 /* MockCharactersListViewModel.swift */,
-				0CF5DA2129C32A240040B3B0 /* MockCharacterDetailItems.swift */,
-				0CF5DA2329C32A320040B3B0 /* MockCharacterDetailItem.swift */,
-				0C61E1A029C281AE008B3C68 /* MockCharacterDetailViewModel.swift */,
 				0C61E1A429C281F1008B3C68 /* MockGetCharactersByPageNumber.swift */,
 				0C61E1A629C281FE008B3C68 /* MockGetCharacterById.swift */,
 			);
@@ -1084,6 +1078,9 @@
 				0CF5DA6229C390A10040B3B0 /* CharactersListViewModelStateTests.swift */,
 				0CF5DA6429C390BC0040B3B0 /* CharactersListViewModelFlowTests.swift */,
 				0CF5DA6629C390D60040B3B0 /* CharactersListRouterTests.swift */,
+				0CFE4ABD29C4F190003BD240 /* FiltersViewEntityTests.swift */,
+				0CFE4ABF29C4F1A6003BD240 /* FilterViewEntityTests.swift */,
+				0CFE4AC129C4F1BE003BD240 /* CharactersListFilterItemTests.swift */,
 			);
 			path = CharactersList;
 			sourceTree = "<group>";
@@ -1096,6 +1093,34 @@
 				0CF5DA6D29C3A4E90040B3B0 /* CharacterDetailHeaderInfoItemTests.swift */,
 				0CF5DA6F29C3A5080040B3B0 /* CharacterDetailViewModelStateTests.swift */,
 				0CF5DA7129C3A5170040B3B0 /* CharacterDetailViewModelFlowTests.swift */,
+			);
+			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
+		0CFE4ABB29C4F123003BD240 /* CharactersList */ = {
+			isa = PBXGroup;
+			children = (
+				0C61E19629C28124008B3C68 /* MockCharactersPagesViewEntity.swift */,
+				0C61E19829C28133008B3C68 /* MockCharacterThinViewEntity.swift */,
+				0C61E19A29C2813E008B3C68 /* MockPageInfoViewEntity.swift */,
+				0CFE4AB329C4E74E003BD240 /* MockFiltersViewEntity.swift */,
+				0CFE4AB529C4E75F003BD240 /* MockFilterViewEntity.swift */,
+				0CF5DA1629C324240040B3B0 /* MockCharactersListItems.swift */,
+				0C61E19C29C2814C008B3C68 /* MockCharactersListItem.swift */,
+				0CFE4AAF29C4E6D8003BD240 /* MockCharactersListFilterItems.swift */,
+				0CFE4AB129C4E6E4003BD240 /* MockCharactersListFilterItem.swift */,
+				0C61E19E29C28189008B3C68 /* MockCharactersListViewModel.swift */,
+			);
+			path = CharactersList;
+			sourceTree = "<group>";
+		};
+		0CFE4ABC29C4F145003BD240 /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				0C61E1A229C281C8008B3C68 /* MockCharacterFatViewEntity.swift */,
+				0CF5DA2129C32A240040B3B0 /* MockCharacterDetailItems.swift */,
+				0CF5DA2329C32A320040B3B0 /* MockCharacterDetailItem.swift */,
+				0C61E1A029C281AE008B3C68 /* MockCharacterDetailViewModel.swift */,
 			);
 			path = CharacterDetail;
 			sourceTree = "<group>";
@@ -1558,15 +1583,18 @@
 				0CFE4AB729C4E8CE003BD240 /* MockCharactersListFilterItems.swift in Sources */,
 				0CF5DA5B29C3902F0040B3B0 /* CharacterThinViewEntityTests.swift in Sources */,
 				0C61E19529C27DA5008B3C68 /* MockUserDefaultsRepository.swift in Sources */,
+				0CFE4ABE29C4F190003BD240 /* FiltersViewEntityTests.swift in Sources */,
 				0CF5DA6729C390D60040B3B0 /* CharactersListRouterTests.swift in Sources */,
 				0CF5DA1729C324240040B3B0 /* MockCharactersListItems.swift in Sources */,
 				0CF5DA2629C32AE50040B3B0 /* MockCharacterDetailItems.swift in Sources */,
 				0CF5DA7429C3B1E20040B3B0 /* StringTests.swift in Sources */,
+				0CFE4AC029C4F1A6003BD240 /* FilterViewEntityTests.swift in Sources */,
 				0CF5DA7029C3A5080040B3B0 /* CharacterDetailViewModelStateTests.swift in Sources */,
 				0C61E1A729C281FE008B3C68 /* MockGetCharacterById.swift in Sources */,
 				0C61E1A329C281C8008B3C68 /* MockCharacterFatViewEntity.swift in Sources */,
 				0CFE4AB829C4E8CE003BD240 /* MockCharactersListFilterItem.swift in Sources */,
 				0CF5DA6A29C3A4C60040B3B0 /* CharacterFatViewEntityTests.swift in Sources */,
+				0CFE4AC229C4F1BE003BD240 /* CharactersListFilterItemTests.swift in Sources */,
 				0C8D897029C2578C00BD86E6 /* BaseCacheHandlerTests.swift in Sources */,
 				0CF5DA2529C32A880040B3B0 /* MockCharacterDetailItem.swift in Sources */,
 				0C61E19B29C2813E008B3C68 /* MockPageInfoViewEntity.swift in Sources */,

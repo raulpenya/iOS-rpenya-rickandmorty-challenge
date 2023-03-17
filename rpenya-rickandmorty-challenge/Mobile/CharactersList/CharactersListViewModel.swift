@@ -17,9 +17,9 @@ enum ViewModelState: Equatable {
     
     static func == (lhs: ViewModelState, rhs: ViewModelState) -> Bool {
         switch (lhs, rhs) {
-        case (.idle, .idle), (.loading, .loading):
+        case (.idle, .idle):
             return true
-        case (.failed(_), .failed(_)), (.loaded(_), .loaded(_)):
+        case (.loading(_), .loading(_)), (.failed(_), .failed(_)), (.loaded(_), .loaded(_)):
             return true
         default:
             return false
