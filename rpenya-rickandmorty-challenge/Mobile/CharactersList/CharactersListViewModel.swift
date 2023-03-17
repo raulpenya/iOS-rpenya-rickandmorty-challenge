@@ -41,6 +41,7 @@ class CharactersListViewModel: ObservableObject {
     }
     
     func loadData() {
+        state = .loading
         getCharactersInitialPagePage()
     }
     
@@ -65,7 +66,6 @@ class CharactersListViewModel: ObservableObject {
     }
     
     func getCharactersInitialPagePage() {
-        state = .loading
         getCharactersPage(with: 1)
     }
     
