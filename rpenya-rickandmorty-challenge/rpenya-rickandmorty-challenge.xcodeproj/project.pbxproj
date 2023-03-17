@@ -60,6 +60,8 @@
 		0C42D94D29C47AC800719A2D /* CharactersListFilterItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D94C29C47AC800719A2D /* CharactersListFilterItems.swift */; };
 		0C42D94F29C47CDD00719A2D /* FilterViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D94E29C47CDD00719A2D /* FilterViewEntity.swift */; };
 		0C42D95129C47D3800719A2D /* FiltersViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D95029C47D3800719A2D /* FiltersViewEntity.swift */; };
+		0C42D95529C482B200719A2D /* PlainHGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D95429C482B200719A2D /* PlainHGridView.swift */; };
+		0C42D95729C4836F00719A2D /* PlainVGridPaginatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D95629C4836F00719A2D /* PlainVGridPaginatedView.swift */; };
 		0C61E19529C27DA5008B3C68 /* MockUserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E19429C27DA5008B3C68 /* MockUserDefaultsRepository.swift */; };
 		0C61E19729C28124008B3C68 /* MockCharactersPagesViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E19629C28124008B3C68 /* MockCharactersPagesViewEntity.swift */; };
 		0C61E19929C28133008B3C68 /* MockCharacterThinViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E19829C28133008B3C68 /* MockCharacterThinViewEntity.swift */; };
@@ -310,6 +312,8 @@
 		0C42D94C29C47AC800719A2D /* CharactersListFilterItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListFilterItems.swift; sourceTree = "<group>"; };
 		0C42D94E29C47CDD00719A2D /* FilterViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewEntity.swift; sourceTree = "<group>"; };
 		0C42D95029C47D3800719A2D /* FiltersViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewEntity.swift; sourceTree = "<group>"; };
+		0C42D95429C482B200719A2D /* PlainHGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainHGridView.swift; sourceTree = "<group>"; };
+		0C42D95629C4836F00719A2D /* PlainVGridPaginatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainVGridPaginatedView.swift; sourceTree = "<group>"; };
 		0C61E19429C27DA5008B3C68 /* MockUserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaultsRepository.swift; sourceTree = "<group>"; };
 		0C61E19629C28124008B3C68 /* MockCharactersPagesViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharactersPagesViewEntity.swift; sourceTree = "<group>"; };
 		0C61E19829C28133008B3C68 /* MockCharacterThinViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterThinViewEntity.swift; sourceTree = "<group>"; };
@@ -862,6 +866,8 @@
 			children = (
 				0C1FEEFE29C0FC7E00E90B30 /* PlainListPaginated.swift */,
 				0C1FEF0229C102A400E90B30 /* PlainGridPaginatedView.swift */,
+				0C42D95429C482B200719A2D /* PlainHGridView.swift */,
+				0C42D95629C4836F00719A2D /* PlainVGridPaginatedView.swift */,
 				0CF5DA1929C3256A0040B3B0 /* PlainListView.swift */,
 				0C8B68E829C1D6E0000B05C1 /* ErrorView.swift */,
 				0CF5DA4229C3672F0040B3B0 /* CloseButton.swift */,
@@ -1451,6 +1457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C8B68EE29C1D789000B05C1 /* TextViewModifier.swift in Sources */,
+				0C42D95529C482B200719A2D /* PlainHGridView.swift in Sources */,
 				0C1FEEEB29C0F28A00E90B30 /* CharactersListViewModel.swift in Sources */,
 				0C8B68FF29C1EDDC000B05C1 /* CharacterListCellView.swift in Sources */,
 				0C8D897E29C25C4100BD86E6 /* CharacterFatViewEntity.swift in Sources */,
@@ -1497,6 +1504,7 @@
 				0C875DA229C0A452001A4EAD /* MockCharactersPage.swift in Sources */,
 				0C42D94B29C477B600719A2D /* CharactersListFilterItem.swift in Sources */,
 				0C8B68F929C1DAC5000B05C1 /* CharactersListItem.swift in Sources */,
+				0C42D95729C4836F00719A2D /* PlainVGridPaginatedView.swift in Sources */,
 				0CF5DA2E29C33E030040B3B0 /* RoundedCorner.swift in Sources */,
 				0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */,
 				0CFEC67329C2310D00AF9319 /* CacheHandler.swift in Sources */,

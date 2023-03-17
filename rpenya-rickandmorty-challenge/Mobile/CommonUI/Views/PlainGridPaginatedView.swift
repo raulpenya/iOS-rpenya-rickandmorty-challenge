@@ -9,42 +9,14 @@ import SwiftUI
 
 struct PlainGridPaginatedView: View {
     let listItems: ListItems
-    let twoColumnGrid = [GridItem(.flexible(), spacing: cellsPadding), GridItem(.flexible(), spacing: cellsPadding)]
-    private static let cellsPadding: CGFloat = 4
+    static let cellsPadding: CGFloat = 4
     
     var body: some View {
         ScrollView {
             if let listItemsWithHeader = listItems as? ListItemsSectionHeader {
-                ScrollView(.horizontal) {
-                    LazyHStack {
-                        ForEach(listItemsWithHeader.sectionHeader.items) { anyItem in
-                            if let item = anyItem.item as? CharactersListFilterItem {
-                                Text(item.filter.text).onTapGesture {
-                                    item.onTapGesture(item)
-                                }
-                            } else {
-                                Text("PlainListView :: unknown item")
-                            }
-                        }
-                    }.frame(height: 40).padding(.horizontal, PlainGridPaginatedView.cellsPadding)
-                }
+                PlainHGridView(listItems: listItemsWithHeader.sectionHeader).frame(height: 40).padding(.horizontal, PlainGridPaginatedView.cellsPadding)
             }
-            LazyVGrid(columns: twoColumnGrid, spacing: PlainGridPaginatedView.cellsPadding) {
-                ForEach(listItems.items) { anyItem in
-                    if let item = anyItem.item as? CharactersListItem {
-                        CharacterListCellView(item: item).frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height).onTapGesture {
-                            item.onTapGesture(item)
-                        }
-                    } else {
-                        Text("PlainListView :: unknown item")
-                    }
-                }
-                if let listItems = listItems as? ListItemsPaginated, listItems.isListCompleted == false {
-                    CharacterListDummyCellView().frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height)
-                    CharacterListDummyCellView().frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height)
-                        .onAppear { listItems.didReachListBottomAction() }
-                }
-            }.padding(.horizontal, PlainGridPaginatedView.cellsPadding)
+            PlainVGridPaginatedView(listItems: listItems).padding(.horizontal, PlainGridPaginatedView.cellsPadding)
         }
     }
 }
