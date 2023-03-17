@@ -8,12 +8,16 @@
 import Foundation
 import Domain
 
-struct CharacterThinViewEntity {
+struct CharacterThinViewEntity: Equatable {
     let id: String
     let name: String
     let status: Status
     let gender: Gender
     let imageUrl: String
+    
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
 
 extension CharacterThinViewEntity {

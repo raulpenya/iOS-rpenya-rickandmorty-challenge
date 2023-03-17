@@ -41,7 +41,7 @@ final class CharacterFatViewEntityTests: XCTestCase {
         //When
         let item = character.transformToCharacterDetailImageItem()
         //Then
-        XCTAssertEqual((item.item as! CharacterDetailImageItem).character.id, character.id)
+        XCTAssertEqual((item.item as! CharacterDetailImageItem).character, character)
         XCTAssertEqual((item.item as! CharacterDetailImageItem).view, .headerImage)
     }
     
@@ -51,7 +51,7 @@ final class CharacterFatViewEntityTests: XCTestCase {
         //When
         let item = character.transformToCharacterDetailHeaderInfoItem()
         //Then
-        XCTAssertEqual((item.item as! CharacterDetailHeaderInfoItem).character.id, character.id)
+        XCTAssertEqual((item.item as! CharacterDetailHeaderInfoItem).character, character)
         XCTAssertEqual((item.item as! CharacterDetailHeaderInfoItem).view, .headerInfo)
     }
     

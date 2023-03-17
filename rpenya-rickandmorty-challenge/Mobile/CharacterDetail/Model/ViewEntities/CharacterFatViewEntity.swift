@@ -8,7 +8,7 @@
 import Foundation
 import Domain
 
-struct CharacterFatViewEntity {
+struct CharacterFatViewEntity: Equatable {
     let id: String
     let name: String
     let status: Status
@@ -19,6 +19,10 @@ struct CharacterFatViewEntity {
     let locationName: String?
     let imageUrl: String
     let episodes: [String]
+    
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
 
 extension CharacterFatViewEntity {

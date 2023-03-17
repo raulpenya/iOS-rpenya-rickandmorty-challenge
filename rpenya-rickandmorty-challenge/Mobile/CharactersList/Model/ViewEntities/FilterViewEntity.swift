@@ -11,7 +11,7 @@ struct FilterViewEntity: Equatable {
     let text: String
     let isSelected: Bool
     
-    static func == (lhs: FilterViewEntity, rhs: FilterViewEntity) -> Bool {
+    static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.text == rhs.text
     }
 }
