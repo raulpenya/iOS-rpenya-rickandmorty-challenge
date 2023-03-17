@@ -10,8 +10,8 @@ import SwiftUI
 struct CharacterDetailImageCellView: View {
     let item: CharacterDetailItem
     var body: some View {
-        if let item = item as? CharacterDetailImageItem {
-            CharacterImageView(url: URL(string: item.getImageUrl())!)
+        if let item = item as? CharacterDetailImageItem, let url = item.getImageUrl() {
+            CharacterImageView(url: url)
             .overlay(alignment: .topLeading) {
                 HStackLayout {
                     CloseButton(action: item.dismiss)

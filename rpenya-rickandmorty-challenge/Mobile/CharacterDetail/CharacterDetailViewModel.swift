@@ -27,15 +27,14 @@ class CharacterDetailViewModel: ObservableObject {
     }
     
     @Sendable func refreshData() {
+        state = .loading
         loadData()
     }
     
     func dismissButtonPressed() {
         dismissCharacterDetail = true
     }
-}
-
-extension CharacterDetailViewModel {
+    
     func getCharacter(with id: String) {
         getCharacterByIdUseCase.execute(GetCharacterByIdRequestValues(id: id)).receive(on: RunLoop.main).sink { [weak self] completion in
             switch completion {

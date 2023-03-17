@@ -9,13 +9,13 @@ import Foundation
 @testable import rpenya_rickandmorty_challenge
 
 struct MockCharacterDetailItem {
-    static func givenCharacterDetailItem1() -> CharacterDetailItem {
+    static func givenCharacterDetailImageItem() -> CharacterDetailImageItem {
         return CharacterDetailImageItem(character: MockCharacterFatViewEntity.givenCharacterFat1()) {
             print("MockCharacterDetailItem")
         }
     }
     
-    static func givenCharacterDetailItem2() -> CharacterDetailItem {
+    static func givenCharacterDetailHeaderInfoItem() -> CharacterDetailHeaderInfoItem {
         return CharacterDetailHeaderInfoItem(character: MockCharacterFatViewEntity.givenCharacterFat1())
     }
     

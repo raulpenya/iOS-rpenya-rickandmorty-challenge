@@ -20,7 +20,7 @@ struct CharacterDetailImageItem: CharacterDetailItem {
         self.dismiss = dismiss
     }
     
-    func getImageUrl() -> String {
-        return character.imageUrl
+    func getImageUrl() -> URL? {
+        return URL(string: character.imageUrl)
     }
 }

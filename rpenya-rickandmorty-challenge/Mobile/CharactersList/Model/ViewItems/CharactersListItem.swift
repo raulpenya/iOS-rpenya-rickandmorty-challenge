@@ -22,8 +22,8 @@ struct CharactersListItem: ListItem, ListItemSelectable {
         return character.name
     }
     
-    func getImageUrl() -> String {
-        return character.imageUrl
+    func getImageUrl() -> URL? {
+        return URL(string: character.imageUrl)
     }
     
     func getStatusString() -> String {
