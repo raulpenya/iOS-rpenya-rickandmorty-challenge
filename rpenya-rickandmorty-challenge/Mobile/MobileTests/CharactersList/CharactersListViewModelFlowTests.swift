@@ -49,7 +49,7 @@ final class CharactersListViewModelFlowTests: XCTestCase {
         XCTAssertTrue(model.getCharactersPageCalled)
     }
     
-    func test_didSelectItem_flow() {
+    func test_didSelectItem_character_flow() {
         //Given
         let model = MockCharactersListViewModel.getModel()
         let item = MockCharactersListItem.givenCharactersListItem1()
@@ -59,6 +59,19 @@ final class CharactersListViewModelFlowTests: XCTestCase {
         XCTAssertTrue(model.presentCharacterDetail)
         XCTAssertNotNil(model.selectedCharacter)
         XCTAssertEqual(model.selectedCharacter?.id, item.character.id)
+    }
+    
+    func test_didSelectItem_filter_flow() {
+        //Given
+        let model = MockCharactersListViewModel.getModel()
+        let item = MockCharactersListFilterItem.givenCharactersListFilterItem2()
+        //When
+        model.didSelectItem(item)
+        //Then
+        XCTAssertTrue(model.loadDataCalled)
+        XCTAssertTrue(model.getCharactersInitialPageCalled)
+        XCTAssertTrue(model.getCharactersPageCalled)
+        XCTAssertEqual(item.filter.text, model.filters.getSelectedFilter().text)
     }
     
     func test_updateView_flow() {

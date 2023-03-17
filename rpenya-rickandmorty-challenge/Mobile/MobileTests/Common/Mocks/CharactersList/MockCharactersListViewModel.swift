@@ -9,12 +9,18 @@ import Foundation
 @testable import rpenya_rickandmorty_challenge
 
 class MockCharactersListViewModel: CharactersListViewModel {
+    var loadDataCalled = false
     var getCharactersInitialPageCalled = false
     var getCharactersPageCalled = false
     var updateViewCalled = false
     
     static func getModel() -> MockCharactersListViewModel {
         return MockCharactersListViewModel(getCharactersByPageNumberUseCase: MockGetCharactersByPageNumber.getUseCase())
+    }
+    
+    override func loadData() {
+        loadDataCalled = true
+        super.loadData()
     }
     
     override func getCharactersInitialPage(filterName: String?) {
