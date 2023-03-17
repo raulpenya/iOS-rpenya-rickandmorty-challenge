@@ -14,14 +14,19 @@ struct PlainGridPaginatedView: View {
     
     var body: some View {
         ScrollView {
-            ScrollView(.horizontal) {
-                LazyHStack {
-                    ForEach(0...50, id: \.self) { index in
-                        Text(String(index))
-                            .onAppear {
-                                print(index)
+            if let listItemsWithHeader = listItems as? ListItemsSectionHeader {
+                ScrollView(.horizontal) {
+                    LazyHStack {
+                        ForEach(listItemsWithHeader.sectionHeader.items) { anyItem in
+                            if let item = anyItem.item as? CharactersListFilterItem {
+                                Text(item.filter.text).onTapGesture {
+                                    item.onTapGesture(item)
+                                }
+                            } else {
+                                Text("PlainListView :: unknown item")
                             }
-                    }
+                        }
+                    }.frame(height: 40).padding(.horizontal, PlainGridPaginatedView.cellsPadding)
                 }
             }
             LazyVGrid(columns: twoColumnGrid, spacing: PlainGridPaginatedView.cellsPadding) {

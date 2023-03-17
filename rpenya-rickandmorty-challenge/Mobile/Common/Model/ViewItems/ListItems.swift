@@ -11,6 +11,10 @@ protocol ListItems {
     var items: [AnyItem] { get set }
 }
 
+protocol ListItemsSectionHeader {
+    var sectionHeader: ListItems { get set }
+}
+
 protocol ListItemsPaginated {
     var isListCompleted: Bool { get set }
     var didReachListBottomAction: (() -> Void) { get set }
