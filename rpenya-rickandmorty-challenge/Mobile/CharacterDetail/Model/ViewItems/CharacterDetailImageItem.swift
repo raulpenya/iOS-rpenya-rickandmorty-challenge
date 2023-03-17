@@ -11,13 +11,11 @@ struct CharacterDetailImageItem: CharacterDetailItem {
     var id: String
     let character: CharacterFatViewEntity
     var view: CharacterDetailCellView
-    let dismiss: (() -> Void)
     
-    init(id: String = UUID().uuidString, character: CharacterFatViewEntity, view: CharacterDetailCellView = .headerImage, dismiss: @escaping () -> Void) {
+    init(id: String = UUID().uuidString, character: CharacterFatViewEntity, view: CharacterDetailCellView = .headerImage) {
         self.id = id
         self.character = character
         self.view = view
-        self.dismiss = dismiss
     }
     
     func getImageUrl() -> URL? {

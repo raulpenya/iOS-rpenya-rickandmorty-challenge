@@ -11,7 +11,7 @@ struct CharacterListCellView: View {
     static let width = (UIScreen.main.bounds.width/2)-6
     static let height = width
     static let padding = 8.0
-    var item: CharactersListItem
+    let item: CharactersListItem
     
     var body: some View {
         if let url = item.getImageUrl() {
@@ -33,9 +33,3 @@ struct CharacterListCellView: View {
         }
     }
 }
-
-//struct CharacterListCellView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CharacterListCellView(item: MockCharactersListItem.givenCharactersListItem1())
-//    }
-//}

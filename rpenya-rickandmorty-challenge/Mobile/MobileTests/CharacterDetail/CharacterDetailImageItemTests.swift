@@ -12,7 +12,7 @@ final class CharacterDetailImageItemTests: XCTestCase {
     func test_getters() {
         //Given
         let character = MockCharacterFatViewEntity.givenCharacterFat1()
-        let item = CharacterDetailImageItem(character: character, dismiss: { })
+        let item = CharacterDetailImageItem(character: character)
         //When
         let url = item.getImageUrl()
         //Then

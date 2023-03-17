@@ -16,4 +16,5 @@ struct Colors {
     static let statusAlive: Color = .green
     static let statusDead: Color = .red
     static let statusUnknown: Color = .gray
+    static let lightBlue: Color = Color(red: 2/255, green: 177/255, blue: 200/255)
 }

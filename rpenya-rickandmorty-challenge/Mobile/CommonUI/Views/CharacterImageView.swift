@@ -18,9 +18,3 @@ struct CharacterImageView: View {
         .aspectRatio(contentMode: .fit)
     }
 }
-
-//struct CharacterImageView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CharacterImageView(url: URL(string: MockCharacterFatViewEntity.imageUrl1)!)
-//    }
-//}

@@ -10,7 +10,7 @@ import Foundation
 
 struct MockCharactersListItems {
     static func givenCharactersListItems() -> CharactersListItems {
-        return CharactersListItems(items: [MockCharactersListItem.givenCharactersListItem1().transformToAnyItem(), MockCharactersListItem.givenCharactersListItem2().transformToAnyItem()], isListCompleted: false) {
+        return CharactersListItems(sectionHeader: MockCharactersListFilterItems.givenCharactersListFilterItems(), items: [MockCharactersListItem.givenCharactersListItem1().transformToAnyItem(), MockCharactersListItem.givenCharactersListItem2().transformToAnyItem()], isListCompleted: false) {
             print("MockCharactersListItems")
         }
     }

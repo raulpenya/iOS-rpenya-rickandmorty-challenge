@@ -15,7 +15,7 @@ final class CharacterThinViewEntityTests: XCTestCase {
         //When
         let item = character.transformToListItem(onTapGesture: { _ in })
         //Then
-        XCTAssertEqual(character.id, (item as! CharactersListItem).character.id)
+        XCTAssertEqual(character, (item as! CharactersListItem).character)
         XCTAssertEqual(character.id, (item as! CharactersListItem).id)
     }
     

@@ -12,7 +12,7 @@ import Combine
 final class GetCharactersByPageNumberTests: XCTestCase {
 
     let charactersRepository = MockCharactersRepository()
-    let requestValues = GetCharactersByPageNumberRequestValues(page: 1)
+    let requestValues = GetCharactersByPageNumberRequestValues(page: 1, filter: nil)
     var cancellableSet: Set<AnyCancellable> = []
     var response: RepositoryResponse?
     var charactersPage: CharactersPage?

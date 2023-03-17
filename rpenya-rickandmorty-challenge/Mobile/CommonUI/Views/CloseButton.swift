@@ -14,11 +14,3 @@ struct CloseButton: View {
         .frame(width: 60, height: 60)
     }
 }
-
-struct CloseButton_Previews: PreviewProvider {
-    static var previews: some View {
-        CloseButton {
-            print("CloseButton")
-        }
-    }
-}

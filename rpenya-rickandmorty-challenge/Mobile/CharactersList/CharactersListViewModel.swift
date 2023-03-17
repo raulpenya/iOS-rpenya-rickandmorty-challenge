@@ -11,15 +11,15 @@ import Combine
 
 enum ViewModelState: Equatable {
     case idle
-    case loading
+    case loading(ListItems)
     case failed(ErrorDescription)
     case loaded(ListItems)
     
     static func == (lhs: ViewModelState, rhs: ViewModelState) -> Bool {
         switch (lhs, rhs) {
-        case (.idle, .idle), (.loading, .loading):
+        case (.idle, .idle):
             return true
-        case (.failed(_), .failed(_)), (.loaded(_), .loaded(_)):
+        case (.loading(_), .loading(_)), (.failed(_), .failed(_)), (.loaded(_), .loaded(_)):
             return true
         default:
             return false
@@ -32,6 +32,7 @@ class CharactersListViewModel: ObservableObject {
     @Published var presentCharacterDetail: Bool = false
     let getCharactersByPageNumberUseCase: GetCharactersByPageNumber
     var cancellableSet: Set<AnyCancellable> = []
+    var filters: FiltersViewEntity = FiltersViewEntity.getFilters()
     var currentCharacters: CharactersPagesViewEntity = CharactersPagesViewEntity()
     var selectedCharacter: CharacterThinViewEntity? = nil
     
@@ -40,34 +41,37 @@ class CharactersListViewModel: ObservableObject {
     }
     
     func loadData() {
-        getCharactersInitialPagePage()
-    }
-    
-    func didReachListBottomAction() {
-        if let nextPage = currentCharacters.currentPage.nextPage {
-            getCharactersPage(with: nextPage)
-        }
+        state = .loading(filters.transformToCharactersListFilterItems(onTapGesture: didSelectItem))
+        getCharactersInitialPage(filterName: filters.getSelectedFilter().transformToQueryParam())
     }
     
     @Sendable func refreshData() {
-        currentCharacters = CharactersPagesViewEntity()
-        getCharactersInitialPagePage()
+        getCharactersInitialPage(filterName: filters.getSelectedFilter().transformToQueryParam())
     }
     
     func didSelectItem(_ item: ListItemSelectable) {
         if let item = item as? CharactersListItem {
             selectedCharacter = item.character
             presentCharacterDetail = true
+        } else if let item = item as? CharactersListFilterItem, item.filter != filters.getSelectedFilter() {
+            filters = filters.didSelectFilter(item.filter)
+            loadData()
         }
     }
     
-    func getCharactersInitialPagePage() {
-        state = .loading
-        getCharactersPage(with: 1)
+    func didReachListBottomAction() {
+        if let nextPage = currentCharacters.currentPage.nextPage {
+            getCharactersPage(with: nextPage, and: filters.getSelectedFilter().transformToQueryParam())
+        }
     }
     
-    func getCharactersPage(with page: Int) {
-        getCharactersByPageNumberUseCase.execute(GetCharactersByPageNumberRequestValues(page: page)).receive(on: RunLoop.main).sink { [weak self] completion in
+    func getCharactersInitialPage(filterName: String?) {
+        currentCharacters = CharactersPagesViewEntity()
+        getCharactersPage(with: 1, and: filterName)
+    }
+    
+    func getCharactersPage(with page: Int, and filterName: String?) {
+        getCharactersByPageNumberUseCase.execute(GetCharactersByPageNumberRequestValues(page: page, filter: filterName)).receive(on: RunLoop.main).sink { [weak self] completion in
             switch completion {
             case .failure(let error):
                 print(error.localizedDescription)
@@ -92,7 +96,7 @@ class CharactersListViewModel: ObservableObject {
     
     func updateView(with charactersPages: CharactersPagesViewEntity) {
         currentCharacters = charactersPages
-        state = .loaded(charactersPages.transformToListItems(didReachListBottomAction: didReachListBottomAction, onTapGesture: didSelectItem))
+        state = .loaded(charactersPages.transformToListItems(filters: filters, didReachListBottomAction: didReachListBottomAction, onTapGesture: didSelectItem))
     }
 }
 

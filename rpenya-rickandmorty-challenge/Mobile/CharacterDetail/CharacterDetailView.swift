@@ -22,7 +22,7 @@ struct CharacterDetailView: View {
                 case .failed(let error):
                     ErrorView(errorMessage: error.text, action: viewModel.refreshData)
                 case .loaded(let listItems):
-                    PlainListView(listItems: listItems)//.clipped().edgesIgnoringSafeArea([.top, .bottom])
+                    PlainListView(listItems: listItems).accessibilityIdentifier(AccessibilityIdentifierConstants.characterDetailList)
                 }
             }
         }.onChange(of: viewModel.dismissCharacterDetail) { _ in
@@ -30,10 +30,3 @@ struct CharacterDetailView: View {
         }
     }
 }
-
-//struct CharacterDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let character = CharacterFatViewEntity(id: "123", name: "Morty Smith", status: .alive, species: "", type: "", gender: .male, originName: "", locationName: "", imageUrl: "https://rickandmortyapi.com/api/character/avatar/2.jpeg")
-//        CharacterDetailAssemblerInjection().resolve(character: character)
-//    }
-//}

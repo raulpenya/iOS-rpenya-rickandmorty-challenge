@@ -20,8 +20,8 @@ extension CharactersPagesViewEntity {
         return CharactersPagesViewEntity(characters: currentCharacters, currentPage: newPage.pageInfo.transformToUI())
     }
     
-    func transformToListItems(didReachListBottomAction: @escaping (() -> Void), onTapGesture: @escaping ((ListItemSelectable) -> Void)) -> ListItems {
-        return CharactersListItems(items: characters.compactMap { $0.transformToListItem(onTapGesture: onTapGesture).transformToAnyItem() }, isListCompleted: isListCompleted(), didReachListBottomAction: didReachListBottomAction)
+    func transformToListItems(filters: FiltersViewEntity, didReachListBottomAction: @escaping (() -> Void), onTapGesture: @escaping ((ListItemSelectable) -> Void)) -> ListItems {
+        return CharactersListItems(sectionHeader: filters.transformToCharactersListFilterItems(onTapGesture: onTapGesture), items: characters.compactMap { $0.transformToListItem(onTapGesture: onTapGesture).transformToAnyItem() }, isListCompleted: isListCompleted(), didReachListBottomAction: didReachListBottomAction)
     }
 }
 

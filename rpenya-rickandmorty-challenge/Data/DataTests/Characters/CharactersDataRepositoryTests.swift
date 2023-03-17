@@ -16,7 +16,7 @@ final class CharactersDataRepositoryTests: XCTestCase {
     var errorResponse: Error?
     var charactersPage: CharactersPage?
     var character: Character?
-    let getCharactersByPageNumberRequestValues = GetCharactersByPageNumberRequestValues(page: 1)
+    let getCharactersByPageNumberRequestValues = GetCharactersByPageNumberRequestValues(page: 1, filter: "male")
     let getCharacterByIdRequestValues = GetCharacterByIdRequestValues(id: "812")
     
     override func setUpWithError() throws {

@@ -8,7 +8,7 @@
 import Foundation
 import Domain
 
-struct CharacterFatViewEntity {
+struct CharacterFatViewEntity: Equatable {
     let id: String
     let name: String
     let status: Status
@@ -19,17 +19,21 @@ struct CharacterFatViewEntity {
     let locationName: String?
     let imageUrl: String
     let episodes: [String]
+    
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
 
 extension CharacterFatViewEntity {
     func transformToCharacterDetailItems(dismiss: @escaping (() -> Void)) -> ListItems {
-        var items = [transformToCharacterDetailImageItem(dismiss: dismiss), transformToCharacterDetailHeaderInfoItem()]
+        var items = [transformToCharacterDetailImageItem(), transformToCharacterDetailHeaderInfoItem()]
         items.append(contentsOf: transformToCharacterDetailInfoItems())
-        return CharacterDetailItems(items: items)
+        return CharacterDetailItems(items: items, dismiss: dismiss)
     }
     
-    func transformToCharacterDetailImageItem(dismiss: @escaping (() -> Void)) -> AnyItem {
-        return CharacterDetailImageItem(character: self, dismiss: dismiss).transformToAnyItem()
+    func transformToCharacterDetailImageItem() -> AnyItem {
+        return CharacterDetailImageItem(character: self).transformToAnyItem()
     }
     
     func transformToCharacterDetailHeaderInfoItem() -> AnyItem {

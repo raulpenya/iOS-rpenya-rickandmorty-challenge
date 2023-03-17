@@ -10,9 +10,7 @@ import Foundation
 
 struct MockCharacterDetailItem {
     static func givenCharacterDetailImageItem() -> CharacterDetailImageItem {
-        return CharacterDetailImageItem(character: MockCharacterFatViewEntity.givenCharacterFat1()) {
-            print("MockCharacterDetailItem")
-        }
+        return CharacterDetailImageItem(character: MockCharacterFatViewEntity.givenCharacterFat1())
     }
     
     static func givenCharacterDetailHeaderInfoItem() -> CharacterDetailHeaderInfoItem {

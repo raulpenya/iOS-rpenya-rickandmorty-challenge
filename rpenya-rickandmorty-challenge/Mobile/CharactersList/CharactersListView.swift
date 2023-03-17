@@ -17,12 +17,15 @@ struct CharactersListView: View {
                 switch viewModel.state {
                 case .idle:
                     Color.clear.onAppear(perform: viewModel.loadData)
-                case .loading:
+                case .loading(let listItems):
+                    PlainHGridView(listItems: listItems)
+                    Spacer()
                     LoadingView()
+                    Spacer()
                 case .failed(let error):
                     ErrorView(errorMessage: error.text, action: viewModel.refreshData)
                 case .loaded(let listItems):
-                    PlainGridPaginatedView(listItems: listItems).refreshable(action: viewModel.refreshData)
+                    PlainGridPaginatedWithHeaderView(listItems: listItems).refreshable(action: viewModel.refreshData)
                 }
             }
             .toolbar {
@@ -31,17 +34,11 @@ struct CharactersListView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                 }
-            }.fullScreenCover(isPresented: $viewModel.presentCharacterDetail) {
+            }.sheet(isPresented: $viewModel.presentCharacterDetail) {
                 if let dependencies = viewModel.transformToCharacterDetailDependencies() {
                     router.destination(dependencies)
                 }
             }
         }
-    }
-}
-
-struct CharactersListView_Previews: PreviewProvider {
-    static var previews: some View {
-        CharactersListAssemblerInjection().resolve()
     }
 }

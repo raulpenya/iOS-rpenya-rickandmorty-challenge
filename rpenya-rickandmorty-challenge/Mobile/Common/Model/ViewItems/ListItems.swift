@@ -11,26 +11,15 @@ protocol ListItems {
     var items: [AnyItem] { get set }
 }
 
+protocol ListItemsSectionHeader {
+    var sectionHeader: ListItems { get set }
+}
+
 protocol ListItemsPaginated {
     var isListCompleted: Bool { get set }
     var didReachListBottomAction: (() -> Void) { get set }
 }
 
-struct AnyItem: Identifiable {
-    let item: ListItem
-    var id: String { item.id }
-}
-
-protocol ListItem {
-    var id: String { get set }
-}
-
-extension ListItem {
-    func transformToAnyItem() -> AnyItem {
-        return  AnyItem(item: self)
-    }
-}
-
-protocol ListItemSelectable {
-    var onTapGesture: ((ListItemSelectable) -> Void) { get set }
+protocol ListItemsDismissable {
+    var dismiss: (() -> Void) { get set }
 }
