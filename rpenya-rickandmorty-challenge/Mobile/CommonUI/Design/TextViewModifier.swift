@@ -85,3 +85,11 @@ struct Title3LightTextModifier: ViewModifier {
             .minimumScaleFactor(0.01)
     }
 }
+
+struct Title3BlueLightTextModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content.font(.system(.title3, weight: .semibold))
+            .foregroundColor(Colors.lightBlue)
+            .minimumScaleFactor(0.01)
+    }
+}

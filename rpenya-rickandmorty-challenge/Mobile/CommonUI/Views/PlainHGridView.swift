@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlainHGridView: View {
-    static let height: CGFloat = 40
+    static let height: CGFloat = 45
     let listItems: ListItems
     
     var body: some View {

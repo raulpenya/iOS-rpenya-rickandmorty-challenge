@@ -11,12 +11,12 @@ struct CharactersListFilterCellView: View {
     let item: CharactersListFilterItem
     var body: some View {
         if item.filter.isSelected {
-            Text(item.filter.text).modifier(Title3LightTextModifier()).padding(.all, 6).frame(height: 30).background {
+            Text(item.getText()).modifier(Title3LightTextModifier()).padding(.all, 6).frame(height: 30).background {
                 RoundedRectangle(cornerRadius: 8)
                     .fill(Colors.lightBlue)
             }
         } else {
-            Text(item.filter.text).modifier(Title3TextModifier()).padding(.all, 6).frame(height: 30).background {
+            Text(item.getText()).modifier(Title3BlueLightTextModifier()).padding(.all, 6).frame(height: 30).background {
                 RoundedRectangle(cornerRadius: 8)
                     .stroke(Colors.lightBlue, lineWidth: 1)
             }

@@ -17,4 +17,8 @@ struct CharactersListFilterItem: ListItem, ListItemSelectable {
         self.filter = filter
         self.onTapGesture = onTapGesture
     }
+    
+    func getText() -> String {
+        return filter.text
+    }
 }
