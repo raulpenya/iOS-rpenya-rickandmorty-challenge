@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PlainVGridPaginatedView: View {
+    static let bottomInset: CGFloat = 60
     let listItems: ListItems
     let twoColumnGrid = [GridItem(.flexible(), spacing: PlainGridPaginatedWithHeaderView.cellsPadding), GridItem(.flexible(), spacing: PlainGridPaginatedWithHeaderView.cellsPadding)]
     
@@ -27,7 +28,7 @@ struct PlainVGridPaginatedView: View {
                 CharacterListDummyCellView().frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height)
                     .onAppear { listItems.didReachListBottomAction() }
             }
-        }
+        }.padding(.bottom, PlainVGridPaginatedView.bottomInset)
     }
 }
 

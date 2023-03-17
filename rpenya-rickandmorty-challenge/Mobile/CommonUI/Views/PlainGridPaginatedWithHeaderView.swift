@@ -10,13 +10,15 @@ import SwiftUI
 struct PlainGridPaginatedWithHeaderView: View {
     let listItems: ListItems
     static let cellsPadding: CGFloat = 4
+    static let listOffset: CGFloat = 55
     
     var body: some View {
-        if let listItemsWithHeader = listItems as? ListItemsSectionHeader {
-            PlainHGridView(listItems: listItemsWithHeader.sectionHeader)
-        }
         ScrollView {
-            PlainVGridPaginatedView(listItems: listItems).padding(.horizontal, PlainGridPaginatedWithHeaderView.cellsPadding)
+            PlainVGridPaginatedView(listItems: listItems).padding(.horizontal, PlainGridPaginatedWithHeaderView.cellsPadding).offset(y: PlainGridPaginatedWithHeaderView.listOffset).onAppear { Appearance.setupUIRefreshControlAppearance() }
+        }.overlay (alignment: .topLeading) {
+            if let listItemsWithHeader = listItems as? ListItemsSectionHeader {
+                PlainHGridView(listItems: listItemsWithHeader.sectionHeader).frame(maxWidth: .infinity).frame(alignment: .top)
+            }
         }
     }
 }

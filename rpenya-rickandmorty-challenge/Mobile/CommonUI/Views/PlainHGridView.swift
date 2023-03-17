@@ -8,23 +8,35 @@
 import SwiftUI
 
 struct PlainHGridView: View {
+    static let height: CGFloat = 40
     let listItems: ListItems
     
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            LazyHStack {
-                ForEach(listItems.items) { anyItem in
-                    if let item = anyItem.item as? CharactersListFilterItem {
-                        CharactersListFilterCellView(item: item).onTapGesture {
-                            item.onTapGesture(item)
+        VisualEffectView(effect: UIBlurEffect(style: .systemThickMaterialLight)).frame(height: PlainHGridView.height).overlay {
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHStack {
+                    ForEach(listItems.items) { anyItem in
+                        if let item = anyItem.item as? CharactersListFilterItem {
+                            CharactersListFilterCellView(item: item).onTapGesture {
+                                item.onTapGesture(item)
+                            }
+                        } else {
+                            Text("PlainListView :: unknown item")
                         }
-                    } else {
-                        Text("PlainListView :: unknown item")
                     }
                 }
-            }
-        }.frame(height: 40).padding(.horizontal, 8).padding(.top, 8)
+            }.frame(height: PlainHGridView.height).padding(.horizontal, 8).padding([.top, .bottom], 6)
+        }.background(
+            Color.white.shadow(color: Colors.shadowColor, radius: 10, x: 0, y: 0)
+                .mask(Rectangle().padding(.bottom, -20))
+        )
     }
+}
+
+struct VisualEffectView: UIViewRepresentable {
+    var effect: UIVisualEffect?
+    func makeUIView(context: UIViewRepresentableContext<Self>) -> UIVisualEffectView { UIVisualEffectView() }
+    func updateUIView(_ uiView: UIVisualEffectView, context: UIViewRepresentableContext<Self>) { uiView.effect = effect }
 }
 
 //struct PlainHGridView_Previews: PreviewProvider {

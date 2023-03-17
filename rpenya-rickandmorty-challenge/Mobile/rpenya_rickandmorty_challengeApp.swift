@@ -23,6 +23,7 @@ struct rpenya_rickandmorty_challengeApp: App {
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        Appearance.setupNavigationBarAppearance()
         let cache = CacheHandler()
         cache.setURLCacheLimits()
         return true
