@@ -15,7 +15,7 @@ final class CharactersListViewModelFlowTests: XCTestCase {
         //When
         model.loadData()
         //Then
-        XCTAssertTrue(model.getCharactersInitialPagePageCalled)
+        XCTAssertTrue(model.getCharactersInitialPageCalled)
         XCTAssertTrue(model.getCharactersPageCalled)
     }
     
@@ -45,7 +45,7 @@ final class CharactersListViewModelFlowTests: XCTestCase {
         //When
         model.refreshData()
         //Then
-        XCTAssertTrue(model.getCharactersInitialPagePageCalled)
+        XCTAssertTrue(model.getCharactersInitialPageCalled)
         XCTAssertTrue(model.getCharactersPageCalled)
     }
     

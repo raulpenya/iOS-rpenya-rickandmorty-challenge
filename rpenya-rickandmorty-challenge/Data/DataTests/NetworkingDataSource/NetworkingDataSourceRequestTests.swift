@@ -20,7 +20,7 @@ final class NetworkingDataSourceRequestTests: XCTestCase {
     var resource: Resource<CharactersPageRemoteEntity, CharactersPage>?
     
     override func setUpWithError() throws {
-        urlRequest = try! CharactersApi.getCharactersByPageNumber(GetCharactersByPageNumberRequestValues(page: 1)).asURLRequest()
+        urlRequest = try! CharactersApi.getCharactersByPageNumber(GetCharactersByPageNumberRequestValues(page: 1, filter: "Male")).asURLRequest()
         resource = Resource<CharactersPageRemoteEntity, CharactersPage>(request: urlRequest!) { [weak self] charactersPage in
             self?.transformCalled = true
             return charactersPage.transformToDomain()

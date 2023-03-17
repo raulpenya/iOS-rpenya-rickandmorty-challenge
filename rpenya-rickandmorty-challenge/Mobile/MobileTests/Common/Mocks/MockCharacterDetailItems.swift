@@ -10,6 +10,6 @@ import Foundation
 
 struct MockCharacterDetailItems {
     static func givenCharacterDetailItems() -> CharacterDetailItems {
-        return CharacterDetailItems(items: [MockCharacterDetailItem.givenCharacterDetailImageItem().transformToAnyItem(), MockCharacterDetailItem.givenCharacterDetailHeaderInfoItem().transformToAnyItem(),MockCharacterDetailItem.giveCharacterDetailInfoSubItem1().transformToAnyItem(),MockCharacterDetailItem.giveCharacterDetailInfoSubItem2().transformToAnyItem()])
+        return CharacterDetailItems(items: [MockCharacterDetailItem.givenCharacterDetailImageItem().transformToAnyItem(), MockCharacterDetailItem.givenCharacterDetailHeaderInfoItem().transformToAnyItem(),MockCharacterDetailItem.giveCharacterDetailInfoSubItem1().transformToAnyItem(),MockCharacterDetailItem.giveCharacterDetailInfoSubItem2().transformToAnyItem()], dismiss: {})
     }
 }

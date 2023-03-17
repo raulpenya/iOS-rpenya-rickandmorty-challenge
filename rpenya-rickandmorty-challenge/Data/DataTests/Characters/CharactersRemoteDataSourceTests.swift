@@ -21,7 +21,7 @@ final class CharactersRemoteDataSourceTests: XCTestCase {
         //Given
         let expectation = expectation(description: "test_getCharactersByPageNumber_success")
         //When
-        dataSource.getCharactersByPageNumber(GetCharactersByPageNumberRequestValues(page: 1)).sink { [weak self] completion in
+        dataSource.getCharactersByPageNumber(GetCharactersByPageNumberRequestValues(page: 1, filter: "Male")).sink { [weak self] completion in
             switch completion {
             case .failure(let error):
                 self?.response = .error
@@ -41,7 +41,7 @@ final class CharactersRemoteDataSourceTests: XCTestCase {
         //Given
         let expectation = expectation(description: "test_getCharactersByPageNumber_error")
         //When
-        dataSource.getCharactersByPageNumber(GetCharactersByPageNumberRequestValues(page: 800)).sink { [weak self] completion in
+        dataSource.getCharactersByPageNumber(GetCharactersByPageNumberRequestValues(page: 800, filter: "Male")).sink { [weak self] completion in
             switch completion {
             case .failure(let error):
                 self?.response = .error

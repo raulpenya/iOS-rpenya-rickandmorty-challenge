@@ -21,9 +21,10 @@ final class CharactersPagesViewEntityTests: XCTestCase {
     
     func test_transformToListItems() {
         //Given
+        let filters = MockFiltersViewEntity.givenFiltersViewEntity()
         let charactersPages = MockCharactersPagesViewEntity.givenCharactersPages()
         //When
-        let items = charactersPages.transformToListItems(didReachListBottomAction: {}, onTapGesture: { _ in })
+        let items = charactersPages.transformToListItems(filters: filters, didReachListBottomAction: {}, onTapGesture: { _ in })
         //Then
         XCTAssertEqual(items.items.count, charactersPages.characters.count)
     }

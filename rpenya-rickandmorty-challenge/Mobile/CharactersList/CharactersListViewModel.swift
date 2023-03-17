@@ -42,11 +42,11 @@ class CharactersListViewModel: ObservableObject {
     
     func loadData() {
         state = .loading(filters.transformToCharactersListFilterItems(onTapGesture: didSelectItem))
-        getCharactersInitialPagePage(filterName: filters.getSelectedFilter().transformToQueryParam())
+        getCharactersInitialPage(filterName: filters.getSelectedFilter().transformToQueryParam())
     }
     
     @Sendable func refreshData() {
-        getCharactersInitialPagePage(filterName: filters.getSelectedFilter().transformToQueryParam())
+        getCharactersInitialPage(filterName: filters.getSelectedFilter().transformToQueryParam())
     }
     
     func didSelectItem(_ item: ListItemSelectable) {
@@ -65,7 +65,7 @@ class CharactersListViewModel: ObservableObject {
         }
     }
     
-    func getCharactersInitialPagePage(filterName: String?) {
+    func getCharactersInitialPage(filterName: String?) {
         currentCharacters = CharactersPagesViewEntity()
         getCharactersPage(with: 1, and: filterName)
     }

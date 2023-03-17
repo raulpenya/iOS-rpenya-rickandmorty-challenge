@@ -161,6 +161,10 @@
 		0CF5DA7629C3B1F80040B3B0 /* StatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5DA7529C3B1F80040B3B0 /* StatusTests.swift */; };
 		0CFE4AAC29C4D818003BD240 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE4AAB29C4D818003BD240 /* Appearance.swift */; };
 		0CFE4AAE29C4E427003BD240 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE4AAD29C4E427003BD240 /* ListItem.swift */; };
+		0CFE4AB729C4E8CE003BD240 /* MockCharactersListFilterItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE4AAF29C4E6D8003BD240 /* MockCharactersListFilterItems.swift */; };
+		0CFE4AB829C4E8CE003BD240 /* MockCharactersListFilterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE4AB129C4E6E4003BD240 /* MockCharactersListFilterItem.swift */; };
+		0CFE4AB929C4E8D3003BD240 /* MockFilterViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE4AB529C4E75F003BD240 /* MockFilterViewEntity.swift */; };
+		0CFE4ABA29C4E8D3003BD240 /* MockFiltersViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE4AB329C4E74E003BD240 /* MockFiltersViewEntity.swift */; };
 		0CFEC67129C22F8200AF9319 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0CFEC67029C22F8200AF9319 /* Kingfisher */; };
 		0CFEC67329C2310D00AF9319 /* CacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67229C2310D00AF9319 /* CacheHandler.swift */; };
 		0CFEC67529C2314800AF9319 /* ImageCacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEC67429C2314800AF9319 /* ImageCacheHandler.swift */; };
@@ -410,6 +414,10 @@
 		0CF5DA7529C3B1F80040B3B0 /* StatusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTests.swift; sourceTree = "<group>"; };
 		0CFE4AAB29C4D818003BD240 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		0CFE4AAD29C4E427003BD240 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		0CFE4AAF29C4E6D8003BD240 /* MockCharactersListFilterItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharactersListFilterItems.swift; sourceTree = "<group>"; };
+		0CFE4AB129C4E6E4003BD240 /* MockCharactersListFilterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharactersListFilterItem.swift; sourceTree = "<group>"; };
+		0CFE4AB329C4E74E003BD240 /* MockFiltersViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFiltersViewEntity.swift; sourceTree = "<group>"; };
+		0CFE4AB529C4E75F003BD240 /* MockFilterViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFilterViewEntity.swift; sourceTree = "<group>"; };
 		0CFEC67229C2310D00AF9319 /* CacheHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHandler.swift; sourceTree = "<group>"; };
 		0CFEC67429C2314800AF9319 /* ImageCacheHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheHandler.swift; sourceTree = "<group>"; };
 		0CFEC67729C231C100AF9319 /* MobileConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileConstants.swift; sourceTree = "<group>"; };
@@ -828,8 +836,12 @@
 				0C61E19829C28133008B3C68 /* MockCharacterThinViewEntity.swift */,
 				0C61E1A229C281C8008B3C68 /* MockCharacterFatViewEntity.swift */,
 				0C61E19A29C2813E008B3C68 /* MockPageInfoViewEntity.swift */,
+				0CFE4AB329C4E74E003BD240 /* MockFiltersViewEntity.swift */,
+				0CFE4AB529C4E75F003BD240 /* MockFilterViewEntity.swift */,
 				0CF5DA1629C324240040B3B0 /* MockCharactersListItems.swift */,
 				0C61E19C29C2814C008B3C68 /* MockCharactersListItem.swift */,
+				0CFE4AAF29C4E6D8003BD240 /* MockCharactersListFilterItems.swift */,
+				0CFE4AB129C4E6E4003BD240 /* MockCharactersListFilterItem.swift */,
 				0C61E19E29C28189008B3C68 /* MockCharactersListViewModel.swift */,
 				0CF5DA2129C32A240040B3B0 /* MockCharacterDetailItems.swift */,
 				0CF5DA2329C32A320040B3B0 /* MockCharacterDetailItem.swift */,
@@ -1543,6 +1555,7 @@
 				0C61E1A129C281AE008B3C68 /* MockCharacterDetailViewModel.swift in Sources */,
 				0CF5DA6329C390A10040B3B0 /* CharactersListViewModelStateTests.swift in Sources */,
 				0CF5DA6529C390BC0040B3B0 /* CharactersListViewModelFlowTests.swift in Sources */,
+				0CFE4AB729C4E8CE003BD240 /* MockCharactersListFilterItems.swift in Sources */,
 				0CF5DA5B29C3902F0040B3B0 /* CharacterThinViewEntityTests.swift in Sources */,
 				0C61E19529C27DA5008B3C68 /* MockUserDefaultsRepository.swift in Sources */,
 				0CF5DA6729C390D60040B3B0 /* CharactersListRouterTests.swift in Sources */,
@@ -1552,16 +1565,19 @@
 				0CF5DA7029C3A5080040B3B0 /* CharacterDetailViewModelStateTests.swift in Sources */,
 				0C61E1A729C281FE008B3C68 /* MockGetCharacterById.swift in Sources */,
 				0C61E1A329C281C8008B3C68 /* MockCharacterFatViewEntity.swift in Sources */,
+				0CFE4AB829C4E8CE003BD240 /* MockCharactersListFilterItem.swift in Sources */,
 				0CF5DA6A29C3A4C60040B3B0 /* CharacterFatViewEntityTests.swift in Sources */,
 				0C8D897029C2578C00BD86E6 /* BaseCacheHandlerTests.swift in Sources */,
 				0CF5DA2529C32A880040B3B0 /* MockCharacterDetailItem.swift in Sources */,
 				0C61E19B29C2813E008B3C68 /* MockPageInfoViewEntity.swift in Sources */,
+				0CFE4ABA29C4E8D3003BD240 /* MockFiltersViewEntity.swift in Sources */,
 				0CF5DA5F29C390570040B3B0 /* CharactersListItemTests.swift in Sources */,
 				0C61E19D29C2814C008B3C68 /* MockCharactersListItem.swift in Sources */,
 				0C61E19F29C28189008B3C68 /* MockCharactersListViewModel.swift in Sources */,
 				0C8D897429C257CD00BD86E6 /* URLCacheHandlerTests.swift in Sources */,
 				0C61E19929C28133008B3C68 /* MockCharacterThinViewEntity.swift in Sources */,
 				0C8D897229C257B700BD86E6 /* ImageCacheHandlerTests.swift in Sources */,
+				0CFE4AB929C4E8D3003BD240 /* MockFilterViewEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

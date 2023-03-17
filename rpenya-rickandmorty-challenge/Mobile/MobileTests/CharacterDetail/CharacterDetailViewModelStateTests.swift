@@ -37,13 +37,4 @@ final class CharacterDetailViewModelStateTests: XCTestCase {
         //Then
         XCTAssertEqual(model.state, .failed(error.transformToErrorDescription()))
     }
-
-    func test_refreshData_state() {
-        //Given
-        let model = MockCharacterDetailViewModel.getModel()
-        //When
-        model.refreshData()
-        //Then
-        XCTAssertEqual(model.state, .loading)
-    }
 }

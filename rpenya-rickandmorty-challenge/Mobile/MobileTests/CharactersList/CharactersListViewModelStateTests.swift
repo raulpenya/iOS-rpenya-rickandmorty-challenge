@@ -25,7 +25,7 @@ final class CharactersListViewModelStateTests: XCTestCase {
         //When
         model.updateView(with: charactersPages)
         //Then
-        XCTAssertEqual(model.state, .loaded(charactersPages.transformToListItems(didReachListBottomAction: {}, onTapGesture: { _ in })))
+        XCTAssertEqual(model.state, .loaded(charactersPages.transformToListItems(filters: MockFiltersViewEntity.givenFiltersViewEntity(), didReachListBottomAction: {}, onTapGesture: { _ in })))
     }
     
     func test_receiveError_state() {
@@ -38,12 +38,12 @@ final class CharactersListViewModelStateTests: XCTestCase {
         XCTAssertEqual(model.state, .failed(error.transformToErrorDescription()))
     }
 
-    func test_getProductsWithPromotions_state() {
+    func test_getCharactersInitialPage_state() {
         //Given
         let model = CharactersListViewModel(getCharactersByPageNumberUseCase: MockGetCharactersByPageNumber.getUseCase())
         //When
-        model.getCharactersInitialPagePage()
+        model.getCharactersInitialPage(filterName: nil)
         //Then
-        XCTAssertEqual(model.state, .loading)
+        XCTAssertEqual(model.state, .loading(MockCharactersListFilterItems.givenCharactersListFilterItems()))
     }
 }
