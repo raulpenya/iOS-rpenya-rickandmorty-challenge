@@ -57,7 +57,6 @@ struct Title2TextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.title2, weight: .bold))
             .foregroundColor(Colors.textColor)
-//            .lineLimit(2)
             .minimumScaleFactor(0.01)
     }
 }
@@ -74,7 +73,15 @@ struct Title2RegularTextModifier: ViewModifier {
 struct Title3TextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.title3, weight: .semibold))
-            .foregroundColor(Colors.textColor)
+            .foregroundColor(.black)
+            .minimumScaleFactor(0.01)
+    }
+}
+
+struct Title3LightTextModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content.font(.system(.title3, weight: .semibold))
+            .foregroundColor(.white)
             .minimumScaleFactor(0.01)
     }
 }

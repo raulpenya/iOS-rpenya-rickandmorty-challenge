@@ -14,7 +14,7 @@ struct PlainGridPaginatedWithHeaderView: View {
     var body: some View {
         ScrollView {
             if let listItemsWithHeader = listItems as? ListItemsSectionHeader {
-                PlainHGridView(listItems: listItemsWithHeader.sectionHeader).frame(height: 40).padding(.horizontal, PlainGridPaginatedWithHeaderView.cellsPadding)
+                PlainHGridView(listItems: listItemsWithHeader.sectionHeader).frame(height: 40).padding(.horizontal, 8).padding(.top, 8)
             }
             PlainVGridPaginatedView(listItems: listItems).padding(.horizontal, PlainGridPaginatedWithHeaderView.cellsPadding)
         }

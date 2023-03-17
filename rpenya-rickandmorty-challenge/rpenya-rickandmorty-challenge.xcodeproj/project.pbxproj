@@ -62,6 +62,7 @@
 		0C42D95129C47D3800719A2D /* FiltersViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D95029C47D3800719A2D /* FiltersViewEntity.swift */; };
 		0C42D95529C482B200719A2D /* PlainHGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D95429C482B200719A2D /* PlainHGridView.swift */; };
 		0C42D95729C4836F00719A2D /* PlainVGridPaginatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D95629C4836F00719A2D /* PlainVGridPaginatedView.swift */; };
+		0C42D95929C48DCB00719A2D /* CharactersListFilterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D95829C48DCB00719A2D /* CharactersListFilterCellView.swift */; };
 		0C61E19529C27DA5008B3C68 /* MockUserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E19429C27DA5008B3C68 /* MockUserDefaultsRepository.swift */; };
 		0C61E19729C28124008B3C68 /* MockCharactersPagesViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E19629C28124008B3C68 /* MockCharactersPagesViewEntity.swift */; };
 		0C61E19929C28133008B3C68 /* MockCharacterThinViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E19829C28133008B3C68 /* MockCharacterThinViewEntity.swift */; };
@@ -314,6 +315,7 @@
 		0C42D95029C47D3800719A2D /* FiltersViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewEntity.swift; sourceTree = "<group>"; };
 		0C42D95429C482B200719A2D /* PlainHGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainHGridView.swift; sourceTree = "<group>"; };
 		0C42D95629C4836F00719A2D /* PlainVGridPaginatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainVGridPaginatedView.swift; sourceTree = "<group>"; };
+		0C42D95829C48DCB00719A2D /* CharactersListFilterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListFilterCellView.swift; sourceTree = "<group>"; };
 		0C61E19429C27DA5008B3C68 /* MockUserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaultsRepository.swift; sourceTree = "<group>"; };
 		0C61E19629C28124008B3C68 /* MockCharactersPagesViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharactersPagesViewEntity.swift; sourceTree = "<group>"; };
 		0C61E19829C28133008B3C68 /* MockCharacterThinViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterThinViewEntity.swift; sourceTree = "<group>"; };
@@ -717,6 +719,7 @@
 			children = (
 				0C8B68FE29C1EDDC000B05C1 /* CharacterListCellView.swift */,
 				0CF5DA4629C36AD60040B3B0 /* CharacterListDummyCellView.swift */,
+				0C42D95829C48DCB00719A2D /* CharactersListFilterCellView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1460,6 +1463,7 @@
 				0C42D95529C482B200719A2D /* PlainHGridView.swift in Sources */,
 				0C1FEEEB29C0F28A00E90B30 /* CharactersListViewModel.swift in Sources */,
 				0C8B68FF29C1EDDC000B05C1 /* CharacterListCellView.swift in Sources */,
+				0C42D95929C48DCB00719A2D /* CharactersListFilterCellView.swift in Sources */,
 				0C8D897E29C25C4100BD86E6 /* CharacterFatViewEntity.swift in Sources */,
 				0C875DA129C0A44C001A4EAD /* MockCharactersRepository.swift in Sources */,
 				0CF5DA3D29C3608D0040B3B0 /* CharacterDetailInfoCellView.swift in Sources */,

@@ -11,11 +11,11 @@ struct PlainHGridView: View {
     let listItems: ListItems
     
     var body: some View {
-        ScrollView(.horizontal) {
+        ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack {
                 ForEach(listItems.items) { anyItem in
                     if let item = anyItem.item as? CharactersListFilterItem {
-                        Text(item.filter.text).onTapGesture {
+                        CharactersListFilterCellView(item: item).onTapGesture {
                             item.onTapGesture(item)
                         }
                     } else {
