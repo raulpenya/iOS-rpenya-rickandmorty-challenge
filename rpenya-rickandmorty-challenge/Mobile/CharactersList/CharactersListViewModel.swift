@@ -11,7 +11,7 @@ import Combine
 
 enum ViewModelState: Equatable {
     case idle
-    case loading
+    case loading(ListItems)
     case failed(ErrorDescription)
     case loaded(ListItems)
     
@@ -41,18 +41,11 @@ class CharactersListViewModel: ObservableObject {
     }
     
     func loadData() {
-        state = .loading
+        state = .loading(filters.transformToCharactersListFilterItems(onTapGesture: didSelectItem))
         getCharactersInitialPagePage(filterName: filters.getSelectedFilter().transformToQueryParam())
     }
     
-    func didReachListBottomAction() {
-        if let nextPage = currentCharacters.currentPage.nextPage {
-            getCharactersPage(with: nextPage, and: filters.getSelectedFilter().transformToQueryParam())
-        }
-    }
-    
     @Sendable func refreshData() {
-        currentCharacters = CharactersPagesViewEntity()
         getCharactersInitialPagePage(filterName: filters.getSelectedFilter().transformToQueryParam())
     }
     
@@ -62,11 +55,18 @@ class CharactersListViewModel: ObservableObject {
             presentCharacterDetail = true
         } else if let item = item as? CharactersListFilterItem, item.filter != filters.getSelectedFilter() {
             filters = filters.didSelectFilter(item.filter)
-            refreshData()
+            loadData()
+        }
+    }
+    
+    func didReachListBottomAction() {
+        if let nextPage = currentCharacters.currentPage.nextPage {
+            getCharactersPage(with: nextPage, and: filters.getSelectedFilter().transformToQueryParam())
         }
     }
     
     func getCharactersInitialPagePage(filterName: String?) {
+        currentCharacters = CharactersPagesViewEntity()
         getCharactersPage(with: 1, and: filterName)
     }
     

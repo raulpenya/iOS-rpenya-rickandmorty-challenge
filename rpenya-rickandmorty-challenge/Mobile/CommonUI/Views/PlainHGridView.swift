@@ -23,7 +23,7 @@ struct PlainHGridView: View {
                     }
                 }
             }
-        }
+        }.frame(height: 40).padding(.horizontal, 8).padding(.top, 8)
     }
 }
 

@@ -14,7 +14,6 @@ struct rpenya_rickandmorty_challengeApp: App {
         WindowGroup {
             CharactersListAssemblerInjection().resolve()
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
-                    print("didBecomeActiveNotification")
                     let cache = CacheHandler()
                     cache.checkCache()
                 }
@@ -24,7 +23,6 @@ struct rpenya_rickandmorty_challengeApp: App {
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        print("UIApplicationDelegate :: didFinishLaunchingWithOptions")
         let cache = CacheHandler()
         cache.setURLCacheLimits()
         return true

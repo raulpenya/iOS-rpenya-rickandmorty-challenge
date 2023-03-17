@@ -27,7 +27,7 @@ class CharacterDetailViewModel: ObservableObject {
     }
     
     @Sendable func refreshData() {
-        state = .loading
+//        state = .loading
         loadData()
     }
     
