@@ -24,7 +24,9 @@ public class GetCharactersByPageNumber: UseCase {
 
 public class GetCharactersByPageNumberRequestValues: RequestValues {
     public let page: Int
-    public init(page: Int) {
+    public let filterName: String?
+    public init(page: Int, filter: String?) {
         self.page = page
+        self.filterName = filter
     }
 }

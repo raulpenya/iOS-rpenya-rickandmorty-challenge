@@ -62,7 +62,7 @@ class CharactersListViewModel: ObservableObject {
             presentCharacterDetail = true
         } else if let item = item as? CharactersListFilterItem, item.filter != filters.getSelectedFilter() {
             filters = filters.didSelectFilter(item.filter)
-            getCharactersInitialPagePage(filterName: item.filter.transformToQueryParam())
+            refreshData()
         }
     }
     
@@ -71,9 +71,7 @@ class CharactersListViewModel: ObservableObject {
     }
     
     func getCharactersPage(with page: Int, and filterName: String?) {
-        print(page)
-        print(filterName)
-        getCharactersByPageNumberUseCase.execute(GetCharactersByPageNumberRequestValues(page: page)).receive(on: RunLoop.main).sink { [weak self] completion in
+        getCharactersByPageNumberUseCase.execute(GetCharactersByPageNumberRequestValues(page: page, filter: filterName)).receive(on: RunLoop.main).sink { [weak self] completion in
             switch completion {
             case .failure(let error):
                 print(error.localizedDescription)
