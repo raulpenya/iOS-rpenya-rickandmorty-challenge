@@ -42,7 +42,7 @@ final class CharactersListViewModelStateTests: XCTestCase {
         //Given
         let model = CharactersListViewModel(getCharactersByPageNumberUseCase: MockGetCharactersByPageNumber.getUseCase())
         //When
-        model.getCharactersInitialPage(filterName: nil)
+        model.loadData()
         //Then
         XCTAssertEqual(model.state, .loading(MockCharactersListFilterItems.givenCharactersListFilterItems()))
     }
