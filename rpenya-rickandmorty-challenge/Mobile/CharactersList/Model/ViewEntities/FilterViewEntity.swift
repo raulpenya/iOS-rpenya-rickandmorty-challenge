@@ -10,6 +10,10 @@ import Foundation
 struct FilterViewEntity: Equatable {
     let text: String
     let isSelected: Bool
+    
+    static func == (lhs: FilterViewEntity, rhs: FilterViewEntity) -> Bool {
+        return lhs.text == rhs.text
+    }
 }
 
 extension FilterViewEntity {
