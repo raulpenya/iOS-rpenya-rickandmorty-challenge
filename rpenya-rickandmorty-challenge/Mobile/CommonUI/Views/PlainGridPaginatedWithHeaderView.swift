@@ -14,10 +14,10 @@ struct PlainGridPaginatedWithHeaderView: View {
     
     var body: some View {
         ScrollView {
-            PlainVGridPaginatedView(listItems: listItems).padding(.horizontal, PlainGridPaginatedWithHeaderView.cellsPadding).offset(y: PlainGridPaginatedWithHeaderView.listOffset).onAppear { Appearance.setupUIRefreshControlAppearance() }
+            PlainVGridPaginatedView(listItems: listItems).padding(.horizontal, PlainGridPaginatedWithHeaderView.cellsPadding).offset(y: PlainGridPaginatedWithHeaderView.listOffset).onAppear { Appearance.setupUIRefreshControlAppearance() }.accessibilityIdentifier(AccessibilityIdentifierConstants.plainVGridPaginatedView)
         }.overlay (alignment: .topLeading) {
             if let listItemsWithHeader = listItems as? ListItemsSectionHeader {
-                PlainHGridView(listItems: listItemsWithHeader.sectionHeader).frame(maxWidth: .infinity).frame(alignment: .top)
+                PlainHGridView(listItems: listItemsWithHeader.sectionHeader).frame(maxWidth: .infinity).frame(alignment: .top).accessibilityIdentifier(AccessibilityIdentifierConstants.plainHGridView)
             }
         }
     }

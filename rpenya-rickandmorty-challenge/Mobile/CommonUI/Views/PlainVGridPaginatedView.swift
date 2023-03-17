@@ -18,7 +18,7 @@ struct PlainVGridPaginatedView: View {
                 if let item = anyItem.item as? CharactersListItem {
                     CharacterListCellView(item: item).frame(minWidth: 0, maxWidth: .infinity, minHeight: CharacterListCellView.height).onTapGesture {
                         item.onTapGesture(item)
-                    }
+                    }.accessibilityIdentifier(AccessibilityIdentifierConstants.characterListCellView)
                 } else {
                     Text("PlainListView :: unknown item")
                 }

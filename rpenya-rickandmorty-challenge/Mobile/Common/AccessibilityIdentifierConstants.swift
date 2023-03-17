@@ -8,10 +8,8 @@
 import Foundation
 
 struct AccessibilityIdentifierConstants {
-    static let unitText = "unit_text"
-    static let productsList = "products_list"
-    static let productListCompleteButton = "product_list_complete_button"
-    static let shoppingBasketList = "shopping_basket_list"
-    static let shoppingBasketCompleteButton = "shopping_basket_complete_button"
-    static let cancelButton = "cancel_button"
+    static let plainVGridPaginatedView = "PlainVGridPaginatedView"
+    static let plainHGridView = "PlainHGridView"
+    static let characterListCellView = "CharacterListCellView"
+    static let characterDetailList = "CharacterDetailList"
 }
