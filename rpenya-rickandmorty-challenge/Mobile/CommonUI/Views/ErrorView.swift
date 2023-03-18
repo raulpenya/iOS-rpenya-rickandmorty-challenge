@@ -13,10 +13,10 @@ struct ErrorView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            Text(NSLocalizedString("errorview_title", comment: ""))
+            Text(NSLocalizedString("_errorview_title", comment: ""))
                 .modifier(TitleTextModifier())
                 .padding(.top, 16)
-            Text(NSLocalizedString("errorview_message", comment: ""))
+            Text(NSLocalizedString("_errorview_message", comment: ""))
                 .modifier(Title3TextModifier())
                 .padding(.top, 8)
             Text(errorMessage)
@@ -25,7 +25,7 @@ struct ErrorView: View {
                 .padding(.bottom, 16)
             Line().stroke(style: StrokeStyle(lineWidth: 1, dash: [1])) .frame(height: 1)
             Button(action: action) {
-                Text(NSLocalizedString("refresh", comment: ""))
+                Text(NSLocalizedString("_refresh", comment: ""))
                     .font(.system(.title2, weight: .semibold))
                     .frame(maxWidth: .infinity, maxHeight: 40)
             }.padding([.top, .bottom], 10)

@@ -13,7 +13,7 @@ final class CharacterDetailUITests: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         app = XCUIApplication()
-//        setupSnapshot(app)
+        setupSnapshot(app)
         app.launch()
     }
     
@@ -35,6 +35,7 @@ final class CharacterDetailUITests: XCTestCase {
         let predicate1 = NSPredicate(format: "identifier == 'CharacterDetailList'")
         let characterDetail = app.otherElements.containing(predicate1).element(boundBy: 0)
         XCTAssertTrue(characterDetail.waitForExistence(timeout: 5))
+        snapshot("CharacterDetail_initialLoad")
         let button = characterDetail.buttons.element(boundBy: 0)
         button.tap()
         XCTAssertFalse(characterDetail.waitForExistence(timeout: 3))

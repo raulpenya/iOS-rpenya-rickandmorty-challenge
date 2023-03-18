@@ -6,7 +6,6 @@
 //
 
 import XCTest
-//@testable import rpenya_rickandmorty_challenge
 
 final class CharactersListUITests: XCTestCase {
     private var app: XCUIApplication!
@@ -14,7 +13,7 @@ final class CharactersListUITests: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         app = XCUIApplication()
-//        setupSnapshot(app)
+        setupSnapshot(app)
         app.launch()
     }
     
@@ -28,6 +27,7 @@ final class CharactersListUITests: XCTestCase {
         let grid = app.scrollViews.containing(predicate1).element(boundBy: 0)
         let filters = app.scrollViews.containing(predicate2).element(boundBy: 0)
         XCTAssertTrue(grid.waitForExistence(timeout: 5))
+        snapshot("CharactersList_initialLoad")
         XCTAssertTrue(filters.waitForExistence(timeout: 5))
     }
     
@@ -47,6 +47,7 @@ final class CharactersListUITests: XCTestCase {
         grid.swipeUp()
         grid.swipeUp()
         grid.swipeUp()
+        snapshot("CharactersList_scrollDown")
     }
     
     func test_tapFilters_success() {

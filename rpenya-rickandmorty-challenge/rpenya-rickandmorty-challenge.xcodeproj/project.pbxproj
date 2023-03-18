@@ -29,7 +29,6 @@
 		0C1B853729BFA43B00671265 /* NetworkingDataSourceHandleResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B853529BFA43B00671265 /* NetworkingDataSourceHandleResponseTests.swift */; };
 		0C1B853829BFA43B00671265 /* NetworkingDataSourceRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B853629BFA43B00671265 /* NetworkingDataSourceRequestTests.swift */; };
 		0C1B853B29BFA45900671265 /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B853929BFA45700671265 /* ApiTests.swift */; };
-		0C1B854729BFA5D300671265 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C1B854529BFA5D300671265 /* Localizable.strings */; };
 		0C1FEEAE29C0C27F00E90B30 /* LocationRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEAD29C0C27F00E90B30 /* LocationRemoteEntity.swift */; };
 		0C1FEEB029C0C28E00E90B30 /* OriginRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEAF29C0C28E00E90B30 /* OriginRemoteEntity.swift */; };
 		0C1FEEC829C0CA8700E90B30 /* CharactersRemoteDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEEC629C0CA8100E90B30 /* CharactersRemoteDataSourceTests.swift */; };
@@ -61,6 +60,8 @@
 		0C42D95529C482B200719A2D /* PlainHGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D95429C482B200719A2D /* PlainHGridView.swift */; };
 		0C42D95729C4836F00719A2D /* PlainVGridPaginatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D95629C4836F00719A2D /* PlainVGridPaginatedView.swift */; };
 		0C42D95929C48DCB00719A2D /* CharactersListFilterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42D95829C48DCB00719A2D /* CharactersListFilterCellView.swift */; };
+		0C4F362229C532C100E26440 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4F361F29C5321F00E26440 /* SnapshotHelper.swift */; };
+		0C4F362329C532C100E26440 /* Snapfile in Resources */ = {isa = PBXBuildFile; fileRef = 0C4F361E29C5321F00E26440 /* Snapfile */; };
 		0C61E19529C27DA5008B3C68 /* MockUserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E19429C27DA5008B3C68 /* MockUserDefaultsRepository.swift */; };
 		0C61E19729C28124008B3C68 /* MockCharactersPagesViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E19629C28124008B3C68 /* MockCharactersPagesViewEntity.swift */; };
 		0C61E19929C28133008B3C68 /* MockCharacterThinViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E19829C28133008B3C68 /* MockCharacterThinViewEntity.swift */; };
@@ -121,6 +122,7 @@
 		0C8D897E29C25C4100BD86E6 /* CharacterFatViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D897D29C25C4100BD86E6 /* CharacterFatViewEntity.swift */; };
 		0C93444D29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93444C29BF9FD0002DDF2F /* rpenya_rickandmorty_challengeApp.swift */; };
 		0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93445029BF9FD2002DDF2F /* Assets.xcassets */; };
+		0CAB075529C53A950031C41D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C1B854529BFA5D300671265 /* Localizable.strings */; };
 		0CF5DA1729C324240040B3B0 /* MockCharactersListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5DA1629C324240040B3B0 /* MockCharactersListItems.swift */; };
 		0CF5DA1A29C3256A0040B3B0 /* PlainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5DA1929C3256A0040B3B0 /* PlainListView.swift */; };
 		0CF5DA1D29C328540040B3B0 /* CharacterDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5DA1C29C328540040B3B0 /* CharacterDetailItem.swift */; };
@@ -323,6 +325,8 @@
 		0C42D95429C482B200719A2D /* PlainHGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainHGridView.swift; sourceTree = "<group>"; };
 		0C42D95629C4836F00719A2D /* PlainVGridPaginatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainVGridPaginatedView.swift; sourceTree = "<group>"; };
 		0C42D95829C48DCB00719A2D /* CharactersListFilterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListFilterCellView.swift; sourceTree = "<group>"; };
+		0C4F361E29C5321F00E26440 /* Snapfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Snapfile; sourceTree = "<group>"; };
+		0C4F361F29C5321F00E26440 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		0C61E19429C27DA5008B3C68 /* MockUserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaultsRepository.swift; sourceTree = "<group>"; };
 		0C61E19629C28124008B3C68 /* MockCharactersPagesViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharactersPagesViewEntity.swift; sourceTree = "<group>"; };
 		0C61E19829C28133008B3C68 /* MockCharacterThinViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterThinViewEntity.swift; sourceTree = "<group>"; };
@@ -828,6 +832,15 @@
 			path = ViewItems;
 			sourceTree = "<group>";
 		};
+		0C4F361D29C531F000E26440 /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				0C4F361E29C5321F00E26440 /* Snapfile */,
+				0C4F361F29C5321F00E26440 /* SnapshotHelper.swift */,
+			);
+			path = fastlane;
+			sourceTree = "<group>";
+		};
 		0C61E19229C27D85008B3C68 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -1011,6 +1024,7 @@
 			children = (
 				0CFE4AC329C4FADA003BD240 /* CharactersListUITests.swift */,
 				0C73DDDF29C52336005FE064 /* CharacterDetailUITests.swift */,
+				0C4F361D29C531F000E26440 /* fastlane */,
 			);
 			path = MobileUITests;
 			sourceTree = "<group>";
@@ -1372,7 +1386,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C1B854729BFA5D300671265 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1402,6 +1415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */,
+				0CAB075529C53A950031C41D /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1416,6 +1430,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C4F362329C532C100E26440 /* Snapfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1626,6 +1641,7 @@
 			files = (
 				0C73DDE129C52338005FE064 /* CharacterDetailUITests.swift in Sources */,
 				0CFE4AC529C4FADD003BD240 /* CharactersListUITests.swift in Sources */,
+				0C4F362229C532C100E26440 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1713,9 +1729,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rpa.Data;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1742,9 +1761,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rpa.Data;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1760,9 +1782,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rpa.DataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpenya-rickandmorty-challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpenya-rickandmorty-challenge";
 			};
 			name = Debug;
@@ -1777,9 +1802,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rpa.DataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpenya-rickandmorty-challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpenya-rickandmorty-challenge";
 			};
 			name = Release;
@@ -1806,10 +1834,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rpa.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1837,9 +1868,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rpa.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1855,9 +1889,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rpa.DomainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpenya-rickandmorty-challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpenya-rickandmorty-challenge";
 			};
 			name = Debug;
@@ -1872,9 +1909,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rpa.DomainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpenya-rickandmorty-challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpenya-rickandmorty-challenge";
 			};
 			name = Release;
@@ -2008,8 +2048,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2041,8 +2080,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2071,9 +2109,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "rpa.rpenya-rickandmorty-challengeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpenya-rickandmorty-challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpenya-rickandmorty-challenge";
 			};
 			name = Debug;
@@ -2090,9 +2131,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "rpa.rpenya-rickandmorty-challengeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpenya-rickandmorty-challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpenya-rickandmorty-challenge";
 			};
 			name = Release;
@@ -2107,9 +2151,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "rpa.rpenya-rickandmorty-challengeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = "rpenya-rickandmorty-challenge";
 			};
 			name = Debug;
@@ -2124,9 +2171,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "rpa.rpenya-rickandmorty-challengeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = "rpenya-rickandmorty-challenge";
 			};
 			name = Release;

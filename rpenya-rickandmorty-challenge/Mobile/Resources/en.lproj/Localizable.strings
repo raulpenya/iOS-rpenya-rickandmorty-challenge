@@ -6,10 +6,11 @@
   
 */
 
-"accept" = "Accept";
-"cancel" = "Cancel";
-"errorview_title" = "Oops!";
-"errorview_message" = "An error ocurred:";
-"refresh" = "Refresh";
-"location" = "Location:";
-"status" = "Status:";
+"_errorview_title" = "Oops!";
+"_errorview_message" = "An error ocurred:";
+"_refresh" = "Refresh";
+"_origin" = "Origin";
+"_location" = "Location";
+"_episodes" = "Episodes";
+"_species" = "Species";
+"_type" = "Type";
