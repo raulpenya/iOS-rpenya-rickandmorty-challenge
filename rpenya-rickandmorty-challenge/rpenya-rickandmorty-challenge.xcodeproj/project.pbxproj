@@ -72,6 +72,7 @@
 		0C61E1A329C281C8008B3C68 /* MockCharacterFatViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E1A229C281C8008B3C68 /* MockCharacterFatViewEntity.swift */; };
 		0C61E1A529C281F1008B3C68 /* MockGetCharactersByPageNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E1A429C281F1008B3C68 /* MockGetCharactersByPageNumber.swift */; };
 		0C61E1A729C281FE008B3C68 /* MockGetCharacterById.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61E1A629C281FE008B3C68 /* MockGetCharacterById.swift */; };
+		0C6456E429C5EC17001CF007 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6456E329C5EC17001CF007 /* Launch Screen.storyboard */; };
 		0C73DDE129C52338005FE064 /* CharacterDetailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C73DDDF29C52336005FE064 /* CharacterDetailUITests.swift */; };
 		0C73DDE329C52D7F005FE064 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C73DDE229C52D7F005FE064 /* VisualEffectView.swift */; };
 		0C875D6229C080F7001A4EAD /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875D6129C080F7001A4EAD /* UseCase.swift */; };
@@ -337,6 +338,7 @@
 		0C61E1A229C281C8008B3C68 /* MockCharacterFatViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterFatViewEntity.swift; sourceTree = "<group>"; };
 		0C61E1A429C281F1008B3C68 /* MockGetCharactersByPageNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetCharactersByPageNumber.swift; sourceTree = "<group>"; };
 		0C61E1A629C281FE008B3C68 /* MockGetCharacterById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetCharacterById.swift; sourceTree = "<group>"; };
+		0C6456E329C5EC17001CF007 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		0C73DDDF29C52336005FE064 /* CharacterDetailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailUITests.swift; sourceTree = "<group>"; };
 		0C73DDE229C52D7F005FE064 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		0C875D6129C080F7001A4EAD /* UseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
@@ -660,6 +662,7 @@
 			children = (
 				0C1B854429BFA5C600671265 /* Localizables */,
 				0C93445029BF9FD2002DDF2F /* Assets.xcassets */,
+				0C6456E329C5EC17001CF007 /* Launch Screen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1414,6 +1417,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C6456E429C5EC17001CF007 /* Launch Screen.storyboard in Resources */,
 				0C93445129BF9FD2002DDF2F /* Assets.xcassets in Resources */,
 				0CAB075529C53A950031C41D /* Localizable.strings in Resources */,
 			);
@@ -2048,6 +2052,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2080,6 +2085,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
