@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  rpenya-eshop-challenge
+
+  Created by raulbot on 11/3/23.
+  
+*/
+
+"_errorview_title" = "Oops!";
+"_errorview_message" = "An error ocurred:";
+"_refresh" = "Refresh";
+"_origin" = "Origin";
+"_location" = "Location";
+"_episodes" = "Episodes";
+"_species" = "Species";
+"_type" = "Type";
