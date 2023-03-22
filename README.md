@@ -36,8 +36,17 @@ The layers that compose this project are:
 ## Layout
 ![Untitled](https://user-images.githubusercontent.com/28446011/226105571-77b01335-f91b-4457-b279-e3a617c625c4.png)
 
+## Cache handling
+This project includes caching for both responses and images.
+To handle response caching I use `URLCache` and to handle image caching I use the external library `Kingfisher`. There're two constants to configure the cache lifetime individually:
+
+<img width="534" alt="Screen Shot 2023-03-18 at 18 32 59" src="https://user-images.githubusercontent.com/28446011/226124363-66711e20-88ba-4ce6-81a7-ff52d275f735.png">
+
+The app checks these constants every time it becomes active to know if reset is needed or not.
+
+
 ## Dependencies
-This project has one and only dependency, which is [Kingfisher](https://github.com/onevcat/Kingfisher). I added this library to manage images cache, due the cache manage is a key feature in this project. Kingfisher is a well-maintained and popular library, it provides performant APIs for downloading, caching, and processing images. When picking a 3rd party library, I try to look at the following points: Maintenance, Popularity, Code quality, Dependencies.
+This project has one and only dependency, which is [Kingfisher](https://github.com/onevcat/Kingfisher). I added this library to manage image cache, due the cache management is a key feature in this project. Kingfisher is a well-maintained and popular library, it provides performant APIs for downloading, caching, and processing images. When picking a 3rd party library, I try to look at the following points: Maintenance, Popularity, Code quality, Dependencies.
 
 ## Testing coverage
 ![Screen Shot 2023-03-18 at 00 36 44](https://user-images.githubusercontent.com/28446011/226105346-b9b709b1-d2d8-4d9d-8ea8-41605a1b49f5.png)
